@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-dark bg-white;
+    padding-top: 88px; /* Espace pour la navbar fixe */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  h4 {
+    @apply text-lg md:text-xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 md:px-6 max-w-7xl;
+  }
+  
+  /* ✅ TOUS LES BOUTONS - STYLE BLEU FACEBOOK UNIFORME */
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-action,
+  .button,
+  a.button,
+  input[type="submit"],
+  button[type="submit"] {
+    background-color: #1877F2 !important;
+    color: #FFFFFF !important;
+    font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif !important;
+    font-weight: 600 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 26px !important;
+    font-size: 1.05rem !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(24, 119, 242, 0.15) !important;
+    letter-spacing: 0.025em !important;
+  }
+
+  /* 📱 RESPONSIVE MOBILE - Boutons plus petits sur mobile */
+  @media (max-width: 767px) {
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-action,
+    .button,
+    a.button,
+    input[type="submit"],
+    button[type="submit"] {
+      padding: 8px 16px !important;
+      font-size: 14px !important;
+      border-radius: 8px !important;
+      line-height: 1.4 !important;
+    }
+  }
+
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-action:hover,
+  .button:hover,
+  a.button:hover,
+  input[type="submit"]:hover,
+  button[type="submit"]:hover {
+    background-color: #155CC4 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 16px rgba(21, 92, 196, 0.2) !important;
+  }
+
+  .btn:focus,
+  .btn-primary:focus,
+  .btn-secondary:focus,
+  .btn-action:focus,
+  .button:focus,
+  a.button:focus,
+  input[type="submit"]:focus,
+  button[type="submit"]:focus {
+    outline: none !important;
+    ring: 2px !important;
+    ring-color: rgba(24, 119, 242, 0.5) !important;
+    ring-offset: 2px !important;
+  }
+  
+  /* Style spécial pour les boutons outline */
+  .btn-outline {
+    background-color: transparent !important;
+    color: #1877F2 !important;
+    border: 2px solid #1877F2 !important;
+  }
+  
+  .btn-outline:hover {
+    background-color: #1877F2 !important;
+    color: white !important;
+    border-color: #1877F2 !important;
+  }
+
+  /* ✅ TÉLÉPHONE FACEBOOK STYLE */
+  .phone-facebook {
+    color: #1877F2 !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .phone-facebook:hover {
+    color: #155cc4 !important;
+    text-decoration: none !important;
+  }
+
+  /* ✅ Animation Lottie pour remplacer les "!" */
+  .lottie-icon {
+    width: 28px !important;
+    height: 28px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-left: 4px !important;
+  }
+
+  .lottie-small {
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-left: 2px !important;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-accent {
+    @apply badge bg-accent text-white;
+  }
+}
+
+@layer utilities {
+  .animate-slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%) translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) translateY(-50%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Animation spéciale pour le logo IA FORMA PLUS */
+  @keyframes logoEntrance {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(30px) rotateY(-15deg);
+      filter: blur(4px);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(0.95) translateY(10px) rotateY(-5deg);
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotateY(0deg);
+      filter: blur(0px);
+    }
+  }
+
+  .animate-logo-entrance {
+    animation: logoEntrance 1.2s ease-out forwards;
+  }
+
+  /* Animation de pulsation douce pour le logo */
+  @keyframes logoPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+  }
+
+  .animate-logo-pulse {
+    animation: logoPulse 3s ease-in-out infinite;
+  }
+
+  /* ✅ ANIMATION TYPEWRITER STYLE CHATGPT */
+  @keyframes typing {
+    from { 
+      width: 0;
+    }
+    to { 
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to { 
+      opacity: 1;
+    }
+    50% { 
+      opacity: 0;
+    }
+  }
+
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(60, end);
+  }
+
+  .typewriter-cursor {
+    animation: blink-caret 0.8s step-end infinite;
+  }
+
+  /* Animation pour le contenu qui apparaît après le typing */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+/* Classes d'accessibilité RGAA/WCAG */
+.accessibility-high-contrast {
+  filter: contrast(150%) !important;
+}
+
+.accessibility-high-contrast * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.accessibility-negative-contrast {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+.accessibility-light-background {
+  background-color: #ffffff !important;
+}
+
+.accessibility-light-background * {
+  background-color: transparent !important;
+}
+
+.accessibility-light-background .bg-gray-900,
+.accessibility-light-background .bg-gray-800,
+.accessibility-light-background .bg-gray-700,
+.accessibility-light-background .bg-primary,
+.accessibility-light-background .bg-secondary {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+.accessibility-underline-links a {
+  text-decoration: underline !important;
+}
+
+.accessibility-underline-links button {
+  text-decoration: underline !important;
+}
+
+.accessibility-readable-font,
+.accessibility-readable-font * {
+  font-family: 'Arial', 'Helvetica', sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+/* Amélioration du focus pour l'accessibilité */
+*:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Respect des préférences utilisateur pour les animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Désactiver l'effet typewriter pour les utilisateurs sensibles au mouvement */
+  .typewriter {
+    animation: none !important;
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+  
+  .typewriter-cursor {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Désactiver l'effet de bande lumineuse pour les utilisateurs sensibles au mouvement */
+  .btn-action::before {
+    display: none !important;
+  }
+}
