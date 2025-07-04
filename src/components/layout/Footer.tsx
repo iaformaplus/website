@@ -1,9 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Check } from 'lucide-react';
 import Logo from '../common/Logo';
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validation simple
+    if (!email.trim()) {
+      setSubmitError('Veuillez saisir votre email');
+      return;
+    }
+    
+    // Validation email basique
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setSubmitError('Veuillez saisir un email valide');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      // Webhook Zapier pour la newsletter
+      const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/23654186/u360rwr/';
+      
+      console.log('Newsletter - Sending email:', email);
+      
+      // Préparer les données avec FormData
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('subscribedAt', new Date().toISOString());
+      formData.append('source', 'Newsletter Footer - IAFormaPlus');
+      
+      const response = await fetch(zapierWebhookUrl, {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      console.log('✅ Newsletter subscription successful');
+      
+      // Succès
+      setIsSubmitted(true);
+      setEmail('');
+      
+      // Réinitialiser après 3 secondes
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Error subscribing to newsletter:', error);
+      setSubmitError('Une erreur est survenue. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container">
@@ -115,15 +179,58 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4">
               Inscrivez-vous pour recevoir nos actualités et offres spéciales.
             </p>
-            <form className="space-y-2">
+            
+            {/* Message d'erreur */}
+            {submitError && (
+              <div className="mb-3 p-2 bg-red-100 border border-red-300 rounded-lg">
+                <p className="text-red-700 text-sm">{submitError}</p>
+              </div>
+            )}
+            
+            {/* Message de succès */}
+            {isSubmitted && (
+              <div className="mb-3 p-3 bg-green-100 border border-green-300 rounded-lg">
+                <div className="flex items-center text-green-700">
+                  <Check size={16} className="mr-2" />
+                  <span className="text-sm font-medium">Merci ! Vous êtes inscrit(e) à notre newsletter.</span>
+                </div>
+              </div>
+            )}
+            
+            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
               <input
                 type="email"
                 placeholder="Votre email"
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 required
+                disabled={isSubmitting}
               />
-              <button type="submit" className="btn-primary w-full">
-                S'inscrire
+              <button 
+                type="submit" 
+                disabled={isSubmitting || isSubmitted}
+                className={`w-full px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  isSubmitted 
+                    ? 'bg-green-600 hover:bg-green-700 text-white' 
+                    : isSubmitting 
+                    ? 'bg-gray-600 cursor-not-allowed' 
+                    : 'bg-primary hover:bg-primary-dark text-white'
+                }`}
+              >
+                {isSubmitted ? (
+                  <div className="flex items-center justify-center">
+                    <Check size={16} className="mr-2" />
+                    Inscrit !
+                  </div>
+                ) : isSubmitting ? (
+                  <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
+                    Inscription...
+                  </div>
+                ) : (
+                  'S\'inscrire'
+                )}
               </button>
             </form>
           </div>

@@ -19,6 +19,7 @@ const FriendlyFeedbackTab: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const ratings = [
     { emoji: '😡', label: 'Très déçu', value: 1 },
@@ -40,6 +41,7 @@ const FriendlyFeedbackTab: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    console.log('Input change:', { name, value, length: value.length });
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -48,9 +50,45 @@ const FriendlyFeedbackTab: React.FC = () => {
     if (!formData.name || !formData.phone) return;
 
     setIsSubmitting(true);
+    setSubmitError('');
     
-    // Simulation d'envoi
-    setTimeout(() => {
+    try {
+      // Zapier webhook URL pour les avis clients
+      const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/23654186/u36w3lo/';
+      
+      // Préparer les données avec FormData pour éviter les problèmes CORS
+      const formDataToSend = new FormData();
+      
+      // Nettoyer et formater le numéro de téléphone pour forcer sa reconnaissance comme texte
+      const cleanPhone = formData.phone.replace(/[^0-9]/g, '');
+      const formattedPhone = `'${cleanPhone}`; // Ajouter une apostrophe pour forcer le texte
+      
+      console.log('Original phone:', formData.phone);
+      console.log('Cleaned phone:', cleanPhone);
+      console.log('Formatted phone for Zapier:', formattedPhone);
+      
+      // Ajouter les données du formulaire
+      formDataToSend.append('rating', formData.rating?.toString() || '');
+      formDataToSend.append('comment', formData.comment);
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('phone', formattedPhone); // Utiliser le numéro formaté
+      formDataToSend.append('phone_raw', cleanPhone); // Aussi envoyer la version sans apostrophe
+      
+      // Ajouter les métadonnées
+      formDataToSend.append('submittedAt', new Date().toISOString());
+      formDataToSend.append('source', 'Feedback Tab - IAFormaPlus');
+      formDataToSend.append('ratingLabel', ratings.find(r => r.value === formData.rating)?.label || '');
+      
+      const response = await fetch(zapierWebhookUrl, {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      // Succès
       setIsSubmitting(false);
       setIsSubmitted(true);
       
@@ -65,14 +103,21 @@ const FriendlyFeedbackTab: React.FC = () => {
           name: '',
           phone: ''
         });
+        setSubmitError('');
       }, 3000);
-    }, 1500);
+      
+    } catch (error) {
+      console.error('Error submitting feedback:', error);
+      setIsSubmitting(false);
+      setSubmitError('Une erreur est survenue lors de l\'envoi de votre avis. Veuillez réessayer.');
+    }
   };
 
   const handleClose = () => {
     setIsOpen(false);
     setCurrentStep(1);
     setIsSubmitted(false);
+    setSubmitError('');
     setFormData({
       rating: null,
       comment: '',
@@ -292,10 +337,23 @@ const FriendlyFeedbackTab: React.FC = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002C6E] focus:border-transparent transition-all"
                           style={{ fontFamily: '"Open Sans", "Roboto", sans-serif' }}
-                          placeholder="06 12 34 56 78"
-                          pattern="[0-9\s\-\+\(\)]{10,}"
+                          placeholder="0612345678"
+                          inputMode="numeric"
+                          autoComplete="tel"
                         />
                       </div>
+
+                      {/* Message d'erreur */}
+                      {submitError && (
+                        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                          <div className="flex items-center">
+                            <svg className="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                            </svg>
+                            <p className="text-red-700 text-sm font-medium">{submitError}</p>
+                          </div>
+                        </div>
+                      )}
 
                       {/* Boutons */}
                       <div className="flex gap-3">

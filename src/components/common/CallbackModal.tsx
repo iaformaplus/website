@@ -11,6 +11,7 @@ const CallbackModal: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   useEffect(() => {
     // Check if user has already seen the modal today
@@ -45,20 +46,74 @@ const CallbackModal: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    // Validation des champs obligatoires
+    if (!formData.firstName.trim() || !formData.phone.trim()) {
+      setSubmitError('Veuillez remplir tous les champs obligatoires.');
+      return;
+    }
+    
+    // Validation du numéro de téléphone français
+    const phoneDigits = formData.phone.replace(/[^0-9]/g, '');
+    if (phoneDigits.length !== 10 || !phoneDigits.startsWith('0')) {
+      setSubmitError('Veuillez saisir un numéro de téléphone français valide (10 chiffres commençant par 0).');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      // Webhook Zapier pour les demandes de rappel
+      const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/23654186/u36pol8/';
+      
+      console.log('Callback - Sending data to Zapier...');
+      console.log('Data:', {
+        firstName: formData.firstName,
+        phone: formData.phone,
+        preferredTime: formData.preferredTime
+      });
+      
+      // Nettoyer et formater le numéro de téléphone
+      const cleanPhone = formData.phone.replace(/[^0-9]/g, '');
+      const formattedPhone = `'${cleanPhone}`; // Ajouter une apostrophe pour forcer le texte
+      
+      // Préparer les données avec FormData
+      const formDataToSend = new FormData();
+      formDataToSend.append('firstName', formData.firstName);
+      formDataToSend.append('phone', formattedPhone); // Avec apostrophe pour préserver le "0"
+      formDataToSend.append('phone_raw', cleanPhone); // Version sans apostrophe
+      formDataToSend.append('preferredTime', formData.preferredTime);
+      formDataToSend.append('submittedAt', new Date().toISOString());
+      formDataToSend.append('source', 'Callback Modal - IAFormaPlus');
+      
+      const response = await fetch(zapierWebhookUrl, {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      console.log('✅ Callback request sent successfully');
+      
+      // Succès
       setIsSubmitted(true);
       
       // Auto-close after 3 seconds
       setTimeout(() => {
         handleClose();
       }, 3000);
-    }, 1500);
+      
+    } catch (error) {
+      console.error('Error submitting callback request:', error);
+      setSubmitError('Une erreur est survenue lors de l\'envoi de votre demande. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isVisible) return null;
@@ -95,6 +150,18 @@ const CallbackModal: React.FC = () => {
                 </p>
               </div>
 
+              {/* Message d'erreur */}
+              {submitError && (
+                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                    </svg>
+                    <p className="text-red-700 text-sm font-medium">{submitError}</p>
+                  </div>
+                </div>
+              )}
+
               {/* Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -125,8 +192,8 @@ const CallbackModal: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent transition-all"
-                    placeholder="06 12 34 56 78"
-                    pattern="[0-9\s\-\+\(\)]{10,}"
+                    placeholder="0612345678"
+                    inputMode="numeric"
                   />
                 </div>
 

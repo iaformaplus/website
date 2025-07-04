@@ -45,10 +45,24 @@ const ContactPage: React.FC = () => {
     // Prepare FormData to avoid CORS issues
     const formDataToSend = new FormData();
     
-    // Add all form fields
+    // Nettoyer et formater le numéro de téléphone pour forcer sa reconnaissance comme texte
+    const cleanPhone = formDataToSubmit.phone.replace(/[^0-9]/g, '');
+    const formattedPhone = `'${cleanPhone}`; // Ajouter une apostrophe pour forcer le texte
+    
+    console.log('Contact Form - Original phone:', formDataToSubmit.phone);
+    console.log('Contact Form - Cleaned phone:', cleanPhone);
+    console.log('Contact Form - Formatted phone for Zapier:', formattedPhone);
+    
+    // Add all form fields (except phone which we handle separately)
     Object.entries(formDataToSubmit).forEach(([key, value]) => {
-      formDataToSend.append(key, value as string);
+      if (key !== 'phone') {
+        formDataToSend.append(key, value as string);
+      }
     });
+    
+    // Add formatted phone numbers
+    formDataToSend.append('phone', formattedPhone); // Avec apostrophe pour préserver le "0"
+    formDataToSend.append('phone_raw', cleanPhone); // Version sans apostrophe
     
     // Add metadata
     formDataToSend.append('submittedAt', new Date().toISOString());

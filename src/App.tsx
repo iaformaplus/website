@@ -15,7 +15,7 @@ import CGVPage from './pages/CGVPage';
 import CookieBanner from './components/common/CookieBanner';
 import CallbackModal from './components/common/CallbackModal';
 import AccessibilityWidget from './components/common/AccessibilityWidget';
-import TripAdvisorFeedbackTab from './components/common/TripAdvisorFeedbackTab';
+import FriendlyFeedbackTab from './components/common/FriendlyFeedbackTab';
 import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
       <CookieBanner />
       <CallbackModal />
       <AccessibilityWidget />
-      <TripAdvisorFeedbackTab />
+      <FriendlyFeedbackTab />
     </>
   );
 }
