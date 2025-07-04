@@ -206,13 +206,13 @@ const HomePage: React.FC = () => {
                 <span className="font-medium">Toutes nos formations sont certifiées Qualiopi</span>
               </div>
               <div className="w-px h-8 bg-gray-200"></div>
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="btn-action flex items-center gap-2"
               >
                 <span>Trouvez votre formation</span>
                 <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -330,9 +330,9 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <a href="/contact" className="btn-action">
+                  <Link to="/contact" className="btn-action">
                     Demander un devis gratuit
-                  </a>
+                  </Link>
                 </div>
               </div>
               

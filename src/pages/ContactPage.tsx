@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Users, Building, FileText, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import AnimatedIcon from '../components/common/AnimatedIcon';
 
 const ContactPage: React.FC = () => {
@@ -502,8 +503,8 @@ const ContactPage: React.FC = () => {
               et vous aider à trouver la solution adaptée à vos besoins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="btn-action group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -511,7 +512,7 @@ const ContactPage: React.FC = () => {
                   <Send size={20} className="mr-2" />
                   Prendre contact
                 </div>
-              </a>
+              </Link>
               <a 
                 href="tel:0162177770"
                 className="btn group relative overflow-hidden"

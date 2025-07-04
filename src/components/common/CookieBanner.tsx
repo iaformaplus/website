@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Settings, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 interface CookiePreferences {
@@ -139,9 +140,9 @@ const CookieBanner: React.FC = () => {
                     </p>
                     <p className="text-xs text-gray-500 mt-2">
                       En continuant à naviguer, vous acceptez notre 
-                      <a href="/politique-confidentialite" className="text-blue-600 hover:underline ml-1">
+                      <Link to="/cgu" className="text-blue-600 hover:underline ml-1">
                         politique de confidentialité
-                      </a>.
+                      </Link>.
                     </p>
                   </div>
                 </div>

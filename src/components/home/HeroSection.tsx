@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 import AnimatedIcon from '../common/AnimatedIcon';
 import TypingEffect from '../common/TypingEffect';
@@ -43,24 +44,24 @@ const HeroSection: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="/formations-particuliers"
+                <Link 
+                  to="/formations-particuliers"
                   className="btn-action group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                   <div className="relative flex items-center justify-center">
                     Je veux me former
                   </div>
-                </a>
-                <a 
-                  href="/contact"
+                </Link>
+                <Link 
+                  to="/contact"
                   className="btn-action group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                   <div className="relative flex items-center justify-center">
                     Je veux former mon équipe
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
