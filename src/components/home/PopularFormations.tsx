@@ -32,16 +32,16 @@ const formationData = [
   },
   {
     id: 3,
-    title: "Automatisation par l'intelligence artificielle",
-    category: "IA",
-    duration: "28h",
-    format: "Mixte",
-    level: "Débutant",
+    title: "Créer et gérer une boutique E-commerce performante",
+    category: "E-commerce",
+    duration: "35h",
+    format: "Présentiel",
+    level: "Intermédiaire",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    fallbackImage: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "automatisation-intelligence-artificielle",
-    excerpt: "Découvrez et maîtrisez les outils d'IA pour automatiser vos processus métier et optimiser votre productivité.",
-    price: "1890€ HT"
+    fallbackImage: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    slug: "e-commerce",
+    excerpt: "Formation pratique pour lancer et optimiser votre activité en ligne. Apprenez à créer, gérer et développer une boutique e-commerce rentable.",
+    price: "2490€ HT"
   },
   {
     id: 4,
