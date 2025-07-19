@@ -35,18 +35,24 @@ const HeroSection: React.FC = () => {
             // Reload page to trigger the callback modal
             window.location.reload();
           }}
-          className="bg-[#1A1A1A]/90 backdrop-blur-md rounded-xl p-6 border border-[#333333]/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-16 h-16 bg-[#1A1A1A] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center border-2 border-white/20 hover:border-white/30"
           aria-label="Contact rapide"
-          title="Cliquez pour un contact rapide"
+          title="Contactez-nous - Un conseiller vous répond sous 1h"
         >
-          <img 
-            src="/Les assureurs experts copy.png" 
-            alt="IA FORMA PLUS - Contact rapide" 
-            className="w-36 h-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity duration-300"
-          />
+          {/* Logo IA FORMA PLUS centré dans le cercle */}
+          <div className="relative">
+            <img 
+              src="/Les assureurs experts copy.png" 
+              alt="IA FORMA PLUS - Contact rapide" 
+              className="w-10 h-auto object-contain opacity-95 group-hover:opacity-100 transition-all duration-300 filter brightness-0 invert"
+            />
+            
+            {/* Effet de halo au hover */}
+            <div className="absolute inset-0 bg-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+          </div>
           
-          {/* Shine effect that passes over the logo on hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out rounded-xl"></div>
+          {/* Effet de brillance circulaire au hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </button>
       </div>
 
