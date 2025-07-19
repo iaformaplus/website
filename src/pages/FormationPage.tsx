@@ -208,6 +208,252 @@ const formationsData = [
     evaluation: "Mise en situation, jeux de rôle et projet final"
   },
   {
+    slug: "automatisation-taches-ia-nocode",
+    title: "Automatisation des tâches avec l'IA (No Code / Low Code)",
+    category: "IA",
+    duration: "14 heures (2 jours)",
+    format: "Mixte",
+    level: "Débutant",
+    price: "990",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_vd2uluct.json",
+    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat de compétence en Automatisation IA",
+    description: "Formation pratique pour automatiser vos processus métier avec des outils d'IA no-code. Idéale pour les TPE/PME, indépendants et fonctions support souhaitant gagner en productivité.",
+    audience: ["TPE/PME", "Indépendants", "Fonctions support", "Entrepreneurs", "Assistants", "Managers"],
+    objectives: [
+      "Identifier les tâches automatisables dans votre organisation",
+      "Maîtriser les outils no-code d'automatisation (Zapier, Make, ChatGPT)",
+      "Créer des workflows automatisés intelligents",
+      "Mesurer l'impact et optimiser les automatisations"
+    ],
+    program: [
+      {
+        title: "Module 1: Fondamentaux de l'automatisation IA",
+        duration: "3h30",
+        content: [
+          "Introduction à l'automatisation intelligente",
+          "Panorama des outils no-code disponibles",
+          "Identification des processus automatisables",
+          "ROI et bénéfices de l'automatisation"
+        ]
+      },
+      {
+        title: "Module 2: Maîtrise des outils",
+        duration: "3h30",
+        content: [
+          "Zapier : automatisations simples et efficaces",
+          "Make : scénarios complexes et conditionnels",
+          "ChatGPT API : intégration dans les workflows",
+          "Connexion avec vos outils métier"
+        ]
+      },
+      {
+        title: "Module 3: Création de workflows",
+        duration: "3h30",
+        content: [
+          "Conception d'automatisations personnalisées",
+          "Gestion des erreurs et monitoring",
+          "Tests et optimisation des performances",
+          "Documentation et maintenance"
+        ]
+      },
+      {
+        title: "Module 4: Projet pratique",
+        duration: "3h30",
+        content: [
+          "Développement d'un projet d'automatisation",
+          "Déploiement et formation des équipes",
+          "Mesure des résultats",
+          "Plan d'amélioration continue"
+        ]
+      }
+    ],
+    prerequisites: "Connaissances de base en informatique. Aucune compétence technique requise",
+    evaluation: "Projet pratique d'automatisation + présentation + QCM"
+  },
+  {
+    slug: "maitriser-chatgpt-productivite",
+    title: "Maîtriser ChatGPT pour booster sa productivité",
+    category: "IA",
+    duration: "7 heures (1 jour)",
+    format: "E-learning",
+    level: "Débutant",
+    price: "490",
+    icon: "https://assets5.lottiefiles.com/packages/lf20_zwph1fkn.json",
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat de maîtrise ChatGPT professionnel",
+    description: "Formation complète pour utiliser ChatGPT efficacement dans votre travail quotidien. Apprenez à rédiger des prompts efficaces et à automatiser vos tâches répétitives.",
+    audience: ["Tous secteurs", "Professionnels", "Entrepreneurs", "Managers", "Assistants", "Consultants"],
+    objectives: [
+      "Comprendre le fonctionnement et les capacités de ChatGPT",
+      "Rédiger des prompts efficaces pour obtenir des résultats précis",
+      "Automatiser la création de contenus professionnels",
+      "Intégrer ChatGPT dans vos workflows quotidiens"
+    ],
+    program: [
+      {
+        title: "Module 1: Découverte de ChatGPT",
+        duration: "2h",
+        content: [
+          "Qu'est-ce que ChatGPT et comment ça fonctionne",
+          "Interface et fonctionnalités principales",
+          "Limites et bonnes pratiques",
+          "Versions et abonnements disponibles"
+        ]
+      },
+      {
+        title: "Module 2: Art du prompt engineering",
+        duration: "2h",
+        content: [
+          "Techniques de rédaction de prompts efficaces",
+          "Structuration des demandes complexes",
+          "Gestion du contexte et de la mémoire",
+          "Prompts templates pour différents usages"
+        ]
+      },
+      {
+        title: "Module 3: Applications professionnelles",
+        duration: "2h",
+        content: [
+          "Rédaction d'emails et de documents",
+          "Création de contenus marketing",
+          "Analyse et synthèse de données",
+          "Brainstorming et génération d'idées"
+        ]
+      },
+      {
+        title: "Module 4: Intégration et optimisation",
+        duration: "1h",
+        content: [
+          "Intégration dans vos outils existants",
+          "Automatisation avec des extensions",
+          "Mesure de l'impact sur votre productivité",
+          "Veille et évolutions futures"
+        ]
+      }
+    ],
+    prerequisites: "Aucun prérequis. Connaissances de base en informatique suffisantes",
+    evaluation: "QCM de validation + exercices pratiques + projet personnel"
+  },
+  {
+    slug: "creation-contenu-marketing-ia",
+    title: "Création de contenu marketing avec l'IA (texte, visuel, vidéo)",
+    category: "IA",
+    duration: "21 heures (3 jours)",
+    format: "Mixte",
+    level: "Intermédiaire",
+    price: "1490",
+    icon: "https://assets10.lottiefiles.com/packages/lf20_Ht6xCY9yVm.json",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat de création de contenu IA",
+    description: "Formation complète pour créer du contenu marketing professionnel avec l'IA. Maîtrisez les outils de création de texte, visuels et vidéos pour vos campagnes marketing.",
+    audience: ["Marketing", "Communication", "Indépendants", "Créateurs de contenu", "Community managers", "Entrepreneurs"],
+    objectives: [
+      "Créer des visuels professionnels avec Canva IA et Midjourney",
+      "Rédiger du contenu marketing optimisé avec ChatGPT",
+      "Produire des vidéos engageantes avec des outils IA",
+      "Développer une stratégie de contenu IA cohérente"
+    ],
+    program: [
+      {
+        title: "Module 1: Création de visuels IA",
+        duration: "7h",
+        content: [
+          "Maîtrise de Canva IA et ses fonctionnalités",
+          "Midjourney : prompts et techniques avancées",
+          "DALL-E et alternatives pour la création d'images",
+          "Optimisation des visuels pour différents supports"
+        ]
+      },
+      {
+        title: "Module 2: Rédaction de contenu IA",
+        duration: "7h",
+        content: [
+          "ChatGPT pour le copywriting marketing",
+          "Création de posts réseaux sociaux engageants",
+          "Rédaction d'articles de blog optimisés SEO",
+          "Newsletters et emails marketing automatisés"
+        ]
+      },
+      {
+        title: "Module 3: Production vidéo IA",
+        duration: "7h",
+        content: [
+          "Outils de création vidéo IA (Synthesia, Pictory)",
+          "Génération de scripts et voix off IA",
+          "Montage automatisé et effets visuels",
+          "Optimisation pour les plateformes sociales"
+        ]
+      }
+    ],
+    prerequisites: "Connaissances de base en marketing digital. Familiarité avec les réseaux sociaux",
+    evaluation: "Portfolio de créations IA + stratégie de contenu + présentation"
+  },
+  {
+    slug: "ia-commerciaux-script-relance-crm",
+    title: "IA pour les commerciaux : Script, relance, objection, CRM intelligent",
+    category: "IA",
+    duration: "14 heures (2 jours)",
+    format: "Présentiel",
+    level: "Intermédiaire",
+    price: "1190",
+    icon: "https://assets4.lottiefiles.com/packages/lf20_vvpbtksi.json",
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat IA pour la vente",
+    description: "Formation spécialisée pour les commerciaux souhaitant utiliser l'IA pour améliorer leurs performances. Apprenez à créer des scripts dynamiques, automatiser les relances et optimiser votre CRM.",
+    audience: ["Vendeurs", "Téléprospecteurs", "Business developers", "Responsables commerciaux", "Entrepreneurs", "Consultants"],
+    objectives: [
+      "Créer des scripts de vente dynamiques avec l'IA",
+      "Automatiser les relances et le suivi client",
+      "Traiter les objections avec l'aide de l'IA",
+      "Optimiser votre CRM avec des outils intelligents"
+    ],
+    program: [
+      {
+        title: "Module 1: Scripts de vente IA",
+        duration: "3h30",
+        content: [
+          "Création de scripts personnalisés avec ChatGPT",
+          "Adaptation automatique selon le profil client",
+          "Techniques de questionnement assistées par IA",
+          "Optimisation des argumentaires de vente"
+        ]
+      },
+      {
+        title: "Module 2: Automatisation des relances",
+        duration: "3h30",
+        content: [
+          "Séquences d'emails automatisées intelligentes",
+          "Personnalisation à grande échelle",
+          "Timing optimal des relances avec IA",
+          "Intégration avec votre CRM existant"
+        ]
+      },
+      {
+        title: "Module 3: Gestion des objections",
+        duration: "3h30",
+        content: [
+          "Base de données d'objections et réponses IA",
+          "Analyse des signaux d'achat avec IA",
+          "Techniques de closing assistées",
+          "Préparation d'entretiens avec IA"
+        ]
+      },
+      {
+        title: "Module 4: CRM intelligent",
+        duration: "3h30",
+        content: [
+          "Enrichissement automatique des fiches prospects",
+          "Scoring et qualification IA",
+          "Prédiction des ventes et pipeline",
+          "Tableaux de bord intelligents"
+        ]
+      }
+    ],
+    prerequisites: "Expérience en vente de 1 an minimum. Utilisation d'un CRM recommandée",
+    evaluation: "Mise en situation commerciale + création de scripts IA + projet CRM"
+  },
+  {
     slug: "e-commerce",
     title: "Créer et gérer une boutique E-commerce performante",
     category: "E-commerce",
