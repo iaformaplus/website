@@ -24,12 +24,6 @@ const HomePage: React.FC = () => {
    * Removes the localStorage flag that prevents the modal from showing
    * and reloads the page to trigger the modal display
    */
-  const openCallbackModal = () => {
-    // Remove the localStorage key to force modal display
-    localStorage.removeItem('callbackModalShown');
-    // Reload page to trigger the callback modal
-    window.location.reload();
-  };
 
   return (
     <>
@@ -81,8 +75,8 @@ const HomePage: React.FC = () => {
             {/* Primary action buttons with clear hierarchy */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {/* Primary CTA - Contact form */}
-              <button
-                onClick={openCallbackModal}
+              <Link
+                to="/contact"
                 className="btn-action group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -90,11 +84,11 @@ const HomePage: React.FC = () => {
                   <MessageCircle size={20} className="mr-2" />
                   Prendre contact
                 </div>
-              </button>
+              </Link>
               
               {/* Secondary CTA - Callback request */}
-              <button
-                onClick={openCallbackModal}
+              <Link
+                to="/contact"
                 className="btn group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -102,7 +96,7 @@ const HomePage: React.FC = () => {
                   <Phone size={20} className="mr-2" />
                   Être rappelé
                 </div>
-              </button>
+              </Link>
             </div>
             
             {/* Trust indicators and service promises */}

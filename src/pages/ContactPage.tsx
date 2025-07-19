@@ -525,14 +525,14 @@ const ContactPage: React.FC = () => {
                 <div className="relative flex items-center justify-center">
                   <Send size={20} className="mr-2" />
                   Prendre contact
-                </div>
-              </Link>
-              <a 
+                </Link>
+                <a 
+                  href="tel:0162177770"
                 href="tel:0162177770"
                 className="btn group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <div className="relative flex items-center justify-center">
+                </a>
                   <Phone size={20} className="mr-2" />
                   Être rappelé
                 </div>
@@ -556,8 +556,8 @@ const ContactPage: React.FC = () => {
                 </p>
                 <a 
                   href="https://wa.me/33749625335"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366]/50 focus:ring-offset-2"
                 >
                   <svg 

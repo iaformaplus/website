@@ -276,12 +276,12 @@ const BlogPage = () => {
                 >
                   Voir les formations IA
                 </Button>
-                <button
-                  onClick={() => window.location.href = '/contact'}
+                <Link
+                  to="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[#1877F2] hover:bg-[#166fe5] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Demander un devis
-                </button>
+                </Link>
               </div>
             </div>
           </div>
