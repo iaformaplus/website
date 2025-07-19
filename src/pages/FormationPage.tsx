@@ -206,6 +206,86 @@ const formationsData = [
     ],
     prerequisites: "Expérience commerciale de 2 ans minimum",
     evaluation: "Mise en situation, jeux de rôle et projet final"
+  },
+  {
+    slug: "e-commerce",
+    title: "Créer et gérer une boutique E-commerce performante",
+    category: "E-commerce",
+    duration: "35 heures (5 jours)",
+    format: "Mixte",
+    level: "Intermédiaire",
+    price: "2490",
+    icon: "https://assets8.lottiefiles.com/packages/lf20_qp1q7sce.json",
+    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat de compétence en E-commerce et vente en ligne",
+    description: "Formation pratique et complète pour créer, lancer et optimiser une boutique e-commerce rentable. Apprenez toutes les étapes de la création d'une activité en ligne, de la conception à la gestion quotidienne.",
+    audience: ["Entrepreneurs", "Commerçants", "Porteurs de projet", "Responsables marketing", "Freelances", "Reconversion professionnelle"],
+    objectives: [
+      "Concevoir et créer une boutique e-commerce attractive et fonctionnelle",
+      "Maîtriser les outils de gestion (CMS, paiement, logistique)",
+      "Développer une stratégie marketing digital efficace",
+      "Optimiser les conversions et fidéliser la clientèle",
+      "Gérer les aspects juridiques et fiscaux du e-commerce"
+    ],
+    program: [
+      {
+        title: "Module 1: Stratégie et conception e-commerce",
+        duration: "7h",
+        content: [
+          "Étude de marché et analyse concurrentielle",
+          "Définition du business model et positionnement",
+          "Choix de la plateforme e-commerce (Shopify, WooCommerce, PrestaShop)",
+          "Architecture et ergonomie de la boutique",
+          "Création de l'identité visuelle et charte graphique"
+        ]
+      },
+      {
+        title: "Module 2: Création et paramétrage technique",
+        duration: "7h",
+        content: [
+          "Installation et configuration de la plateforme",
+          "Création des fiches produits optimisées",
+          "Paramétrage des moyens de paiement sécurisés",
+          "Configuration de la logistique et livraison",
+          "Optimisation SEO technique et référencement"
+        ]
+      },
+      {
+        title: "Module 3: Marketing digital et acquisition",
+        duration: "7h",
+        content: [
+          "Stratégie de contenu et storytelling",
+          "Publicité en ligne (Google Ads, Facebook Ads)",
+          "Email marketing et automation",
+          "Réseaux sociaux et influence marketing",
+          "Partenariats et affiliation"
+        ]
+      },
+      {
+        title: "Module 4: Optimisation et conversion",
+        duration: "7h",
+        content: [
+          "Analyse des performances avec Google Analytics",
+          "Optimisation du taux de conversion (CRO)",
+          "Gestion de la relation client et SAV",
+          "Stratégies de fidélisation et rétention",
+          "A/B testing et amélioration continue"
+        ]
+      },
+      {
+        title: "Module 5: Gestion et développement",
+        duration: "7h",
+        content: [
+          "Aspects juridiques et RGPD",
+          "Gestion comptable et fiscale",
+          "Scaling et développement international",
+          "Marketplace et multi-canal",
+          "Projet final : lancement de votre boutique"
+        ]
+      }
+    ],
+    prerequisites: "Connaissances de base en informatique et navigation web. Projet e-commerce défini ou en cours de réflexion",
+    evaluation: "Projet pratique de création d'une boutique e-commerce + présentation orale + QCM de validation des acquis"
   }
 ];
 
