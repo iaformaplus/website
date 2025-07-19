@@ -3,7 +3,7 @@ import HeroSection from '../components/home/HeroSection';
 import PopularFormations from '../components/home/PopularFormations';
 import AIFormationsSection from '../components/home/AIFormationsSection';
 import AIQAAnimation from '../components/common/AIQAAnimation';
-import { ArrowRight, Award, Clock, User, BookOpen, Users, Building, Laptop, Globe, Zap, Phone, MessageCircle } from 'lucide-react';
+import { ArrowRight, Award, Clock, User, BookOpen, Users, Building, Laptop, Globe, Zap, Phone, MessageCircle, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -159,10 +159,10 @@ const HomePage: React.FC = () => {
                   Sessions accessibles à tous dans nos centres ou à distance, idéales pour monter en compétences rapidement.
                 </p>
                 {/* Call-to-action link */}
-                <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <Link to="/format/inter-entreprise" className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm">En savoir plus</span>
                   <ArrowRight size={16} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -179,10 +179,10 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Organisées à la date de votre choix, au sein de votre structure, pour répondre aux besoins concrets de vos équipes.
                 </p>
-                <div className="flex items-center text-purple-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <Link to="/format/intra-entreprise" className="flex items-center text-purple-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm">En savoir plus</span>
                   <ArrowRight size={16} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -199,10 +199,10 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Accompagnement personnalisé selon vos objectifs, votre secteur, et vos enjeux métiers spécifiques.
                 </p>
-                <div className="flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <Link to="/format/sur-mesure" className="flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm">En savoir plus</span>
                   <ArrowRight size={16} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -219,10 +219,10 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Modules 100% digitaux, accessibles à votre rythme, sur tous supports (vidéo, PDF, interactif...).
                 </p>
-                <div className="flex items-center text-orange-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <Link to="/format/e-learning" className="flex items-center text-orange-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm">En savoir plus</span>
                   <ArrowRight size={16} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -239,10 +239,10 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Clés des nouvelles méthodes d'apprentissage : classes virtuelles, vidéos, IA, outils immersifs.
                 </p>
-                <div className="flex items-center text-indigo-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                <Link to="/format/digital-learning" className="flex items-center text-indigo-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm">En savoir plus</span>
                   <ArrowRight size={16} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -351,6 +351,218 @@ const HomePage: React.FC = () => {
                 <AIQAAnimation />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 
+        FORMATIONS SÉCURITÉ SECTION
+        Nouvelle section dédiée aux formations sécurité
+        Positionnée après les formations IA pour diversifier l'offre
+      */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl mb-6 shadow-lg">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              🛡️ Formations Sécurité
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Formations obligatoires et certifiantes pour garantir la sécurité de vos équipes et la conformité 
+              de votre entreprise aux réglementations en vigueur.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Sécurité incendie */}
+            <div className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-red-200 hover:translate-y-[-2px]">
+              <div className="relative overflow-hidden h-48">
+                <img 
+                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Sécurité incendie"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-red-500 to-orange-600 text-white shadow-sm">
+                    🔥 Obligatoire
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-red-600 transition-colors line-clamp-2 leading-tight">
+                  Sécurité incendie
+                </h3>
+                <div className="flex items-start mb-3">
+                  <Target size={14} className="mr-2 text-red-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600 line-clamp-2">
+                    <strong>Objectif :</strong> Prévenir les risques et réagir efficacement en cas d'incendie
+                  </span>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 group-hover:bg-red-50/50 transition-colors">
+                <Link 
+                  to="/formations/securite-incendie"
+                  className="flex justify-between items-center w-full"
+                >
+                  <span 
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105 group-hover:translate-x-1"
+                    style={{ backgroundColor: '#1877F2' }}
+                  >
+                    Voir détails
+                  </span>
+                  <ArrowRight size={16} className="text-red-600 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* SST */}
+            <div className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-green-200 hover:translate-y-[-2px]">
+              <div className="relative overflow-hidden h-48">
+                <img 
+                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="SST"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-sm">
+                    ⛑️ Certifiant
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-green-600 transition-colors line-clamp-2 leading-tight">
+                  Sauveteur Secouriste du Travail (SST)
+                </h3>
+                <div className="flex items-start mb-3">
+                  <Target size={14} className="mr-2 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600 line-clamp-2">
+                    <strong>Objectif :</strong> Formation SST certifiante – minimum 4 stagiaires
+                  </span>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 group-hover:bg-green-50/50 transition-colors">
+                <Link 
+                  to="/formations/sauveteur-secouriste-travail-sst"
+                  className="flex justify-between items-center w-full"
+                >
+                  <span 
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105 group-hover:translate-x-1"
+                    style={{ backgroundColor: '#1877F2' }}
+                  >
+                    Voir détails
+                  </span>
+                  <ArrowRight size={16} className="text-green-600 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Hygiène & Sécurité */}
+            <div className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 hover:translate-y-[-2px]">
+              <div className="relative overflow-hidden h-48">
+                <img 
+                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Hygiène & Sécurité"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-sm">
+                    🏭 Conformité
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
+                  Hygiène & Sécurité au travail
+                </h3>
+                <div className="flex items-start mb-3">
+                  <Target size={14} className="mr-2 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600 line-clamp-2">
+                    <strong>Objectif :</strong> Garantir des conditions de travail conformes et saines
+                  </span>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 group-hover:bg-blue-50/50 transition-colors">
+                <Link 
+                  to="/formations/hygiene-securite-travail"
+                  className="flex justify-between items-center w-full"
+                >
+                  <span 
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105 group-hover:translate-x-1"
+                    style={{ backgroundColor: '#1877F2' }}
+                  >
+                    Voir détails
+                  </span>
+                  <ArrowRight size={16} className="text-blue-600 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Cybersécurité */}
+            <div className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-purple-200 hover:translate-y-[-2px]">
+              <div className="relative overflow-hidden h-48">
+                <img 
+                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Cybersécurité"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-sm">
+                    🔒 Digital
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-purple-600 transition-colors line-clamp-2 leading-tight">
+                  Cybersécurité pour les professionnels
+                </h3>
+                <div className="flex items-start mb-3">
+                  <Target size={14} className="mr-2 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600 line-clamp-2">
+                    <strong>Objectif :</strong> Protéger les données, systèmes et communications de l'entreprise
+                  </span>
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 group-hover:bg-purple-50/50 transition-colors">
+                <Link 
+                  to="/formations/cybersecurite-professionnels"
+                  className="flex justify-between items-center w-full"
+                >
+                  <span 
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105 group-hover:translate-x-1"
+                    style={{ backgroundColor: '#1877F2' }}
+                  >
+                    Voir détails
+                  </span>
+                  <ArrowRight size={16} className="text-purple-600 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link 
+              to="/formations-professionnelles" 
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              style={{ backgroundColor: '#1877F2' }}
+            >
+              <span className="mr-2">🛡️</span>
+              Voir toutes nos formations sécurité
+              <ArrowRight size={20} className="ml-2" />
+            </Link>
           </div>
         </div>
       </section>

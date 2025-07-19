@@ -10,6 +10,7 @@ import WebinairsPage from './pages/WebinairsPage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import FormatPage from './pages/FormatPage';
 import CGUPage from './pages/CGUPage';
 import CGVPage from './pages/CGVPage';
 import CookieBanner from './components/common/CookieBanner';
