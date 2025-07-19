@@ -4,6 +4,94 @@ import { ArrowLeft, Users, Laptop, Building, Award, Zap, CheckCircle, Clock, Glo
 
 // Format data with detailed information
 const formatsData = {
+  "presentiel": {
+    title: "Formations en Présentiel",
+    icon: Users,
+    color: "blue",
+    definition: "Sessions de formation organisées dans nos centres ou dans vos locaux, avec un formateur présent physiquement pour un accompagnement personnalisé et des échanges directs.",
+    advantages: [
+      "Interaction directe avec le formateur",
+      "Échanges enrichissants entre participants",
+      "Manipulation d'équipements réels",
+      "Concentration optimale sans distractions",
+      "Networking et création de liens professionnels"
+    ],
+    useCases: [
+      "Formations techniques nécessitant de la pratique",
+      "Apprentissage de logiciels complexes",
+      "Formations sécurité avec manipulation",
+      "Développement de compétences relationnelles",
+      "Formations certifiantes exigeantes"
+    ],
+    functioning: "Sessions organisées dans nos centres équipés ou dans vos locaux. Groupes de 4 à 12 participants maximum. Matériel pédagogique fourni. Pauses et déjeuner inclus selon la durée.",
+    qualiopi: "Toutes nos formations présentielles sont certifiées Qualiopi. Elles bénéficient d'un suivi pédagogique renforcé et sont éligibles à tous les dispositifs de financement (OPCO, CPF, plan de formation)."
+  },
+  "distanciel": {
+    title: "Formations en Distanciel",
+    icon: Laptop,
+    color: "green",
+    definition: "Classes virtuelles en direct avec un formateur expert, utilisant des outils collaboratifs modernes pour recréer l'expérience d'une formation présentielle.",
+    advantages: [
+      "Pas de déplacement nécessaire",
+      "Flexibilité géographique totale",
+      "Outils collaboratifs modernes",
+      "Enregistrement des sessions disponible",
+      "Coût réduit (pas de frais de déplacement)"
+    ],
+    useCases: [
+      "Équipes dispersées géographiquement",
+      "Contraintes de déplacement",
+      "Formations théoriques et conceptuelles",
+      "Mise à jour de compétences rapide",
+      "Formations en langues étrangères"
+    ],
+    functioning: "Classes virtuelles via plateforme dédiée (Zoom, Teams). Sessions interactives avec partage d'écran, tableaux blancs collaboratifs, salles de sous-groupes. Support technique inclus.",
+    qualiopi: "Nos formations distancielles sont certifiées Qualiopi avec traçabilité complète des connexions et interactions. Éligibles aux mêmes financements que le présentiel."
+  },
+  "elearning": {
+    title: "Formations E-learning",
+    icon: BookOpen,
+    color: "purple",
+    definition: "Modules de formation 100% autonomes, accessibles 24h/24 sur notre plateforme LMS, avec contenus interactifs, quiz et suivi personnalisé de progression.",
+    advantages: [
+      "Apprentissage à votre rythme",
+      "Accès 24h/24, 7j/7",
+      "Répétition illimitée des modules",
+      "Suivi détaillé de la progression",
+      "Coût très compétitif"
+    ],
+    useCases: [
+      "Emplois du temps très contraints",
+      "Apprentissage en autonomie",
+      "Remise à niveau rapide",
+      "Formations de masse en entreprise",
+      "Préparation à une certification"
+    ],
+    functioning: "Plateforme LMS accessible via navigateur. Modules vidéo HD, documents PDF, exercices interactifs, quiz d'évaluation. Support pédagogique par email ou chat.",
+    qualiopi: "Modules e-learning certifiés Qualiopi avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Éligibles CPF et financements OPCO."
+  },
+  "mixte": {
+    title: "Formations Mixtes (Blended Learning)",
+    icon: Zap,
+    color: "orange",
+    definition: "Combinaison optimale de présentiel, distanciel et e-learning pour maximiser l'efficacité pédagogique selon les objectifs de chaque module.",
+    advantages: [
+      "Flexibilité maximale d'organisation",
+      "Pédagogie adaptée à chaque contenu",
+      "Optimisation des coûts et du temps",
+      "Suivi continu et personnalisé",
+      "Meilleur taux de réussite"
+    ],
+    useCases: [
+      "Formations longues et complexes",
+      "Alternance théorie/pratique",
+      "Contraintes organisationnelles variées",
+      "Parcours de professionnalisation",
+      "Formations diplômantes"
+    ],
+    functioning: "Parcours personnalisé combinant sessions présentielles pour la pratique, classes virtuelles pour les échanges, et modules e-learning pour la théorie. Planning adapté à vos contraintes.",
+    qualiopi: "Parcours mixtes certifiés Qualiopi avec traçabilité de toutes les modalités. Évaluation continue et finale. Financement possible selon la répartition des modalités."
+  },
   "inter-entreprise": {
     title: "Formations Inter-entreprises",
     icon: Users,

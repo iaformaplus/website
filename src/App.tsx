@@ -30,6 +30,7 @@ function App() {
           <Route path="formations-ia" element={<FormationsIAPage />} />
           <Route path="formations-professionnelles" element={<FormationsProfessionnellesPage />} />
           <Route path="formations-particuliers" element={<FormationsParticuliersPage />} />
+          <Route path="format/:format" element={<FormatPage />} />
           <Route path="webinaires" element={<WebinairsPage />} />
           <Route path="a-propos" element={<AboutPage />} />
           <Route path="blog" element={<BlogPage />} />
