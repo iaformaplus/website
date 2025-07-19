@@ -6,23 +6,23 @@ const WebinairsPage = () => {
   const webinars = [
     {
       title: "IA & Marketing Digital",
-      date: "Jeudi 6 juin à 14h",
+      date: "Mardi 24 septembre à 14h00",
       description: "Découvrez comment l'IA révolutionne le marketing digital et comment l'intégrer dans votre stratégie.",
-      speaker: "Marie Laurent",
+      speaker: "Marie",
       role: "Experte Marketing Digital"
     },
     {
       title: "Gagner du temps avec ChatGPT",
-      date: "Lundi 10 juin à 11h",
+      date: "Jeudi 26 septembre à 11h30",
       description: "Apprenez à utiliser ChatGPT efficacement pour automatiser vos tâches quotidiennes.",
-      speaker: "Thomas Dubois",
+      speaker: "Thomas",
       role: "Consultant IA"
     },
     {
       title: "Réussir sa reconversion avec l'IA",
-      date: "Vendredi 14 juin à 17h",
+      date: "Lundi 30 septembre à 18h00",
       description: "Comment l'IA peut vous aider à accélérer votre reconversion professionnelle.",
-      speaker: "Sophie Girard",
+      speaker: "Sophie",
       role: "Coach en Transition Professionnelle"
     }
   ];
