@@ -92,3 +92,4 @@ import TypingEffect from '../common/TypingEffect';
 };
 
 export default HeroSection;
+  )
