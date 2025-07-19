@@ -37,8 +37,8 @@ const formationData = [
     duration: "35h",
     format: "Présentiel",
     level: "Intermédiaire",
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    fallbackImage: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    fallbackImage: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "e-commerce",
     excerpt: "Formation pratique pour lancer et optimiser votre activité en ligne. Apprenez à créer, gérer et développer une boutique e-commerce rentable.",
     price: "2490€ HT"
@@ -133,7 +133,9 @@ const PopularFormations: React.FC = () => {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                <span className="block leading-tight">
                   {formation.title}
+                </span>
                 </h3>
                 
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
