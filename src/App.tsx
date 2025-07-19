@@ -34,6 +34,7 @@ function App() {
           <Route path="webinaires" element={<WebinairsPage />} />
           <Route path="a-propos" element={<AboutPage />} />
           <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/actualite-ia" element={<BlogPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="cgu" element={<CGUPage />} />
           <Route path="cgv" element={<CGVPage />} />
