@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Users, Laptop, Building, Award, Zap, CheckCircle, Clock, Globe, Phone, Mail } from 'lucide-react';
+import { ArrowLeft, Users, Laptop, Building, Award, Zap, CheckCircle, Clock, Globe, Phone, Mail, BookOpen } from 'lucide-react';
 
 // Format data with detailed information
 const formatsData = {
