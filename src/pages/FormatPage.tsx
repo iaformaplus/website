@@ -178,7 +178,7 @@ const FormatPage: React.FC = () => {
                 <div className={`w-8 h-8 bg-gradient-to-br ${colorClasses[formatData.color as keyof typeof colorClasses].split(' ')[0]} ${colorClasses[formatData.color as keyof typeof colorClasses].split(' ')[1]} rounded-full flex items-center justify-center mr-3`}>
                   <span className="text-white font-bold text-sm">?</span>
                 </div>
-                Qu'est-ce que c'est ?
+                Qu'est-ce que c\'est ?
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed">{formatData.definition}</p>
             </div>
