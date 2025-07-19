@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedIcon from '../common/AnimatedIcon';
 import TypingEffect from '../common/TypingEffect';
+
+const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-gray-900 to-secondary overflow-hidden">
       {/* Background Image Overlay */}
@@ -13,7 +15,8 @@ import TypingEffect from '../common/TypingEffect';
       {/* Company Logo - Top Right Corner */}
       {/* Floating logo with glassmorphism effect, hidden on mobile for better UX */}
       <div className="absolute top-6 right-6 z-20 hidden md:block">
-        {/* Badge institutionnel avec rubans pour contact */}
+      </div>
+      
       {/* Main Content Container */}
       <div className="container relative z-10 py-14 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -92,4 +95,3 @@ import TypingEffect from '../common/TypingEffect';
 };
 
 export default HeroSection;
-  )
