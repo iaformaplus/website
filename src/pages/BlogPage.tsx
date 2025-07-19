@@ -265,7 +265,7 @@ const BlogPage = () => {
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Transformez ces connaissances en compétences concrètes avec nos formations 
-                certifiantes en intelligence artificielle.
+                délivrant un certificat de réalisation en intelligence artificielle.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

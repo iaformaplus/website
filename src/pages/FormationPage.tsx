@@ -315,7 +315,7 @@ const FormationPage: React.FC = () => {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle size={16} className="text-primary mr-2" />
-                    <span className="text-sm">Certification incluse</span>
+                    <span className="text-sm">Certificat de réalisation</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle size={16} className="text-primary mr-2" />

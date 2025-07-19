@@ -654,6 +654,10 @@ const FormationsIAPage = () => {
                               <Star size={18} className="mr-2" />
                               <span>À partir de {formation.price}€ HT</span>
                             </div>
+                            <div className="flex items-center text-gray-600 mt-2">
+                              <Award size={16} className="mr-2 text-primary" />
+                              <span className="text-sm">Certificat de réalisation</span>
+                            </div>
                           </div>
 
                           {/* Expanded Details */}

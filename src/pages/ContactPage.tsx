@@ -477,7 +477,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-medium">Certifié Qualiopi</p>
-                      <p className="text-gray-300 text-sm">Garantie de qualité reconnue par l'État</p>
+                      <p className="text-gray-300 text-sm">Certificat de réalisation + garantie qualité</p>
                     </div>
                   </div>
                   <div className="flex items-start">

@@ -252,7 +252,7 @@ const CGVPage: React.FC = () => {
                       <li>Manuel de formation au format PDF</li>
                       <li>Exercices pratiques et corrigés</li>
                       <li>Accès aux ressources en ligne (si applicable)</li>
-                      <li>Certificat de réalisation en fin de formation</li>
+                      <li>Certificat de réalisation délivré en fin de formation</li>
                     </ul>
                   </div>
                   

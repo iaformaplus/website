@@ -97,7 +97,7 @@ const WebinairsPage = () => {
               <div className="p-4">
                 <div className="text-2xl mb-2">📱</div>
                 <h3 className="font-semibold mb-2">Replay disponible</h3>
-                <p className="text-gray-600">Accès aux enregistrements pendant 30 jours</p>
+                <p className="text-gray-600">Accès aux enregistrements pendant 30 jours + certificat de participation</p>
               </div>
             </div>
           </div>

@@ -30,7 +30,8 @@ const FormationsParticuliersPage = () => {
             <div className="text-3xl mb-4">🎓</div>
             <h3 className="text-xl font-semibold mb-4">Formations accessibles</h3>
             <p className="text-gray-600">
-              Modules adaptés aux débutants, financement personnel ou CPF, accompagnement pédagogique humain.
+              Modules adaptés aux débutants, financement personnel ou CPF, accompagnement pédagogique humain. 
+              Certificat de réalisation délivré en fin de formation.
             </p>
           </div>
           

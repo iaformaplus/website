@@ -949,6 +949,10 @@ const FormationsProfessionnellesPage = () => {
                               <BookOpen size={18} className="mr-2 text-primary" />
                               <span>{formation.format}</span>
                             </div>
+                            <div className="flex items-center text-gray-600">
+                              <Award size={18} className="mr-2 text-primary" />
+                              <span className="text-sm">Certificat de réalisation</span>
+                            </div>
                           </div>
 
                           {/* Expanded Details */}
