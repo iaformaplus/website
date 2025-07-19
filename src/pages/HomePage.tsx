@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import PopularFormations from '../components/home/PopularFormations';
+import AIFormationsSection from '../components/home/AIFormationsSection';
 import AIQAAnimation from '../components/common/AIQAAnimation';
 import { ArrowRight, Award, Clock, User, BookOpen, Users, Building, Laptop, Globe, Zap, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,6 +39,13 @@ const HomePage: React.FC = () => {
         Contains the main value proposition and entry points for different user types
       */}
       <HeroSection />
+      
+      {/* 
+        AI FORMATIONS SECTION
+        Showcases the most requested AI training programs
+        Positioned prominently after hero to capture AI-interested visitors
+      */}
+      <AIFormationsSection />
       
       {/* 
         POPULAR FORMATIONS SECTION
