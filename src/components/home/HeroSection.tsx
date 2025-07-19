@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 import AnimatedIcon from '../common/AnimatedIcon';
 import TypingEffect from '../common/TypingEffect';
+import LogoContactModal from '../common/LogoContactModal';
 
 /**
  * HeroSection Component
@@ -27,13 +28,7 @@ const HeroSection: React.FC = () => {
       {/* Company Logo - Top Right Corner */}
       {/* Floating logo with glassmorphism effect, hidden on mobile for better UX */}
       <div className="absolute top-6 right-6 z-20 hidden md:block">
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-          <img 
-            src="/1.jpg" 
-            alt="IA FORMA PLUS - Logo" 
-            className="w-24 h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-          />
-        </div>
+        <LogoContactModal />
       </div>
 
       {/* Main Content Container */}
