@@ -6,7 +6,7 @@ import Button from '../common/Button';
 const formationData = [
   {
     id: 1,
-    title: "Habilitation véhicules électriques B1-B2",
+    title: "Habilitation véhicules électriques B1VL-B2VL",
     category: "Technique",
     duration: "21h",
     format: "Présentiel",

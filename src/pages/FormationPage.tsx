@@ -7,8 +7,8 @@ import AnimatedIcon from '../components/common/AnimatedIcon';
 // Mock data for formations
 const formationsData = [
   {
-    slug: "habilitation-vehicules-electriques-b1-b2",
-    title: "Habilitation véhicules électriques B1-B2",
+    slug: "habilitation-vehicules-electriques-b1vl-b2vl",
+    title: "Habilitation véhicules électriques B1VL-B2VL",
     category: "Technique",
     duration: "21 heures (3 jours)",
     format: "Présentiel",
