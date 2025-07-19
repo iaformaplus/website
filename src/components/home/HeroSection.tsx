@@ -28,28 +28,26 @@ const HeroSection: React.FC = () => {
       {/* Company Logo - Top Right Corner */}
       {/* Floating logo with glassmorphism effect, hidden on mobile for better UX */}
       <div className="absolute top-6 right-6 z-20 hidden md:block">
-        {/* Bouton circulaire style certificat/diplôme - 2cm de diamètre */}
-        <button
-          onClick={() => {
-            // Remove the localStorage flag to force modal display
-            localStorage.removeItem('callbackModalShown');
-            // Reload page to trigger the callback modal
-            window.location.reload();
-          }}
-          className="btn-certificat group"
-          aria-label="Contact rapide"
-          title="Contactez-nous - Un conseiller vous répond sous 1h"
+        {/* Grand bouton circulaire IA pour contact */}
+        <Link 
+          to="/contact"
+          className="btn-ia-hero group"
+          aria-label="Contacter notre équipe IA"
+          title="Contactez notre équipe - Formations IA"
         >
-          {/* Logo IA FORMA PLUS centré */}
+          {/* Logo IA FORMA PLUS centré avec animation pulse */}
           <img 
             src="/Les assureurs experts copy.png" 
-            alt="IA FORMA PLUS - Contact rapide" 
-            className="w-12 h-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
+            alt="Contact IA FORMA PLUS" 
+            className="w-16 h-auto object-contain opacity-95 group-hover:opacity-100 transition-all duration-300 group-hover:animate-pulse"
           />
           
-          {/* Effet de surbrillance au hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        </button>
+          {/* Effet de lumière qui traverse le bouton au hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform -skew-x-12 -translate-x-full group-hover:translate-x-full"></div>
+          
+          {/* Halo coloré qui apparaît au hover */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 via-fuchsia-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm scale-110"></div>
+        </Link>
       </div>
 
       {/* Main Content Container */}
