@@ -219,7 +219,7 @@ const BlogPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
               <strong>Bienvenue sur notre Blog IA</strong><br />
-              Actualités, conseils, cas d'usage et débats autour de l'intelligence artificielle 
+              Actualités, conseils, cas d'usage et débats autour de l\'intelligence artificielle 
               dans tous les secteurs professionnels.
             </p>
             
