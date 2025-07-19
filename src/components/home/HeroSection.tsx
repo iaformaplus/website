@@ -28,7 +28,26 @@ const HeroSection: React.FC = () => {
       {/* Company Logo - Top Right Corner */}
       {/* Floating logo with glassmorphism effect, hidden on mobile for better UX */}
       <div className="absolute top-6 right-6 z-20 hidden md:block">
-        <LogoContactModal />
+        <button
+          onClick={() => {
+            // Remove the localStorage flag to force modal display
+            localStorage.removeItem('callbackModalShown');
+            // Reload page to trigger the callback modal
+            window.location.reload();
+          }}
+          className="bg-[#1A1A1A]/90 backdrop-blur-md rounded-xl p-6 border border-[#333333]/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Contact rapide"
+          title="Cliquez pour un contact rapide"
+        >
+          <img 
+            src="/Les assureurs experts copy.png" 
+            alt="IA FORMA PLUS - Contact rapide" 
+            className="w-36 h-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+          />
+          
+          {/* Shine effect that passes over the logo on hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out rounded-xl"></div>
+        </button>
       </div>
 
       {/* Main Content Container */}
