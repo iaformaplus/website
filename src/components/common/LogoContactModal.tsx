@@ -118,17 +118,30 @@ const LogoContactModal: React.FC = () => {
     document.body.style.overflow = 'unset';
   };
 
+  // Gestion de la fermeture par touche Escape
+  React.useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        closeModal();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }
+  }, [isOpen]);
   return (
     <>
       {/* Logo cliquable */}
       <button
         onClick={openModal}
-        className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer group"
+        className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-white/50"
         aria-label="Contact rapide"
         title="Cliquez pour un contact rapide"
       >
         <img 
-          src="/1.jpg" 
+          src="/Les assureurs experts copy.png" 
           alt="IA FORMA PLUS - Contact rapide" 
           className="w-24 h-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
         />
@@ -141,10 +154,13 @@ const LogoContactModal: React.FC = () => {
           <div 
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 animate-fade-in"
             onClick={closeModal}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-modal-title"
           />
           
           {/* Modal centré */}
-          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 w-[480px] max-w-[90vw] max-h-[90vh] overflow-y-auto border border-white/20 animate-slide-up">
+          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 md:p-8 w-[320px] sm:w-[480px] max-w-[90vw] max-h-[90vh] overflow-y-auto border border-white/20 animate-slide-up">
             
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
@@ -153,7 +169,7 @@ const LogoContactModal: React.FC = () => {
                   <Phone className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800">Contact rapide</h2>
+                  <h2 id="contact-modal-title" className="text-xl md:text-2xl font-bold text-gray-800">Contact rapide</h2>
                   <div className="flex items-center text-sm text-green-600 font-medium">
                     <Clock size={14} className="mr-1" />
                     💡 Un conseiller IA vous répond sous 1h
@@ -184,7 +200,7 @@ const LogoContactModal: React.FC = () => {
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Prénom et Nom */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="flex items-center text-sm font-medium text-gray-700 mb-2">
                       <User size={14} className="mr-2 text-blue-600" />
@@ -197,7 +213,7 @@ const LogoContactModal: React.FC = () => {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
                       placeholder="Votre prénom"
                     />
                   </div>
@@ -213,7 +229,7 @@ const LogoContactModal: React.FC = () => {
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -232,7 +248,7 @@ const LogoContactModal: React.FC = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
+                    className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
                     placeholder="06 12 34 56 78"
                     inputMode="numeric"
                   />
@@ -251,7 +267,7 @@ const LogoContactModal: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
+                    className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all"
                     placeholder="votre.email@entreprise.com"
                   />
                 </div>
@@ -267,8 +283,8 @@ const LogoContactModal: React.FC = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all resize-none"
+                    rows={2}
+                    className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-gray-200/70 bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-300/50 focus:border-blue-300/50 transition-all resize-none"
                     placeholder="Décrivez brièvement votre besoin en formation..."
                   />
                 </div>
@@ -277,7 +293,7 @@ const LogoContactModal: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-4 px-6 rounded-xl font-medium text-base tracking-wide transition-all duration-300 ${
+                  className={`w-full py-3 md:py-4 px-4 md:px-6 rounded-xl font-medium text-sm md:text-base tracking-wide transition-all duration-300 ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed text-white'
                       : 'bg-[#1877F2] hover:bg-[#166fe5] text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02]'
@@ -285,12 +301,12 @@ const LogoContactModal: React.FC = () => {
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-2"></div>
+                      <div className="animate-spin rounded-full h-4 w-4 md:h-5 md:w-5 border-2 border-white border-t-transparent mr-2"></div>
                       Envoi en cours...
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
-                      <Phone size={18} className="mr-2" />
+                      <Phone size={16} className="mr-2 md:w-[18px] md:h-[18px]" />
                       Être rappelé
                     </div>
                   )}
@@ -304,10 +320,10 @@ const LogoContactModal: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
                   Merci {formData.firstName} !
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
                   Votre demande a été transmise avec succès. Un de nos conseillers IA vous contactera sous 1h pour répondre à vos questions.
                 </p>
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
