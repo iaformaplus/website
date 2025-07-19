@@ -454,6 +454,221 @@ const formationsData = [
     evaluation: "Mise en situation commerciale + création de scripts IA + projet CRM"
   },
   {
+    slug: "habilitation-vehicules-electriques-b1vl-b2vl",
+    title: "Habilitation électrique véhicules légers B1VL-B2VL",
+    category: "Sécurité",
+    duration: "14 heures (2 jours)",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "890",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_u4qemvpl.json",
+    image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Habilitation électrique B1VL-B2VL",
+    description: "Formation obligatoire pour intervenir en sécurité sur les véhicules électriques et hybrides selon la norme NF C18-550.",
+    audience: ["Mécaniciens", "Techniciens automobiles", "Carrossiers", "Responsables d'atelier"],
+    objectives: [
+      "Identifier les risques électriques sur véhicules électriques/hybrides",
+      "Appliquer les mesures de sécurité lors des interventions",
+      "Réaliser des opérations d'ordre électrique en sécurité",
+      "Obtenir l'habilitation B1VL-B2VL obligatoire"
+    ],
+    program: [
+      {
+        title: "Module 1: Fondamentaux électriques",
+        duration: "3h30",
+        content: ["Principes de l'électricité automobile", "Architecture véhicules électriques/hybrides", "Composants haute tension", "Dangers du courant électrique"]
+      },
+      {
+        title: "Module 2: Sécurité et prévention",
+        duration: "3h30",
+        content: ["Équipements de protection individuelle", "Procédures de consignation", "Conduite à tenir en cas d'accident", "Réglementation NF C18-550"]
+      },
+      {
+        title: "Module 3: Interventions pratiques",
+        duration: "3h30",
+        content: ["Identification circuits haute tension", "Mise en sécurité véhicules", "Mesures et vérifications", "Cas pratiques atelier"]
+      },
+      {
+        title: "Module 4: Évaluation et certification",
+        duration: "3h30",
+        content: ["Évaluation théorique", "Évaluation pratique", "Délivrance habilitation", "Recyclage et maintien"]
+      }
+    ],
+    prerequisites: "Connaissances de base en mécanique automobile et électricité",
+    evaluation: "Évaluation théorique et pratique + délivrance titre d'habilitation"
+  },
+  {
+    slug: "securite-incendie",
+    title: "Sécurité incendie",
+    category: "Sécurité",
+    duration: "7 heures (1 jour)",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "350",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_u4qemvpl.json",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Attestation de formation sécurité incendie",
+    description: "Prévenir les risques et réagir efficacement en cas d'incendie. Formation obligatoire pour les équipiers de première intervention.",
+    audience: ["Tous salariés", "Équipiers de première intervention", "Responsables sécurité", "Chefs d'équipe"],
+    objectives: [
+      "Identifier les risques d'incendie dans l'entreprise",
+      "Utiliser les moyens de première intervention",
+      "Évacuer en sécurité et donner l'alerte",
+      "Appliquer les consignes de sécurité incendie"
+    ],
+    program: [
+      {
+        title: "Module 1: Théorie du feu",
+        duration: "2h",
+        content: ["Triangle du feu", "Classes de feu", "Modes de propagation", "Causes d'incendie"]
+      },
+      {
+        title: "Module 2: Moyens d'extinction",
+        duration: "2h",
+        content: ["Types d'extincteurs", "Agents extincteurs", "Utilisation pratique", "Maintenance préventive"]
+      },
+      {
+        title: "Module 3: Évacuation et alerte",
+        duration: "2h",
+        content: ["Procédures d'évacuation", "Rôle du guide-file", "Moyens d'alerte", "Point de rassemblement"]
+      },
+      {
+        title: "Module 4: Exercices pratiques",
+        duration: "1h",
+        content: ["Manipulation extincteurs", "Simulation évacuation", "Mise en situation", "Évaluation pratique"]
+      }
+    ],
+    prerequisites: "Aucun prérequis",
+    evaluation: "Exercices pratiques + QCM + attestation de formation"
+  },
+  {
+    slug: "sauveteur-secouriste-travail-sst",
+    title: "Sauveteur Secouriste du Travail (SST)",
+    category: "Sécurité",
+    duration: "14 heures (2 jours)",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "450",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_u4qemvpl.json",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat SST (validité 2 ans)",
+    description: "Formation SST certifiante pour porter secours en cas d'accident du travail. Minimum 4 stagiaires, maximum 10.",
+    audience: ["Tous salariés", "Membres CHSCT", "Responsables sécurité", "Personnel désigné"],
+    objectives: [
+      "Porter secours en cas d'accident du travail",
+      "Protéger, examiner, faire alerter, secourir",
+      "Contribuer à la prévention des risques",
+      "Obtenir le certificat SST"
+    ],
+    program: [
+      {
+        title: "Module 1: Rôle du SST",
+        duration: "3h30",
+        content: ["Cadre juridique", "Rôle et responsabilités", "Organisation des secours", "Prévention en entreprise"]
+      },
+      {
+        title: "Module 2: Protéger et examiner",
+        duration: "3h30",
+        content: ["Analyse des risques", "Mise en sécurité", "Examen de la victime", "Recherche des signes"]
+      },
+      {
+        title: "Module 3: Alerter et secourir",
+        duration: "3h30",
+        content: ["Procédures d'alerte", "Gestes de premiers secours", "Positions d'attente", "Surveillance victime"]
+      },
+      {
+        title: "Module 4: Évaluation certificative",
+        duration: "3h30",
+        content: ["Cas concrets", "Évaluation continue", "Certification", "Recyclage obligatoire"]
+      }
+    ],
+    prerequisites: "Aucun prérequis. Minimum 4 stagiaires",
+    evaluation: "Évaluation certificative continue + délivrance certificat SST"
+  },
+  {
+    slug: "hygiene-securite-travail",
+    title: "Hygiène & Sécurité au travail",
+    category: "Sécurité",
+    duration: "14 heures (2 jours)",
+    format: "Présentiel",
+    level: "Intermédiaire",
+    price: "650",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_u4qemvpl.json",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Attestation hygiène et sécurité au travail",
+    description: "Garantir des conditions de travail conformes et saines. Formation pour responsables sécurité et managers.",
+    audience: ["Responsables sécurité", "Managers", "RH", "Membres CHSCT"],
+    objectives: [
+      "Maîtriser la réglementation hygiène et sécurité",
+      "Évaluer et prévenir les risques professionnels",
+      "Mettre en place un système de management sécurité",
+      "Former et sensibiliser les équipes"
+    ],
+    program: [
+      {
+        title: "Module 1: Cadre réglementaire",
+        duration: "3h30",
+        content: ["Code du travail", "Responsabilités employeur", "Obligations salariés", "Sanctions et contrôles"]
+      },
+      {
+        title: "Module 2: Évaluation des risques",
+        duration: "3h30",
+        content: ["Document unique", "Identification dangers", "Analyse des risques", "Plan de prévention"]
+      },
+      {
+        title: "Module 3: Prévention et protection",
+        duration: "3h30",
+        content: ["EPI et EPC", "Signalisation sécurité", "Consignation", "Procédures de travail"]
+      },
+      {
+        title: "Module 4: Management sécurité",
+        duration: "3h30",
+        content: ["Animation sécurité", "Formation du personnel", "Suivi indicateurs", "Amélioration continue"]
+      }
+    ],
+    prerequisites: "Fonction d'encadrement ou responsabilité sécurité",
+    evaluation: "Étude de cas + plan d'action sécurité + attestation"
+  },
+  {
+    slug: "cybersecurite-professionnels",
+    title: "Cybersécurité pour les professionnels",
+    category: "Sécurité",
+    duration: "21 heures (3 jours)",
+    format: "Mixte",
+    level: "Intermédiaire",
+    price: "1290",
+    icon: "https://assets3.lottiefiles.com/packages/lf20_u4qemvpl.json",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
+    certification: "Certificat de sensibilisation cybersécurité",
+    description: "Protéger les données, systèmes et communications de l'entreprise. Formation essentielle à l'ère numérique.",
+    audience: ["Dirigeants", "Responsables IT", "Tous utilisateurs", "Consultants"],
+    objectives: [
+      "Identifier les menaces cybersécurité actuelles",
+      "Mettre en place des mesures de protection",
+      "Réagir efficacement en cas d'incident",
+      "Sensibiliser les équipes aux bonnes pratiques"
+    ],
+    program: [
+      {
+        title: "Module 1: Panorama des menaces",
+        duration: "7h",
+        content: ["Types de cyberattaques", "Phishing et ransomware", "Vulnérabilités courantes", "Veille sécurité"]
+      },
+      {
+        title: "Module 2: Protection et prévention",
+        duration: "7h",
+        content: ["Sécurisation des postes", "Gestion des mots de passe", "Sauvegarde des données", "Mise à jour systèmes"]
+      },
+      {
+        title: "Module 3: Gestion d'incident",
+        duration: "7h",
+        content: ["Plan de continuité", "Procédures d'urgence", "Communication de crise", "Récupération données"]
+      }
+    ],
+    prerequisites: "Connaissances de base en informatique",
+    evaluation: "Simulation d'attaque + plan de sécurité + certification"
+  },
+  {
     slug: "e-commerce",
     title: "Créer et gérer une boutique E-commerce performante",
     category: "E-commerce",
