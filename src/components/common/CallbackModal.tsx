@@ -275,6 +275,7 @@ const CallbackModal: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
