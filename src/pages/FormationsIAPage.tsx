@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { ArrowRight, Clock, User, BookOpen, Search, Filter, ChevronDown, X, Star, Award, Eye, EyeOff, Target, Users, Calendar, MapPin } from 'lucide-react';
+import { Search, Filter, BookOpen, Clock, Users, ArrowRight, ChevronDown, X, Eye, EyeOff, Target, Calendar, MapPin, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 import AnimatedIcon from '../components/common/AnimatedIcon';
 import JobAIHelper from '../components/common/JobAIHelper';
