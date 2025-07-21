@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, BookOpen, Clock, Users, ArrowRight, ChevronDown, X, Eye, EyeOff, Target, Calendar, MapPin, Award } from 'lucide-react';
+import { Search, Filter, BookOpen, Clock, Users, ArrowRight, ChevronDown, X, Eye, EyeOff, Target, Calendar, MapPin, Award, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 import AnimatedIcon from '../components/common/AnimatedIcon';
@@ -622,7 +622,7 @@ const FormationsIAPage = () => {
                     const isExpanded = expandedFormation === formationId;
                     
                     return (
-                      <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                      <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
                         {/* Formation Image */}
                         <div className="h-48 rounded-t-xl overflow-hidden">
                           <img 
@@ -644,7 +644,7 @@ const FormationsIAPage = () => {
                               <span>{formation.duration}</span>
                             </div>
                             <div className="flex items-center text-gray-600">
-                              <User size={18} className="mr-2 text-primary" />
+                              <Users size={18} className="mr-2 text-primary" />
                               <span>{formation.level}</span>
                             </div>
                             <div className="flex items-center text-gray-600">
