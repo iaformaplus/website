@@ -3,7 +3,6 @@ import HeroSection from '../components/home/HeroSection';
 import PopularFormations from '../components/home/PopularFormations';
 import AIFormationsSection from '../components/home/AIFormationsSection';
 import AIQAAnimation from '../components/common/AIQAAnimation';
-import BugReportWidget from '../components/common/BugReportWidget';
 import { ArrowRight, Award, Clock, User, BookOpen, Users, Building, Laptop, Globe, Zap, Phone, MessageCircle, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -28,25 +27,6 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      {/* Bug Reports - HomePage */}
-      <BugReportWidget
-        bugId="HP001"
-        description="Logo dans la section finale ne s'affiche pas correctement sur mobile"
-        severity="medium"
-        location="HomePage - Section CTA finale"
-        type="responsive"
-        className="top-[95vh] right-4"
-      />
-      
-      <BugReportWidget
-        bugId="HP002"
-        description="Animation Lottie peut ne pas se charger sur connexions lentes"
-        severity="low"
-        location="HomePage - Section IA benefits"
-        type="performance"
-        className="top-[80vh] right-16"
-      />
-
       {/* 
         HERO SECTION
         Main banner with animated typing effect and primary CTAs

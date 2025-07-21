@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import { Search, Filter, BookOpen, Clock, Users, ArrowRight, ChevronDown, X, Eye, EyeOff, Target, Calendar, MapPin, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
-import BugReportWidget from '../components/common/BugReportWidget';
 import AnimatedIcon from '../components/common/AnimatedIcon';
 
 // Training categories with detailed information and specific images for each category
@@ -767,25 +766,6 @@ const FormationsProfessionnellesPage = () => {
 
   return (
     <>
-      {/* Bug Reports - FormationsProfessionnellesPage */}
-      <BugReportWidget
-        bugId="FP001"
-        description="Données de formations très volumineuses - peut ralentir le chargement"
-        severity="medium"
-        location="FormationsProfessionnellesPage - Données formations"
-        type="performance"
-        className="top-[40vh] right-4"
-      />
-      
-      <BugReportWidget
-        bugId="FP002"
-        description="Boutons d'expansion peuvent ne pas fonctionner sur certains navigateurs"
-        severity="low"
-        location="FormationsProfessionnellesPage - Détails formations"
-        type="functionality"
-        className="top-[60vh] right-16"
-      />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 to-secondary text-white py-16">
         <div className="container">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Settings, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import BugReportWidget from './BugReportWidget';
 import Button from './Button';
 
 interface CookiePreferences {
@@ -115,19 +114,6 @@ const CookieBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <>
-      {/* Bug Reports - CookieBanner */}
-      {isVisible && (
-        <BugReportWidget
-          bugId="CB001"
-          description="Bandeau cookies bloque le scroll - peut gêner la navigation"
-          severity="medium"
-          location="CookieBanner - Comportement de blocage"
-          type="functionality"
-          className="bottom-32 left-4"
-        />
-      )}
-      
       {/* Overlay bloquant */}
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
       
@@ -326,7 +312,6 @@ const CookieBanner: React.FC = () => {
           )}
         </div>
       </div>
-    </>
   );
 };
 

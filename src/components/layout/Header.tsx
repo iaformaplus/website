@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
-import BugReportWidget from '../common/BugReportWidget';
 import Logo from '../common/Logo';
 
 const Header: React.FC = () => {
@@ -36,17 +35,6 @@ const Header: React.FC = () => {
     }`;
 
   return (
-    <>
-      {/* Bug Reports - Header */}
-      <BugReportWidget
-        bugId="H001"
-        description="Menu mobile peut se superposer au contenu sur très petits écrans"
-        severity="medium"
-        location="Header - Menu mobile"
-        type="responsive"
-        className="top-20 right-4"
-      />
-      
     <header className={`fixed top-0 w-full z-50 bg-white transition-all duration-300 ${
       isScrolled ? 'shadow-lg' : 'shadow-sm'
     }`}>
@@ -228,7 +216,6 @@ const Header: React.FC = () => {
         </div>
       )}
     </header>
-    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Users, Building, FileText, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import BugReportWidget from '../components/common/BugReportWidget';
 import AnimatedIcon from '../components/common/AnimatedIcon';
 
 const ContactPage: React.FC = () => {
@@ -134,26 +133,6 @@ const ContactPage: React.FC = () => {
   };
   
   return (
-    <>
-      {/* Bug Reports - ContactPage */}
-      <BugReportWidget
-        bugId="CP001"
-        description="Validation du formulaire pourrait être plus stricte"
-        severity="low"
-        location="ContactPage - Formulaire principal"
-        type="functionality"
-        className="top-[50vh] right-4"
-      />
-      
-      <BugReportWidget
-        bugId="CP002"
-        description="Animation Lottie WhatsApp peut ne pas se charger"
-        severity="low"
-        location="ContactPage - Section WhatsApp"
-        type="performance"
-        className="top-[80vh] right-16"
-      />
-
       <section className="bg-gradient-to-r from-gray-900 to-secondary text-white py-16">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
@@ -606,7 +585,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
