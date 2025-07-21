@@ -133,6 +133,7 @@ const ContactPage: React.FC = () => {
   };
   
   return (
+    <>
       <section className="bg-gradient-to-r from-gray-900 to-secondary text-white py-16">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
@@ -585,6 +586,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
+    </>
   );
 };
 

@@ -114,6 +114,7 @@ const CookieBanner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+    <>
       {/* Overlay bloquant */}
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
       
@@ -312,6 +313,7 @@ const CookieBanner: React.FC = () => {
           )}
         </div>
       </div>
+    </>
   );
 };
 

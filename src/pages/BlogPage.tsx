@@ -221,6 +221,7 @@ const BlogPage: React.FC = () => {
   };
 
   return (
+    <>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 to-secondary text-white py-16">
         <div className="container">
@@ -650,6 +651,7 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
+    </>
   );
 };
 
