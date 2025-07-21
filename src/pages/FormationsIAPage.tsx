@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 import AnimatedIcon from '../components/common/AnimatedIcon';
 import JobAIHelper from '../components/common/JobAIHelper';
+import BugReportWidget from '../components/common/BugReportWidget';
 import MessengerButton from '../components/common/MessengerButton';
 
 // Training data with detailed information
@@ -458,6 +459,25 @@ const FormationsIAPage = () => {
 
   return (
     <>
+      {/* Bug Reports - FormationsIAPage */}
+      <BugReportWidget
+        bugId="FIA001"
+        description="Certaines images de formations peuvent ne pas se charger"
+        severity="medium"
+        location="FormationsIAPage - Cartes de formations"
+        type="content"
+        className="top-[50vh] right-4"
+      />
+      
+      <BugReportWidget
+        bugId="FIA002"
+        description="Filtres peuvent ne pas fonctionner correctement sur mobile"
+        severity="high"
+        location="FormationsIAPage - Section filtres"
+        type="responsive"
+        className="top-[25vh] right-16"
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-gray-900 to-secondary overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">

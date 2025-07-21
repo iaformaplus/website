@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Calendar, User, MessageCircle, Heart, Share2, ArrowRight, Tag, Clock, Eye, ChevronDown, Send, ThumbsUp, Play, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BugReportWidget from '../components/common/BugReportWidget';
 import Button from '../components/common/Button';
 
 // Types pour les articles et commentaires
@@ -222,6 +223,33 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
+      {/* Bug Reports - BlogPage */}
+      <BugReportWidget
+        bugId="BP001"
+        description="Formulaire de commentaires ne se connecte pas encore à un backend"
+        severity="high"
+        location="BlogPage - Section commentaires"
+        type="functionality"
+        className="top-[70vh] right-4"
+      />
+      
+      <BugReportWidget
+        bugId="BP002"
+        description="Vidéos YouTube peuvent ne pas se charger sur certains réseaux"
+        severity="medium"
+        location="BlogPage - Section vidéos"
+        type="content"
+        className="top-[50vh] right-16"
+      />
+      
+      <BugReportWidget
+        bugId="BP003"
+        description="Newsletter ne se connecte pas encore à un service d'emailing"
+        severity="medium"
+        location="BlogPage - Section newsletter"
+        type="functionality"
+        className="top-[90vh] right-28"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 to-secondary text-white py-16">
         <div className="container">

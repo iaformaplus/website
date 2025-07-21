@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Check } from 'lucide-react';
+import BugReportWidget from '../common/BugReportWidget';
 import Logo from '../common/Logo';
 
 const Footer: React.FC = () => {
@@ -69,6 +70,17 @@ const Footer: React.FC = () => {
   };
 
   return (
+    <>
+      {/* Bug Reports - Footer */}
+      <BugReportWidget
+        bugId="F001"
+        description="Newsletter se connecte à Zapier mais pourrait avoir un meilleur feedback"
+        severity="low"
+        location="Footer - Newsletter"
+        type="functionality"
+        className="bottom-32 right-4"
+      />
+      
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

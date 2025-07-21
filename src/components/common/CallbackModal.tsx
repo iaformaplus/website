@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Phone } from 'lucide-react';
+import BugReportWidget from './BugReportWidget';
 import Button from './Button';
 
 const CallbackModal: React.FC = () => {
@@ -119,6 +120,19 @@ const CallbackModal: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+    <>
+      {/* Bug Reports - CallbackModal */}
+      {isVisible && (
+        <BugReportWidget
+          bugId="CM001"
+          description="Modal peut apparaître trop tôt pour certains utilisateurs"
+          severity="low"
+          location="CallbackModal - Timing d'apparition"
+          type="functionality"
+          className="top-1/2 right-4"
+        />
+      )}
+      
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
       {/* Backdrop - BLOCKING */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
