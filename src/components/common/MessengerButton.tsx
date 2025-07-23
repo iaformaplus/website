@@ -3,7 +3,7 @@ import React from 'react';
 const MessengerButton: React.FC = () => {
   return (
     <a
-      href="https://www.facebook.com/profile.php?id=61577955839186"
+      href="https://www.facebook.com/messages/t/633807809825804"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-20 md:bottom-28 right-6 z-50 group"
