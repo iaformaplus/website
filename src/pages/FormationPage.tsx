@@ -647,7 +647,7 @@ const FormationPage: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                   <Award size={24} className="mx-auto mb-2" />
                   <div className="text-sm text-gray-300">Certification</div>
-                  <div className="font-semibold">Incluse</div>
+                  <div className="font-semibold">Certificat de réalisation</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                   <Star size={24} className="mx-auto mb-2" />
@@ -798,6 +798,7 @@ const FormationPage: React.FC = () => {
                     <Award size={20} className="text-primary mr-3 mt-1" />
                     <div>
                       <div className="font-semibold">Certification</div>
+                      <div className="font-semibold">Certificat de réalisation</div>
                       <div className="text-gray-600">{formation.certification}</div>
                     </div>
                   </div>
