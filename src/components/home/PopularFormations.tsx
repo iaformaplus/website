@@ -154,7 +154,7 @@ const PopularFormations: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Award size={14} className="mr-2 text-primary" />
-                    <span>Certificat de réalisation</span>
+                    <span className="text-sm">Certificat de réalisation</span>
                   </div>
                 </div>
               </div>
