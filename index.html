@@ -10,31 +10,8 @@
     <!-- 🔽 Chargement de Lottie une seule fois dans le layout global -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
-    <!-- Facebook Messenger Customer Chat Plugin -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml: true,
-          version: 'v18.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
   </head>
   <body>
-    <!-- Facebook Messenger Customer Chat -->
-    <div class="fb-customerchat"
-         attribution="biz_inbox"
-         page_id="633807809825804">
-    </div>
-    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
