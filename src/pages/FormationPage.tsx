@@ -289,6 +289,302 @@ const formationsData = {
     location: "Centre de formation avec salles de simulation",
     groupSize: "10 participants maximum",
     instructor: "Expert en vente et management avec 15+ ans d'expérience"
+  },
+  "securite-incendie": {
+    title: "Sécurité incendie",
+    category: "Sécurité",
+    duration: "7h",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "350€ HT",
+    image: "https://images.pexels.com/photos/280076/pexels-photo-280076.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Formation obligatoire pour prévenir les risques d'incendie et réagir efficacement en cas d'urgence.",
+    objectives: [
+      "Identifier les risques d'incendie dans l'entreprise",
+      "Utiliser les moyens de première intervention",
+      "Évacuer en sécurité et guider les personnes",
+      "Alerter les secours et rendre compte"
+    ],
+    program: [
+      {
+        module: "Module 1 : Théorie du feu",
+        duration: "2h",
+        content: [
+          "Triangle du feu et classes de feux",
+          "Modes de propagation",
+          "Causes d'incendie les plus fréquentes",
+          "Prévention des risques"
+        ]
+      },
+      {
+        module: "Module 2 : Moyens d'extinction",
+        duration: "2h",
+        content: [
+          "Types d'extincteurs et leur utilisation",
+          "Robinets d'incendie armés (RIA)",
+          "Systèmes de détection et d'alarme",
+          "Désenfumage"
+        ]
+      },
+      {
+        module: "Module 3 : Évacuation",
+        duration: "2h",
+        content: [
+          "Procédures d'évacuation",
+          "Rôle des guides et serre-files",
+          "Points de rassemblement",
+          "Personnes à mobilité réduite"
+        ]
+      },
+      {
+        module: "Module 4 : Exercices pratiques",
+        duration: "1h",
+        content: [
+          "Manipulation d'extincteurs",
+          "Simulation d'évacuation",
+          "Mise en situation",
+          "Évaluation des acquis"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Aucun prérequis particulier",
+      "Aptitude physique pour la manipulation des extincteurs"
+    ],
+    audience: [
+      "Tous salariés",
+      "Équipiers de première intervention",
+      "Guides et serre-files",
+      "Responsables sécurité"
+    ],
+    certification: "Attestation de formation sécurité incendie",
+    validityPeriod: "3 ans (recyclage obligatoire)",
+    location: "Sur site avec matériel de formation",
+    groupSize: "12 participants maximum",
+    instructor: "Formateur certifié sécurité incendie"
+  },
+  "sauveteur-secouriste-travail-sst": {
+    title: "Sauveteur Secouriste du Travail (SST)",
+    category: "Sécurité",
+    duration: "14h",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "250€ HT",
+    image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Formation certifiante SST pour porter secours et prévenir les risques dans l'entreprise. Minimum 4 stagiaires requis.",
+    objectives: [
+      "Maîtriser la conduite à tenir en cas d'accident",
+      "Appliquer les gestes de premiers secours",
+      "Contribuer à la prévention des risques",
+      "Informer les personnes désignées dans l'entreprise"
+    ],
+    program: [
+      {
+        module: "Module 1 : Le sauvetage secourisme du travail",
+        duration: "2h",
+        content: [
+          "Cadre juridique et responsabilités",
+          "Rôle du SST dans l'entreprise",
+          "Chaîne des secours",
+          "Conduite à tenir en cas d'accident"
+        ]
+      },
+      {
+        module: "Module 2 : Rechercher les risques",
+        duration: "2h",
+        content: [
+          "Identifier les dangers dans l'entreprise",
+          "Supprimer ou isoler le danger",
+          "Soustraire la victime au danger",
+          "Examiner la victime"
+        ]
+      },
+      {
+        module: "Module 3 : Faire alerter ou alerter",
+        duration: "2h",
+        content: [
+          "Qui alerter selon l'organisation",
+          "Numéros d'urgence",
+          "Message d'alerte",
+          "Accueil des secours"
+        ]
+      },
+      {
+        module: "Module 4 : Secourir",
+        duration: "8h",
+        content: [
+          "Victime saigne abondamment",
+          "Victime s'étouffe",
+          "Victime se plaint de malaise",
+          "Victime se plaint de brûlures",
+          "Victime se plaint d'une douleur",
+          "Victime ne répond pas mais respire",
+          "Victime ne répond pas et ne respire pas",
+          "Situations inhérentes aux risques spécifiques"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Aucun prérequis particulier",
+      "Aptitude physique pour les gestes de secours"
+    ],
+    audience: [
+      "Salariés désignés SST",
+      "Membres du CHSCT",
+      "Responsables sécurité",
+      "Toute personne volontaire"
+    ],
+    certification: "Certificat SST délivré par l'INRS (valable 24 mois)",
+    validityPeriod: "24 mois (recyclage obligatoire)",
+    location: "Sur site ou en centre avec mannequins SST",
+    groupSize: "4 à 10 participants",
+    instructor: "Formateur SST certifié INRS"
+  },
+  "hygiene-securite-travail": {
+    title: "Hygiène & Sécurité au travail",
+    category: "Sécurité",
+    duration: "14h",
+    format: "Présentiel",
+    level: "Débutant",
+    price: "490€ HT",
+    image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Formation pour garantir des conditions de travail conformes et saines selon la réglementation.",
+    objectives: [
+      "Connaître la réglementation hygiène et sécurité",
+      "Identifier et évaluer les risques professionnels",
+      "Mettre en place des mesures de prévention",
+      "Organiser la sécurité dans l'entreprise"
+    ],
+    program: [
+      {
+        module: "Module 1 : Cadre réglementaire",
+        duration: "3h",
+        content: [
+          "Code du travail et obligations",
+          "Responsabilités employeur/salarié",
+          "Instances représentatives",
+          "Contrôles et sanctions"
+        ]
+      },
+      {
+        module: "Module 2 : Évaluation des risques",
+        duration: "4h",
+        content: [
+          "Document unique d'évaluation",
+          "Identification des dangers",
+          "Analyse des risques",
+          "Hiérarchisation et plan d'action"
+        ]
+      },
+      {
+        module: "Module 3 : Prévention",
+        duration: "4h",
+        content: [
+          "Équipements de protection",
+          "Formation et information",
+          "Consignation et signalisation",
+          "Maintenance préventive"
+        ]
+      },
+      {
+        module: "Module 4 : Organisation",
+        duration: "3h",
+        content: [
+          "Plan de prévention",
+          "Protocole de sécurité",
+          "Gestion des accidents",
+          "Amélioration continue"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Fonction d'encadrement ou de responsabilité",
+      "Connaissances de base de l'entreprise"
+    ],
+    audience: [
+      "Responsables sécurité",
+      "Managers",
+      "Membres CHSCT/CSE",
+      "Chefs d'équipe"
+    ],
+    certification: "Attestation de formation hygiène et sécurité",
+    validityPeriod: "Permanent avec mise à jour réglementaire",
+    location: "En entreprise ou centre de formation",
+    groupSize: "8 à 12 participants",
+    instructor: "Expert en prévention des risques professionnels"
+  },
+  "cybersecurite-professionnels": {
+    title: "Cybersécurité pour les professionnels",
+    category: "Sécurité",
+    duration: "14h",
+    format: "Distanciel",
+    level: "Intermédiaire",
+    price: "790€ HT",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Formation pour protéger les données, systèmes et communications de l'entreprise contre les cybermenaces.",
+    objectives: [
+      "Identifier les menaces cybersécurité",
+      "Mettre en place des mesures de protection",
+      "Réagir en cas d'incident de sécurité",
+      "Sensibiliser les équipes aux bonnes pratiques"
+    ],
+    program: [
+      {
+        module: "Module 1 : Panorama des menaces",
+        duration: "3h",
+        content: [
+          "Types d'attaques (phishing, ransomware, etc.)",
+          "Vecteurs d'intrusion",
+          "Motivations des cybercriminels",
+          "Coût des cyberattaques"
+        ]
+      },
+      {
+        module: "Module 2 : Protection des données",
+        duration: "4h",
+        content: [
+          "RGPD et obligations légales",
+          "Chiffrement et sauvegarde",
+          "Gestion des accès et mots de passe",
+          "Sécurisation des communications"
+        ]
+      },
+      {
+        module: "Module 3 : Sécurité des systèmes",
+        duration: "4h",
+        content: [
+          "Mise à jour et antivirus",
+          "Pare-feu et filtrage",
+          "Sécurité Wi-Fi et VPN",
+          "Surveillance et détection"
+        ]
+      },
+      {
+        module: "Module 4 : Gestion des incidents",
+        duration: "3h",
+        content: [
+          "Plan de réponse aux incidents",
+          "Isolation et analyse",
+          "Communication de crise",
+          "Retour d'expérience"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Connaissances informatiques de base",
+      "Utilisation professionnelle des outils numériques"
+    ],
+    audience: [
+      "RSSI et responsables IT",
+      "Managers",
+      "Utilisateurs avancés",
+      "Consultants"
+    ],
+    certification: "Certificat de sensibilisation cybersécurité",
+    validityPeriod: "2 ans (mise à jour recommandée)",
+    location: "Formation 100% distanciel sécurisée",
+    groupSize: "8 à 15 participants",
+    instructor: "Expert cybersécurité certifié"
   }
 };
 

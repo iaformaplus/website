@@ -6,7 +6,7 @@ const MessengerButton: React.FC = () => {
       href="https://www.facebook.com/messages/t/633807809825804"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 left-6 z-50 group"
+      className="fixed bottom-20 right-6 z-50 group"
       aria-label="Chat on Messenger"
     >
       <div className="relative">
