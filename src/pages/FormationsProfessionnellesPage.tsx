@@ -922,7 +922,7 @@ const FormationsProfessionnellesPage = () => {
                     const isExpanded = expandedFormation === formationId;
                     
                     return (
-                      <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                      <div key={formationId} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                         {/* Formation Image */}
                         <div className="h-48 rounded-t-xl overflow-hidden">
                           <img 
