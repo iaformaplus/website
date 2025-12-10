@@ -1,17 +1,16 @@
-import React from 'react';
-import { ArrowRight, Users, Target, Clock, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Users, Target, Clock, Award, ChevronDown, CheckCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
- * SECTION ULTRA-STABLE - FORMATIONS IA LES PLUS DEMANDÉES
+ * SECTION FORMATIONS IA - AFFICHAGE INLINE SANS NAVIGATION
  *
- * Cette section est VERROUILLÉE et STATIQUE.
- * Aucun carrousel, aucun état dynamique, aucune logique qui pourrait masquer le contenu.
- * Tous les textes, images et boutons sont TOUJOURS VISIBLES.
- * Chaque carte a sa propre destination unique - AUCUNE redirection vers l'accueil.
+ * Affiche les détails de formation directement sur la page d'accueil
+ * au clic, sans aucune redirection.
+ * Comportement accordéon/expand pour l'interaction.
  */
 
-// Données hardcodées et stables avec destinations uniques vers pages formations complètes
+// Données complètes avec TOUT le contenu détaillé
 const formationsStables = [
   {
     id: 'ia-productivite-quotidien',
@@ -21,9 +20,26 @@ const formationsStables = [
     publicCible: "Tous professionnels, TPE/PME, indépendants",
     duree: "7h",
     format: "E-learning ou Distanciel",
+    prix: "490€ HT",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // DESTINATION : Page de formation complète avec programme détaillé
-    lien: "/formations/ia-productivite-quotidien"
+    objectifs: [
+      "Utiliser ChatGPT et les assistants IA pour automatiser les tâches répétitives",
+      "Rédiger rapidement emails, documents et rapports avec l'IA",
+      "Organiser et structurer votre travail avec Notion AI",
+      "Gagner plusieurs heures par jour grâce à l'automatisation"
+    ],
+    prerequis: [
+      "Utilisation basique d'un ordinateur et d'Internet",
+      "Aucune compétence technique particulière requise",
+      "Motivation pour gagner en efficacité"
+    ],
+    programme: [
+      "Découverte des outils IA (ChatGPT, Claude, Gemini)",
+      "Rédaction et communication professionnelle",
+      "Organisation et productivité avec Notion AI",
+      "Automatisations pratiques et templates réutilisables",
+      "Plan d'action personnalisé post-formation"
+    ]
   },
   {
     id: 'ia-marketing-vente',
@@ -33,9 +49,26 @@ const formationsStables = [
     publicCible: "Marketeurs, commerciaux, entrepreneurs",
     duree: "14h",
     format: "Présentiel ou Distanciel",
+    prix: "990€ HT",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // DESTINATION : Page de formation complète avec programme détaillé
-    lien: "/formations/ia-marketing-vente"
+    objectifs: [
+      "Créer des campagnes publicitaires optimisées avec l'IA",
+      "Générer du contenu marketing engageant pour tous les canaux",
+      "Automatiser et personnaliser la prospection commerciale",
+      "Optimiser le CRM et le parcours client avec l'IA"
+    ],
+    prerequis: [
+      "Connaissances de base en marketing ou vente",
+      "Utilisation d'outils digitaux",
+      "Expérience en prospection ou marketing digital recommandée"
+    ],
+    programme: [
+      "IA pour la création de contenu (posts, landing pages, newsletters)",
+      "IA pour la publicité (Google Ads, Facebook, Instagram)",
+      "IA pour la prospection (automatisation, scoring, séquences)",
+      "IA pour le CRM (intégration HubSpot, Salesforce, prédictions)",
+      "Analyse des performances et optimisation continue"
+    ]
   },
   {
     id: 'ia-automatisation-process',
@@ -45,9 +78,26 @@ const formationsStables = [
     publicCible: "Managers, chefs de projet, Ops",
     duree: "14h",
     format: "Intra-entreprise ou Distanciel",
+    prix: "990€ HT",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // DESTINATION : Page de formation complète avec programme détaillé
-    lien: "/formations/ia-automatisation-process"
+    objectifs: [
+      "Identifier et automatiser les processus à faible valeur ajoutée",
+      "Créer des workflows intelligents avec Make, Zapier et n8n",
+      "Automatiser la génération de rapports et tableaux de bord",
+      "Mettre en place un support client intelligent et automatisé"
+    ],
+    prerequis: [
+      "Connaissances des processus de l'entreprise",
+      "Utilisation d'outils web et SaaS",
+      "Aucune compétence de programmation requise"
+    ],
+    programme: [
+      "Cartographie et identification des processus automatisables",
+      "Automatisation no-code avec Make et Zapier",
+      "Reporting automatisé avec génération IA",
+      "Support client IA (chatbot, réponses automatiques)",
+      "Mesure de performance et optimisation"
+    ]
   },
   {
     id: 'ia-dirigeants-strategie',
@@ -57,21 +107,44 @@ const formationsStables = [
     publicCible: "Dirigeants, décideurs, consultants",
     duree: "7h",
     format: "Sur-mesure ou Présentiel",
+    prix: "1290€ HT",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // DESTINATION : Page de formation complète avec programme détaillé
-    lien: "/formations/ia-dirigeants-strategie"
+    objectifs: [
+      "Comprendre les enjeux stratégiques de l'IA pour votre secteur",
+      "Identifier les cas d'usage à fort impact business",
+      "Utiliser l'IA pour l'aide à la décision stratégique",
+      "Définir et piloter une roadmap de transformation IA"
+    ],
+    prerequis: [
+      "Fonction de direction ou management stratégique",
+      "Compréhension des enjeux business de l'entreprise",
+      "Aucune compétence technique requise"
+    ],
+    programme: [
+      "IA et stratégie d'entreprise (panorama, impact secteur, ROI)",
+      "Identifier les cas d'usage stratégiques",
+      "IA pour la prise de décision (analyse données, scénarios)",
+      "Roadmap et mise en œuvre (gouvernance, changement)",
+      "Mesure et pilotage de la performance"
+    ]
   }
 ];
 
 const AIFormationsSection: React.FC = () => {
-  // Fonction de gestion d'erreur image ultra-sécurisée
+  // État pour gérer quelle carte est étendue (null = aucune)
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  // Toggle l'expansion d'une carte
+  const toggleExpand = (id: string) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
+  // Fonction de gestion d'erreur image
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
-    // Forcer l'affichage même en cas d'erreur
     target.style.opacity = '1';
     target.style.display = 'block';
     target.style.visibility = 'visible';
-    // Image de secours ultra-fiable
     target.src = 'https://images.pexels.com/photos/5926393/pexels-photo-5926393.jpeg?auto=compress&cs=tinysrgb&w=800';
   };
 
@@ -131,35 +204,22 @@ const AIFormationsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* GRILLE DE 4 CARTES - STATIQUE ET STABLE - PAS DE SLIDER */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          style={{
-            display: 'grid',
-            visibility: 'visible',
-            opacity: 1
-          }}
-        >
-          {formationsStables.map((formation) => (
+        {/* GRILLE DE 4 CARTES AVEC EXPAND INLINE */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {formationsStables.map((formation) => {
+            const isExpanded = expandedId === formation.id;
+
+            return (
             <div
               key={formation.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-400 hover:-translate-y-1"
-              style={{
-                display: 'block',
-                visibility: 'visible',
-                opacity: 1,
-                position: 'relative'
-              }}
+              className={`bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border ${
+                isExpanded ? 'border-blue-500 lg:col-span-2' : 'border-gray-100 hover:border-blue-400'
+              }`}
             >
-              {/* CARTE ENTIÈREMENT CLIQUABLE VERS DESTINATION UNIQUE */}
-              <Link
-                to={formation.lien}
-                className="block"
-                style={{
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  display: 'block'
-                }}
+              {/* PARTIE TOUJOURS VISIBLE - CLIQUABLE POUR EXPAND */}
+              <div
+                onClick={() => toggleExpand(formation.id)}
+                className="cursor-pointer"
               >
                 {/* IMAGE - TOUJOURS VISIBLE AVEC FOND DE SECOURS */}
                 <div
@@ -325,52 +385,138 @@ const AIFormationsSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
-
-              {/* FOOTER AVEC BOUTON CTA - TOUJOURS VISIBLE - DESTINATION UNIQUE */}
-              <div
-                className="px-6 py-4 bg-gray-50 border-t border-gray-100"
-                style={{
-                  display: 'block',
-                  visibility: 'visible',
-                  opacity: 1
-                }}
-              >
-                <Link
-                  to={formation.lien}
-                  className="flex justify-between items-center w-full group"
-                  style={{
-                    display: 'flex',
-                    visibility: 'visible',
-                    opacity: 1,
-                    textDecoration: 'none'
-                  }}
-                >
-                  {/* BOUTON CTA - VERROUILLÉ ET TOUJOURS VISIBLE */}
-                  <span
-                    className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                    style={{
-                      backgroundColor: '#1877F2',
-                      display: 'inline-flex',
-                      visibility: 'visible',
-                      opacity: 1
-                    }}
-                  >
-                    Voir le programme
-                  </span>
-                  <ArrowRight
-                    size={18}
-                    className="text-blue-600 group-hover:translate-x-2 transition-transform"
-                    style={{
-                      display: 'block',
-                      visibility: 'visible',
-                      opacity: 1
-                    }}
-                  />
-                </Link>
               </div>
+
+              {/* SECTION DÉTAILLÉE - AFFICHÉE QUAND EXPANDED */}
+              {isExpanded && (
+                <div className="border-t border-gray-200 bg-gray-50 p-6 animate-slide-down">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    {/* Colonne gauche - Objectifs et Programme */}
+                    <div className="space-y-4">
+                      {/* Objectifs */}
+                      <div>
+                        <h4 className="flex items-center font-bold text-lg mb-3 text-gray-900">
+                          <Target size={18} className="mr-2 text-blue-600" />
+                          Objectifs pédagogiques
+                        </h4>
+                        <ul className="space-y-2">
+                          {formation.objectifs.map((obj, idx) => (
+                            <li key={idx} className="flex items-start text-sm text-gray-700">
+                              <CheckCircle size={16} className="mr-2 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span>{obj}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Programme */}
+                      <div>
+                        <h4 className="flex items-center font-bold text-lg mb-3 text-gray-900">
+                          <Award size={18} className="mr-2 text-blue-600" />
+                          Mini-programme
+                        </h4>
+                        <ul className="space-y-2">
+                          {formation.programme.map((module, idx) => (
+                            <li key={idx} className="flex items-start text-sm text-gray-700">
+                              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                              <span>{module}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Colonne droite - Infos pratiques et CTA */}
+                    <div className="space-y-4">
+                      {/* Prérequis */}
+                      <div>
+                        <h4 className="flex items-center font-bold text-lg mb-3 text-gray-900">
+                          <Users size={18} className="mr-2 text-blue-600" />
+                          Prérequis
+                        </h4>
+                        <ul className="space-y-2">
+                          {formation.prerequis.map((prereq, idx) => (
+                            <li key={idx} className="flex items-start text-sm text-gray-700">
+                              <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                              <span>{prereq}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Infos pratiques */}
+                      <div className="bg-white rounded-lg p-4 border border-gray-200">
+                        <h4 className="font-bold text-sm mb-3 text-gray-900">Informations pratiques</h4>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex items-center text-gray-700">
+                            <Clock size={14} className="mr-2 text-blue-600" />
+                            <span><strong>Durée :</strong> {formation.duree}</span>
+                          </div>
+                          <div className="flex items-center text-gray-700">
+                            <Users size={14} className="mr-2 text-blue-600" />
+                            <span><strong>Public :</strong> {formation.publicCible}</span>
+                          </div>
+                          <div className="flex items-center text-gray-700">
+                            <Target size={14} className="mr-2 text-blue-600" />
+                            <span><strong>Format :</strong> {formation.format}</span>
+                          </div>
+                          <div className="flex items-center text-blue-600 font-bold mt-3">
+                            <Award size={14} className="mr-2" />
+                            <span>{formation.prix}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* CTAs */}
+                      <div className="space-y-2">
+                        <Link
+                          to="/contact"
+                          className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold w-full"
+                        >
+                          Demander le programme complet
+                        </Link>
+                        <a
+                          href="tel:0162177770"
+                          className="flex items-center justify-center px-4 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm font-semibold w-full"
+                        >
+                          <Phone size={16} className="mr-2" />
+                          Être rappelé
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bouton pour replier */}
+                  <div className="mt-4 text-center">
+                    <button
+                      onClick={() => setExpandedId(null)}
+                      className="text-sm text-gray-600 hover:text-gray-900 flex items-center mx-auto"
+                    >
+                      Replier
+                      <ChevronDown size={16} className="ml-1 rotate-180" />
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* FOOTER - BOUTON POUR EXPAND SI NON EXPANDED */}
+              {!isExpanded && (
+                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                  <button
+                    onClick={() => toggleExpand(formation.id)}
+                    className="flex justify-between items-center w-full group"
+                  >
+                    <span className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-blue-600">
+                      Voir les détails
+                    </span>
+                    <ChevronDown size={18} className="text-blue-600 group-hover:translate-y-1 transition-transform" />
+                  </button>
+                </div>
+              )}
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* BOUTON "VOIR TOUTES LES FORMATIONS" - TOUJOURS VISIBLE */}
