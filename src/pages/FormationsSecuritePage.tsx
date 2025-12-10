@@ -105,14 +105,17 @@ const FormationsSecuritePage: React.FC = () => {
                   <div className="flex items-start">
                     <AlertTriangle size={24} className="text-green-600 mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">Formation réalisée avec l'agrément Forprev</h3>
-                      <p className="text-gray-700">
+                      <h3 className="font-bold text-gray-900 mb-3">Formation SST - Partenariat FORPREV</h3>
+                      <p className="text-gray-700 mb-3">
+                        <strong>Pour la formation SST (Sauveteur Secouriste du Travail), IA FORMA PLUS intervient dans le cadre de l'agrément/partenariat FORPREV, selon le dispositif applicable.</strong>
+                      </p>
+                      <p className="text-gray-700 mb-3">
                         Nos formations SST sont dispensées en partenariat avec Forprev, organisme agréé
                         par l'INRS (Institut National de Recherche et de Sécurité). Cette certification
                         garantit la conformité de la formation aux exigences réglementaires et la validité
                         du certificat SST délivré.
                       </p>
-                      <p className="text-gray-700 mt-2">
+                      <p className="text-gray-700">
                         <strong>Minimum 4 stagiaires requis</strong> pour l'organisation d'une session.
                       </p>
                     </div>

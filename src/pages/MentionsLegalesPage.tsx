@@ -140,12 +140,11 @@ const MentionsLegalesPage: React.FC = () => {
                 <p className="text-gray-700 mb-3">
                   <strong>Numéro de déclaration d'activité (NDA) :</strong>
                 </p>
-                <p className="text-blue-900 font-medium bg-white px-4 py-2 rounded inline-block">
-                  En cours d'obtention
+                <p className="text-blue-900 font-bold text-xl bg-white px-4 py-3 rounded inline-block">
+                  11757219975
                 </p>
-                <p className="text-gray-600 text-sm mt-3">
-                  Enregistrement auprès de la Préfecture de la Région Île-de-France (DRIEETS).
-                  Cet enregistrement ne vaut pas agrément de l'État.
+                <p className="text-gray-600 text-sm mt-4">
+                  Enregistrement auprès de la DRIEETS Île-de-France. Cet enregistrement ne vaut pas agrément de l'État.
                 </p>
               </div>
             </div>
@@ -156,27 +155,42 @@ const MentionsLegalesPage: React.FC = () => {
                 <Shield size={24} className="mr-3 text-primary" />
                 5. Certification Qualiopi
               </h2>
-              <div className="bg-amber-50 rounded-lg p-6 border-l-4 border-amber-500">
+              <div className="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
                 <p className="text-gray-700 mb-3">
                   <strong>Statut de la certification :</strong>
                 </p>
-                <p className="text-amber-900 font-medium bg-white px-4 py-2 rounded inline-block mb-3">
-                  Certification Qualiopi : en cours de formalisation interne
+                <p className="text-green-900 font-bold text-lg bg-white px-4 py-3 rounded inline-block mb-4 flex items-center gap-2">
+                  <span className="text-2xl">✅</span> Organisme certifié Qualiopi
                 </p>
-                <p className="text-gray-600 text-sm mt-3">
-                  <strong>Catégories d'actions concernées :</strong> Actions de formation
+                <p className="text-gray-700 mb-3">
+                  <strong>Catégories d'actions concernées :</strong>
                 </p>
-                <p className="text-gray-600 text-sm mt-3">
-                  La démarche de certification qualité vise à garantir la conformité de nos actions de formation
-                  aux exigences du Référentiel National Qualité.
+                <p className="text-green-900 font-medium bg-white px-4 py-2 rounded inline-block mb-4 flex items-center gap-2">
+                  <span className="text-xl">✅</span> Actions de formation
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  La certification qualité Qualiopi atteste de la conformité de nos actions de formation aux exigences du Référentiel National Qualité (RNQ) et facilite la mobilisation de financements publics et mutualisés, notamment via les OPCO, selon conditions.
                 </p>
               </div>
             </div>
 
-            {/* 6. OPCO et financements */}
+            {/* 6. Formation SST - Partenariat FORPREV */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <Shield size={24} className="mr-3 text-primary" />
+                6. Formation SST - Partenariat FORPREV
+              </h2>
+              <div className="bg-red-50 rounded-lg p-6 border-l-4 border-red-500">
+                <p className="text-gray-700 leading-relaxed">
+                  Pour la formation <strong>SST (Sauveteur Secouriste du Travail)</strong>, IA FORMA PLUS intervient dans le cadre de l'agrément/partenariat <strong>FORPREV</strong>, selon le dispositif applicable.
+                </p>
+              </div>
+            </div>
+
+            {/* 7. OPCO et financements */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                6. Financements - OPCO
+                7. Financements - OPCO
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -197,10 +211,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 7. Propriété intellectuelle */}
+            {/* 8. Propriété intellectuelle */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                7. Propriété intellectuelle
+                8. Propriété intellectuelle
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -217,10 +231,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 8. Responsabilité */}
+            {/* 9. Responsabilité */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                8. Limitation de responsabilité
+                9. Limitation de responsabilité
               </h2>
               <div className="bg-gray-50 rounded-lg p-6 space-y-3">
                 <p className="text-gray-700 leading-relaxed">
@@ -236,10 +250,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 9. Données personnelles - RGPD */}
+            {/* 10. Données personnelles - RGPD */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                9. Protection des données personnelles (RGPD)
+                10. Protection des données personnelles (RGPD)
               </h2>
               <div className="bg-blue-50 rounded-lg p-6 space-y-4">
                 <div>
@@ -314,10 +328,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 10. Cookies */}
+            {/* 11. Cookies */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                10. Gestion des cookies
+                11. Gestion des cookies
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 leading-relaxed mb-3">
@@ -337,10 +351,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 11. Droit applicable et juridiction */}
+            {/* 12. Droit applicable et juridiction */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                11. Droit applicable et juridiction
+                12. Droit applicable et juridiction
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 leading-relaxed">
@@ -350,10 +364,10 @@ const MentionsLegalesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 12. Médiation et réclamation */}
+            {/* 13. Médiation et réclamation */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                12. Médiation et réclamation
+                13. Médiation et réclamation
               </h2>
               <div className="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-500">
                 <p className="text-gray-700 leading-relaxed mb-3">
