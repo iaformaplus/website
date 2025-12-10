@@ -126,10 +126,10 @@ const AboutPage = () => {
                   <h3 className="text-lg font-semibold text-gray-900">Certification Qualiopi</h3>
                 </div>
                 <p className="text-gray-700">
-                  Certification Qualiopi : en cours de formalisation interne
+                  Organisme certifié Qualiopi
                 </p>
                 <p className="text-gray-600 text-sm mt-2">
-                  Catégories d'actions : actions de formation
+                  Catégorie : Actions de formation
                 </p>
               </div>
 

@@ -1153,8 +1153,8 @@ const FormationPage: React.FC = () => {
                     className="h-12 w-auto object-contain mr-4"
                   />
                   <div>
-                    <div className="font-semibold text-amber-800">Certification Qualiopi</div>
-                    <div className="text-sm text-amber-600">En cours de formalisation interne</div>
+                    <div className="font-semibold text-amber-800">Organisme certifié Qualiopi</div>
+                    <div className="text-sm text-amber-600">Catégorie : Actions de formation</div>
                   </div>
                 </div>
                 <p className="text-amber-700 text-sm">

@@ -253,7 +253,7 @@ const HomePage: React.FC = () => {
               {/* Qualiopi certification badge */}
               <div className="flex items-center gap-2 text-gray-600">
                 <Globe size={20} className="text-amber-500" />
-                <span className="font-medium">Certification Qualiopi en cours de formalisation</span>
+                <span className="font-medium">Organisme certifié Qualiopi</span>
               </div>
               <div className="w-px h-8 bg-gray-200"></div>
               {/* CTA button */}

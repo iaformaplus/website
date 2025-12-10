@@ -163,7 +163,7 @@ const MentionsLegalesPage: React.FC = () => {
                   <span className="text-2xl">✅</span> Organisme certifié Qualiopi
                 </p>
                 <p className="text-gray-700 mb-3">
-                  <strong>Catégories d'actions concernées :</strong>
+                  <strong>Catégorie :</strong>
                 </p>
                 <p className="text-green-900 font-medium bg-white px-4 py-2 rounded inline-block mb-4 flex items-center gap-2">
                   <span className="text-xl">✅</span> Actions de formation

@@ -24,7 +24,7 @@ const formatsData = {
       "Formations certifiantes exigeantes"
     ],
     functioning: "Sessions organisées dans nos centres équipés ou dans vos locaux. Groupes de 4 à 12 participants maximum. Matériel pédagogique fourni. Pauses et déjeuner inclus selon la durée.",
-    qualiopi: "Nos formations présentielles bénéficient d'un suivi pédagogique renforcé et peuvent être financées par les OPCO et le plan de formation selon votre situation. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Nos formations présentielles bénéficient d'un suivi pédagogique renforcé et peuvent être financées par les OPCO et le plan de formation selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "distanciel": {
     title: "Formations en Distanciel",
@@ -46,7 +46,7 @@ const formatsData = {
       "Formations en langues étrangères"
     ],
     functioning: "Classes virtuelles via plateforme dédiée (Zoom, Teams). Sessions interactives avec partage d'écran, tableaux blancs collaboratifs, salles de sous-groupes. Support technique inclus.",
-    qualiopi: "Nos formations distancielles assurent une traçabilité complète des connexions et interactions. Financement possible par OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Nos formations distancielles assurent une traçabilité complète des connexions et interactions. Financement possible par OPCO selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "elearning": {
     title: "Formations E-learning",
@@ -68,7 +68,7 @@ const formatsData = {
       "Préparation à une certification"
     ],
     functioning: "Plateforme LMS accessible via navigateur. Modules vidéo HD, documents PDF, exercices interactifs, quiz d'évaluation. Support pédagogique par email ou chat.",
-    qualiopi: "Modules e-learning avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Modules e-learning avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "mixte": {
     title: "Formations Mixtes (Blended Learning)",
@@ -90,7 +90,7 @@ const formatsData = {
       "Formations diplômantes"
     ],
     functioning: "Parcours personnalisé combinant sessions présentielles pour la pratique, classes virtuelles pour les échanges, et modules e-learning pour la théorie. Planning adapté à vos contraintes.",
-    qualiopi: "Parcours mixtes avec traçabilité de toutes les modalités. Évaluation continue et finale. Financement possible via OPCO selon la répartition des modalités. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Parcours mixtes avec traçabilité de toutes les modalités. Évaluation continue et finale. Financement possible via OPCO selon la répartition des modalités. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "inter-entreprise": {
     title: "Formations Inter-entreprises",
@@ -112,7 +112,7 @@ const formatsData = {
       "Développement personnel"
     ],
     functioning: "Inscription sur sessions programmées, groupes de 4 à 12 participants, supports fournis, certificat de réalisation délivré.",
-    qualiopi: "Nos formations inter-entreprises peuvent être financées par les OPCO et le plan de développement des compétences selon votre situation. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Nos formations inter-entreprises peuvent être financées par les OPCO et le plan de développement des compétences selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "intra-entreprise": {
     title: "Formations Intra-entreprise",
@@ -134,7 +134,7 @@ const formatsData = {
       "Formation de 4 à 15 personnes"
     ],
     functioning: "Analyse des besoins, programme sur-mesure, animation dans vos locaux, évaluation et suivi des acquis.",
-    qualiopi: "Formations intra-entreprise pouvant être financées par les OPCO et le plan de formation entreprise. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Formations intra-entreprise pouvant être financées par les OPCO et le plan de formation entreprise. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "sur-mesure": {
     title: "Formations sur-mesure",
@@ -156,7 +156,7 @@ const formatsData = {
       "Accompagnement au changement"
     ],
     functioning: "Audit des besoins, co-construction du programme, animation experte, évaluation des résultats et plan d'amélioration.",
-    qualiopi: "Formations sur-mesure avec financement possible via OPCO selon les modalités définies ensemble. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Formations sur-mesure avec financement possible via OPCO selon les modalités définies ensemble. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "e-learning": {
     title: "Formations E-learning",
@@ -178,7 +178,7 @@ const formatsData = {
       "Apprentissage autonome"
     ],
     functioning: "Plateforme LMS dédiée, vidéos HD, exercices interactifs, quiz d'évaluation, support pédagogique à distance.",
-    qualiopi: "Modules e-learning avec traçabilité complète des apprentissages. Financements possibles via OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Modules e-learning avec traçabilité complète des apprentissages. Financements possibles via OPCO selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   },
   "digital-learning": {
     title: "Digital Learning & Innovation",
@@ -200,7 +200,7 @@ const formatsData = {
       "Innovation pédagogique"
     ],
     functioning: "Classes virtuelles interactives, modules VR/AR, IA adaptive, gamification, analytics d'apprentissage avancés.",
-    qualiopi: "Méthodes digital learning avec innovation pédagogique reconnue. Financement possible via OPCO selon modalités. Certification Qualiopi en cours de formalisation interne."
+    qualiopi: "Méthodes digital learning avec innovation pédagogique reconnue. Financement possible via OPCO selon modalités. Organisme certifié Qualiopi - Catégorie : Actions de formation."
   }
 };
 
