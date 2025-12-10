@@ -476,7 +476,7 @@ const ContactPage: React.FC = () => {
                       <Building size={16} className="text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium">Certifié Qualiopi</p>
+                      <p className="font-medium">Organisme déclaré</p>
                       <p className="text-gray-300 text-sm">Certificat de réalisation + garantie qualité</p>
                     </div>
                   </div>

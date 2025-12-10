@@ -1145,21 +1145,21 @@ const FormationPage: React.FC = () => {
               </div>
 
               {/* Qualiopi */}
-              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
-                  <img 
-                    src="/Screenshot 2025-06-22 204332.png" 
-                    alt="Logo Qualiopi" 
+                  <img
+                    src="/Screenshot 2025-06-22 204332.png"
+                    alt="Logo Qualiopi"
                     className="h-12 w-auto object-contain mr-4"
                   />
                   <div>
-                    <div className="font-semibold text-green-800">Certifié Qualiopi</div>
-                    <div className="text-sm text-green-600">Formation de qualité</div>
+                    <div className="font-semibold text-amber-800">Certification Qualiopi</div>
+                    <div className="text-sm text-amber-600">En cours de formalisation interne</div>
                   </div>
                 </div>
-                <p className="text-green-700 text-sm">
-                  Cette formation est certifiée Qualiopi et éligible aux financements OPCO
-                  et plan de développement des compétences selon votre situation.
+                <p className="text-amber-700 text-sm">
+                  Cette formation peut être financée par les OPCO et le plan de développement des compétences selon votre situation.
+                  Non éligible au CPF.
                 </p>
               </div>
             </div>

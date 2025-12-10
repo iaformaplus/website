@@ -75,8 +75,17 @@ const Footer: React.FC = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <Logo className="h-12 w-auto" isWhite={true} />
-            <p className="text-gray-400">
-              Organisme de formation certifié Qualiopi, spécialisé dans les formations IA et professionnelles.
+            <p className="text-gray-400 font-medium">
+              IA FORMA PLUS – SAS au capital de 1 000 €
+            </p>
+            <p className="text-gray-400 text-sm">
+              Organisme de formation spécialisé dans les formations IA et professionnelles.
+            </p>
+            <p className="text-gray-400 text-sm">
+              SIRET : 941 565 988 00016 – RCS Paris 941 565 988
+            </p>
+            <p className="text-gray-400 text-sm">
+              TVA : FR67941565988
             </p>
             <div className="flex space-x-4">
               <a
@@ -254,9 +263,9 @@ const Footer: React.FC = () => {
                 />
               </div>
               <div className="text-gray-400 text-sm max-w-md">
-                <p className="font-medium text-white mb-1">Organisme certifié Qualiopi</p>
-                <p>La certification Qualiopi a été délivrée au titre des catégories d'actions suivantes :</p>
-                <p>• actions de formation</p>
+                <p className="font-medium text-white mb-1">Certification Qualiopi</p>
+                <p>En cours de formalisation interne</p>
+                <p className="text-xs mt-1">Catégories d'actions : actions de formation</p>
               </div>
             </div>
             

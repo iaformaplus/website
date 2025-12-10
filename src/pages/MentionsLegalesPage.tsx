@@ -47,20 +47,35 @@ const MentionsLegalesPage: React.FC = () => {
               </h2>
               <div className="bg-gray-50 rounded-lg p-6 space-y-3">
                 <p className="text-gray-700">
-                  <strong>Raison sociale :</strong> IA FORMA PLUS
+                  <strong>Dénomination :</strong> IA FORMA PLUS – SAS au capital de 1 000 €
                 </p>
                 <p className="text-gray-700">
-                  <strong>Forme juridique :</strong> SARL (Société à Responsabilité Limitée)
+                  <strong>Forme juridique :</strong> SAS (Société par Actions Simplifiée)
+                </p>
+                <p className="text-gray-700">
+                  <strong>Capital social :</strong> 1 000 €
                 </p>
                 <p className="text-gray-700 flex items-start">
                   <MapPin size={18} className="mr-2 text-primary mt-0.5 flex-shrink-0" />
-                  <span><strong>Siège social :</strong> 138 boulevard Haussmann, 75008 Paris, France</span>
+                  <span><strong>Siège social :</strong> 138 boulevard Haussmann, 75008 Paris</span>
                 </p>
                 <p className="text-gray-700">
-                  <strong>SIRET :</strong> [Numéro SIRET à compléter]
+                  <strong>SIREN :</strong> 941 565 988
                 </p>
                 <p className="text-gray-700">
-                  <strong>Capital social :</strong> [Montant du capital à compléter]
+                  <strong>SIRET :</strong> 941 565 988 00016
+                </p>
+                <p className="text-gray-700">
+                  <strong>RCS :</strong> 941 565 988 R.C.S. Paris
+                </p>
+                <p className="text-gray-700">
+                  <strong>N° TVA intracommunautaire :</strong> FR67941565988
+                </p>
+                <p className="text-gray-700">
+                  <strong>Code APE/NAF :</strong> 85.59B – Autres enseignements
+                </p>
+                <p className="text-gray-700">
+                  <strong>Date de création :</strong> 26 février 2025
                 </p>
                 <p className="text-gray-700 flex items-start">
                   <Phone size={18} className="mr-2 text-primary mt-0.5 flex-shrink-0" />
@@ -81,10 +96,10 @@ const MentionsLegalesPage: React.FC = () => {
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700">
-                  <strong>Nom :</strong> [Nom du directeur de publication à compléter]
+                  <strong>Nom :</strong> Didier Krief
                 </p>
                 <p className="text-gray-700 mt-2">
-                  <strong>Qualité :</strong> Gérant / Président
+                  <strong>Qualité :</strong> Président
                 </p>
               </div>
             </div>
@@ -134,22 +149,19 @@ const MentionsLegalesPage: React.FC = () => {
                 <Shield size={24} className="mr-3 text-primary" />
                 5. Certification Qualiopi
               </h2>
-              <div className="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
+              <div className="bg-amber-50 rounded-lg p-6 border-l-4 border-amber-500">
                 <p className="text-gray-700 mb-3">
                   <strong>Statut de la certification :</strong>
                 </p>
-                <p className="text-green-900 font-medium bg-white px-4 py-2 rounded inline-block mb-3">
-                  Certification Qualiopi obtenue
+                <p className="text-amber-900 font-medium bg-white px-4 py-2 rounded inline-block mb-3">
+                  Certification Qualiopi : en cours de formalisation interne
                 </p>
                 <p className="text-gray-600 text-sm mt-3">
-                  <strong>Organisme certificateur :</strong> [Nom de l'organisme certificateur]
-                </p>
-                <p className="text-gray-600 text-sm">
                   <strong>Catégories d'actions concernées :</strong> Actions de formation
                 </p>
                 <p className="text-gray-600 text-sm mt-3">
-                  La certification Qualiopi a été délivrée au titre de la catégorie d'action suivante :
-                  ACTIONS DE FORMATION.
+                  La démarche de certification qualité vise à garantir la conformité de nos actions de formation
+                  aux exigences du Référentiel National Qualité.
                 </p>
               </div>
             </div>
@@ -160,14 +172,20 @@ const MentionsLegalesPage: React.FC = () => {
                 6. Financements - OPCO
               </h2>
               <div className="bg-gray-50 rounded-lg p-6">
-                <p className="text-gray-700 leading-relaxed">
-                  En tant qu'organisme de formation certifié Qualiopi, nos formations sont éligibles
-                  à une prise en charge par les Opérateurs de Compétences (OPCO) selon votre branche
-                  professionnelle et votre situation.
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  <strong>Financement par OPCO</strong>
                 </p>
-                <p className="text-gray-700 mt-3">
-                  Nous vous accompagnons dans vos démarches de financement et le montage de votre
-                  dossier auprès de votre OPCO.
+                <p className="text-gray-700 leading-relaxed">
+                  Nos formations peuvent être prises en charge par les Opérateurs de Compétences (OPCO)
+                  selon votre branche professionnelle et votre situation. Nous vous accompagnons dans vos
+                  démarches de financement et le montage de votre dossier auprès de votre OPCO.
+                </p>
+                <p className="text-gray-700 mt-3 leading-relaxed">
+                  Les OPCO concernés incluent : OPCO EP, AFDAS, AKTO, Atlas, Constructys, L'Opcommerce,
+                  OCAPIAT, Opco Mobilités, Opco Santé, Opco 2i, et Uniformation.
+                </p>
+                <p className="text-gray-600 text-sm mt-4 italic">
+                  Note : Nos formations ne sont actuellement pas éligibles au CPF (Compte Personnel de Formation).
                 </p>
               </div>
             </div>

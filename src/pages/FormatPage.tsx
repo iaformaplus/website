@@ -24,7 +24,7 @@ const formatsData = {
       "Formations certifiantes exigeantes"
     ],
     functioning: "Sessions organisées dans nos centres équipés ou dans vos locaux. Groupes de 4 à 12 participants maximum. Matériel pédagogique fourni. Pauses et déjeuner inclus selon la durée.",
-    qualiopi: "Toutes nos formations présentielles sont certifiées Qualiopi. Elles bénéficient d'un suivi pédagogique renforcé et sont éligibles aux financements OPCO et plan de formation selon votre situation."
+    qualiopi: "Nos formations présentielles bénéficient d'un suivi pédagogique renforcé et peuvent être financées par les OPCO et le plan de formation selon votre situation. Certification Qualiopi en cours de formalisation interne."
   },
   "distanciel": {
     title: "Formations en Distanciel",
@@ -46,7 +46,7 @@ const formatsData = {
       "Formations en langues étrangères"
     ],
     functioning: "Classes virtuelles via plateforme dédiée (Zoom, Teams). Sessions interactives avec partage d'écran, tableaux blancs collaboratifs, salles de sous-groupes. Support technique inclus.",
-    qualiopi: "Nos formations distancielles sont certifiées Qualiopi avec traçabilité complète des connexions et interactions. Éligibles aux mêmes financements que le présentiel."
+    qualiopi: "Nos formations distancielles assurent une traçabilité complète des connexions et interactions. Financement possible par OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
   },
   "elearning": {
     title: "Formations E-learning",
@@ -68,7 +68,7 @@ const formatsData = {
       "Préparation à une certification"
     ],
     functioning: "Plateforme LMS accessible via navigateur. Modules vidéo HD, documents PDF, exercices interactifs, quiz d'évaluation. Support pédagogique par email ou chat.",
-    qualiopi: "Modules e-learning certifiés Qualiopi avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation."
+    qualiopi: "Modules e-learning avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
   },
   "mixte": {
     title: "Formations Mixtes (Blended Learning)",
@@ -90,7 +90,7 @@ const formatsData = {
       "Formations diplômantes"
     ],
     functioning: "Parcours personnalisé combinant sessions présentielles pour la pratique, classes virtuelles pour les échanges, et modules e-learning pour la théorie. Planning adapté à vos contraintes.",
-    qualiopi: "Parcours mixtes certifiés Qualiopi avec traçabilité de toutes les modalités. Évaluation continue et finale. Financement possible selon la répartition des modalités."
+    qualiopi: "Parcours mixtes avec traçabilité de toutes les modalités. Évaluation continue et finale. Financement possible via OPCO selon la répartition des modalités. Certification Qualiopi en cours de formalisation interne."
   },
   "inter-entreprise": {
     title: "Formations Inter-entreprises",
@@ -112,7 +112,7 @@ const formatsData = {
       "Développement personnel"
     ],
     functioning: "Inscription sur sessions programmées, groupes de 4 à 12 participants, supports fournis, certificat de réalisation délivré.",
-    qualiopi: "Toutes nos formations inter-entreprises sont certifiées Qualiopi et éligibles aux financements OPCO et plan de développement des compétences selon votre situation."
+    qualiopi: "Nos formations inter-entreprises peuvent être financées par les OPCO et le plan de développement des compétences selon votre situation. Certification Qualiopi en cours de formalisation interne."
   },
   "intra-entreprise": {
     title: "Formations Intra-entreprise",
@@ -134,7 +134,7 @@ const formatsData = {
       "Formation de 4 à 15 personnes"
     ],
     functioning: "Analyse des besoins, programme sur-mesure, animation dans vos locaux, évaluation et suivi des acquis.",
-    qualiopi: "Formations intra-entreprise certifiées Qualiopi, éligibles aux financements OPCO et plan de formation entreprise."
+    qualiopi: "Formations intra-entreprise pouvant être financées par les OPCO et le plan de formation entreprise. Certification Qualiopi en cours de formalisation interne."
   },
   "sur-mesure": {
     title: "Formations sur-mesure",
@@ -156,7 +156,7 @@ const formatsData = {
       "Accompagnement au changement"
     ],
     functioning: "Audit des besoins, co-construction du programme, animation experte, évaluation des résultats et plan d'amélioration.",
-    qualiopi: "Formations sur-mesure certifiées Qualiopi, financement possible via OPCO selon les modalités définies ensemble."
+    qualiopi: "Formations sur-mesure avec financement possible via OPCO selon les modalités définies ensemble. Certification Qualiopi en cours de formalisation interne."
   },
   "e-learning": {
     title: "Formations E-learning",
@@ -178,7 +178,7 @@ const formatsData = {
       "Apprentissage autonome"
     ],
     functioning: "Plateforme LMS dédiée, vidéos HD, exercices interactifs, quiz d'évaluation, support pédagogique à distance.",
-    qualiopi: "Modules e-learning certifiés Qualiopi, traçabilité complète des apprentissages. Financements possibles via OPCO selon votre situation."
+    qualiopi: "Modules e-learning avec traçabilité complète des apprentissages. Financements possibles via OPCO selon votre situation. Certification Qualiopi en cours de formalisation interne."
   },
   "digital-learning": {
     title: "Digital Learning & Innovation",
@@ -200,7 +200,7 @@ const formatsData = {
       "Innovation pédagogique"
     ],
     functioning: "Classes virtuelles interactives, modules VR/AR, IA adaptive, gamification, analytics d'apprentissage avancés.",
-    qualiopi: "Méthodes digital learning certifiées Qualiopi, innovation pédagogique reconnue, financement possible selon modalités."
+    qualiopi: "Méthodes digital learning avec innovation pédagogique reconnue. Financement possible via OPCO selon modalités. Certification Qualiopi en cours de formalisation interne."
   }
 };
 
@@ -326,7 +326,7 @@ const FormatPage: React.FC = () => {
                 <Globe size={24} className={`mr-3 ${colorClasses[formatData.color as keyof typeof colorClasses].split(' ')[2]}`} />
                 Certification Qualiopi
               </h2>
-              <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
+              <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg">
                 <div className="flex items-start">
                   <img 
                     src="/Screenshot 2025-06-22 204332.png" 

@@ -252,8 +252,8 @@ const HomePage: React.FC = () => {
             <div className="inline-flex items-center gap-4 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
               {/* Qualiopi certification badge */}
               <div className="flex items-center gap-2 text-gray-600">
-                <Globe size={20} className="text-blue-500" />
-                <span className="font-medium">Toutes nos formations sont certifiées Qualiopi</span>
+                <Globe size={20} className="text-amber-500" />
+                <span className="font-medium">Certification Qualiopi en cours de formalisation</span>
               </div>
               <div className="w-px h-8 bg-gray-200"></div>
               {/* CTA button */}
@@ -620,7 +620,7 @@ const HomePage: React.FC = () => {
                         <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                    <span>Formations éligibles au financement OPCO</span>
+                    <span>Formations finançables par OPCO (non éligibles CPF)</span>
                   </div>
                 </div>
                 
