@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Users, Target } from 'lucide-react';
+import { ArrowRight, Users, Target, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -8,45 +8,58 @@ import { Link } from 'react-router-dom';
  * Cette section est VERROUILLÉE et STATIQUE.
  * Aucun carrousel, aucun état dynamique, aucune logique qui pourrait masquer le contenu.
  * Tous les textes, images et boutons sont TOUJOURS VISIBLES.
+ * Chaque carte a sa propre destination unique - AUCUNE redirection vers l'accueil.
  */
 
-// Données hardcodées et stables - NE PAS MODIFIER SANS RAISON
+// Données hardcodées et stables avec destinations uniques - NE PAS MODIFIER SANS RAISON
 const formationsStables = [
   {
     id: 'ia-quotidien-1',
     titre: "IA pour gagner du temps au quotidien",
     description: "Automatisations, rédaction, organisation",
-    details: "Apprenez à utiliser ChatGPT, Notion AI et autres outils pour automatiser vos tâches répétitives et gagner plusieurs heures par jour",
+    details: "Apprenez à utiliser ChatGPT, Notion AI et autres outils IA pour automatiser vos tâches répétitives, rédiger vos emails et documents, et organiser votre travail. Gagnez plusieurs heures par jour.",
     publicCible: "Tous professionnels, TPE/PME, indépendants",
+    duree: "7h à 14h",
+    format: "E-learning ou Distanciel",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "ia-quotidien-productivite"
+    // Destination unique pour cette formation
+    lien: "/formations-ia#ia-productivite"
   },
   {
     id: 'ia-marketing-2',
     titre: "IA pour le marketing & la vente",
     description: "Ads, contenus, CRM, prospection",
-    details: "Créez des campagnes marketing performantes, générez du contenu engageant et optimisez votre prospection commerciale avec l'IA",
+    details: "Créez des campagnes marketing performantes, générez du contenu engageant pour vos réseaux sociaux, optimisez votre prospection commerciale et automatisez votre CRM avec l'IA.",
     publicCible: "Marketeurs, commerciaux, entrepreneurs",
+    duree: "14h à 21h",
+    format: "Présentiel ou Distanciel",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "ia-marketing-vente"
+    // Destination unique pour cette formation
+    lien: "/formations-ia#ia-marketing-vente"
   },
   {
     id: 'ia-equipe-3',
     titre: "IA pour la productivité d'équipe",
     description: "Process internes, reporting, support",
-    details: "Optimisez la collaboration de vos équipes avec des outils IA pour la gestion de projet, le reporting automatisé et le support client",
+    details: "Optimisez la collaboration de vos équipes avec des outils IA pour la gestion de projet, le reporting automatisé, le support client intelligent et les processus internes.",
     publicCible: "Managers, chefs de projet, RH",
+    duree: "14h à 21h",
+    format: "Intra-entreprise ou Distanciel",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "ia-productivite-equipe"
+    // Destination unique pour cette formation
+    lien: "/formations-ia#ia-equipe"
   },
   {
     id: 'ia-strategie-4',
     titre: "IA pour dirigeants & stratégie",
     description: "Cas d'usage, décisions, roadmap",
-    details: "Intégrez l'IA dans votre stratégie d'entreprise, identifiez les opportunités et prenez des décisions éclairées grâce à l'analyse de données",
+    details: "Intégrez l'IA dans votre stratégie d'entreprise, identifiez les opportunités business, prenez des décisions éclairées grâce à l'analyse de données et définissez votre roadmap IA.",
     publicCible: "Dirigeants, décideurs, consultants",
+    duree: "7h à 14h",
+    format: "Sur-mesure ou Présentiel",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
-    slug: "ia-dirigeants-strategie"
+    // Destination unique pour cette formation
+    lien: "/formations-ia#ia-dirigeants"
   }
 ];
 
@@ -101,7 +114,7 @@ const AIFormationsSection: React.FC = () => {
               opacity: 1
             }}
           >
-            Formations IA les plus demandées
+            🧠 Formations IA les plus demandées
           </h2>
 
           {/* Sous-titre - VERROUILLÉ */}
@@ -114,7 +127,7 @@ const AIFormationsSection: React.FC = () => {
             }}
           >
             Découvrez nos formations en intelligence artificielle les plus populaires, conçues pour transformer
-            votre façon de travailler et booster votre productivité au quotidien.
+            votre façon de travailler et booster votre productivité au quotidien. Formations certifiées Qualiopi.
           </p>
         </div>
 
@@ -130,7 +143,7 @@ const AIFormationsSection: React.FC = () => {
           {formationsStables.map((formation) => (
             <div
               key={formation.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-300"
+              className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-400 hover:-translate-y-1"
               style={{
                 display: 'block',
                 visibility: 'visible',
@@ -138,129 +151,183 @@ const AIFormationsSection: React.FC = () => {
                 position: 'relative'
               }}
             >
-              {/* IMAGE - TOUJOURS VISIBLE AVEC FOND DE SECOURS */}
-              <div
-                className="relative h-48 bg-gradient-to-br from-blue-100 to-indigo-100"
+              {/* CARTE ENTIÈREMENT CLIQUABLE VERS DESTINATION UNIQUE */}
+              <Link
+                to={formation.lien}
+                className="block"
                 style={{
-                  display: 'block',
-                  visibility: 'visible',
-                  opacity: 1,
-                  overflow: 'hidden'
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  display: 'block'
                 }}
               >
-                <img
-                  src={formation.image}
-                  alt={formation.titre}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  loading="eager"
-                  onError={handleImageError}
+                {/* IMAGE - TOUJOURS VISIBLE AVEC FOND DE SECOURS */}
+                <div
+                  className="relative h-48 bg-gradient-to-br from-blue-100 to-indigo-100"
                   style={{
+                    display: 'block',
+                    visibility: 'visible',
                     opacity: 1,
-                    display: 'block',
-                    visibility: 'visible'
-                  }}
-                />
-
-                {/* Badge IA - TOUJOURS VISIBLE */}
-                <div
-                  className="absolute top-4 left-4"
-                  style={{
-                    zIndex: 10,
-                    display: 'block',
-                    visibility: 'visible',
-                    opacity: 1
+                    overflow: 'hidden'
                   }}
                 >
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md">
-                    🧠 IA
-                  </span>
+                  <img
+                    src={formation.image}
+                    alt={formation.titre}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    loading="eager"
+                    onError={handleImageError}
+                    style={{
+                      opacity: 1,
+                      display: 'block',
+                      visibility: 'visible'
+                    }}
+                  />
+
+                  {/* Overlay au hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+
+                  {/* Badge IA - TOUJOURS VISIBLE */}
+                  <div
+                    className="absolute top-4 left-4"
+                    style={{
+                      zIndex: 10,
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1
+                    }}
+                  >
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg">
+                      🧠 IA
+                    </span>
+                  </div>
+
+                  {/* Badge Populaire - TOUJOURS VISIBLE */}
+                  <div
+                    className="absolute top-4 right-4"
+                    style={{
+                      zIndex: 10,
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1
+                    }}
+                  >
+                    <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold bg-red-500 text-white shadow-lg">
+                      🔥 Top
+                    </span>
+                  </div>
                 </div>
 
-                {/* Badge Tendance - TOUJOURS VISIBLE */}
+                {/* CONTENU TEXTUEL - VERROUILLÉ ET TOUJOURS VISIBLE */}
                 <div
-                  className="absolute top-4 right-4"
-                  style={{
-                    zIndex: 10,
-                    display: 'block',
-                    visibility: 'visible',
-                    opacity: 1
-                  }}
-                >
-                  <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-red-500 text-white shadow-md">
-                    🔥 Populaire
-                  </span>
-                </div>
-              </div>
-
-              {/* CONTENU TEXTUEL - VERROUILLÉ ET TOUJOURS VISIBLE */}
-              <div
-                className="p-6"
-                style={{
-                  display: 'block',
-                  visibility: 'visible',
-                  opacity: 1
-                }}
-              >
-                {/* Titre de la formation - TOUJOURS VISIBLE */}
-                <h3
-                  className="text-lg font-bold mb-3 text-gray-900 leading-tight min-h-[56px]"
+                  className="p-6"
                   style={{
                     display: 'block',
                     visibility: 'visible',
                     opacity: 1
                   }}
                 >
-                  {formation.titre}
-                </h3>
-
-                {/* Description courte - TOUJOURS VISIBLE */}
-                <p
-                  className="text-sm text-gray-600 mb-3 font-medium"
-                  style={{
-                    display: 'block',
-                    visibility: 'visible',
-                    opacity: 1
-                  }}
-                >
-                  {formation.description}
-                </p>
-
-                {/* Détails - TOUJOURS VISIBLES */}
-                <p
-                  className="text-sm text-gray-600 mb-4 leading-relaxed"
-                  style={{
-                    display: 'block',
-                    visibility: 'visible',
-                    opacity: 1
-                  }}
-                >
-                  {formation.details}
-                </p>
-
-                {/* Public cible - TOUJOURS VISIBLE */}
-                <div
-                  className="flex items-start mb-4 bg-blue-50 p-3 rounded-lg"
-                  style={{
-                    display: 'flex',
-                    visibility: 'visible',
-                    opacity: 1
-                  }}
-                >
-                  <Users size={16} className="mr-2 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span
-                    className="text-xs text-gray-700"
+                  {/* Titre de la formation - TOUJOURS VISIBLE */}
+                  <h3
+                    className="text-lg font-bold mb-3 text-gray-900 leading-tight min-h-[56px] hover:text-blue-600 transition-colors"
                     style={{
                       display: 'block',
                       visibility: 'visible',
                       opacity: 1
                     }}
                   >
-                    <strong>Pour :</strong> {formation.publicCible}
-                  </span>
-                </div>
-              </div>
+                    {formation.titre}
+                  </h3>
 
-              {/* FOOTER AVEC BOUTON CTA - TOUJOURS VISIBLE */}
+                  {/* Description courte - TOUJOURS VISIBLE */}
+                  <p
+                    className="text-sm text-blue-600 font-bold mb-3"
+                    style={{
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1
+                    }}
+                  >
+                    {formation.description}
+                  </p>
+
+                  {/* Détails - TOUJOURS VISIBLES */}
+                  <p
+                    className="text-sm text-gray-700 mb-4 leading-relaxed"
+                    style={{
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1
+                    }}
+                  >
+                    {formation.details}
+                  </p>
+
+                  {/* Infos pratiques - TOUJOURS VISIBLES */}
+                  <div
+                    className="space-y-2 mb-4"
+                    style={{
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1
+                    }}
+                  >
+                    {/* Public cible */}
+                    <div
+                      className="flex items-start text-xs text-gray-600"
+                      style={{
+                        display: 'flex',
+                        visibility: 'visible',
+                        opacity: 1
+                      }}
+                    >
+                      <Users size={14} className="mr-2 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Pour :</strong> {formation.publicCible}</span>
+                    </div>
+
+                    {/* Durée */}
+                    <div
+                      className="flex items-start text-xs text-gray-600"
+                      style={{
+                        display: 'flex',
+                        visibility: 'visible',
+                        opacity: 1
+                      }}
+                    >
+                      <Clock size={14} className="mr-2 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Durée :</strong> {formation.duree}</span>
+                    </div>
+
+                    {/* Format */}
+                    <div
+                      className="flex items-start text-xs text-gray-600"
+                      style={{
+                        display: 'flex',
+                        visibility: 'visible',
+                        opacity: 1
+                      }}
+                    >
+                      <Target size={14} className="mr-2 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Format :</strong> {formation.format}</span>
+                    </div>
+
+                    {/* Certification */}
+                    <div
+                      className="flex items-start text-xs text-gray-600"
+                      style={{
+                        display: 'flex',
+                        visibility: 'visible',
+                        opacity: 1
+                      }}
+                    >
+                      <Award size={14} className="mr-2 text-orange-600 mt-0.5 flex-shrink-0" />
+                      <span><strong>Certificat Qualiopi</strong></span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* FOOTER AVEC BOUTON CTA - TOUJOURS VISIBLE - DESTINATION UNIQUE */}
               <div
                 className="px-6 py-4 bg-gray-50 border-t border-gray-100"
                 style={{
@@ -270,7 +337,7 @@ const AIFormationsSection: React.FC = () => {
                 }}
               >
                 <Link
-                  to="/contact"
+                  to={formation.lien}
                   className="flex justify-between items-center w-full group"
                   style={{
                     display: 'flex',
@@ -281,7 +348,7 @@ const AIFormationsSection: React.FC = () => {
                 >
                   {/* BOUTON CTA - VERROUILLÉ ET TOUJOURS VISIBLE */}
                   <span
-                    className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                    className="inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     style={{
                       backgroundColor: '#1877F2',
                       display: 'inline-flex',
@@ -293,7 +360,7 @@ const AIFormationsSection: React.FC = () => {
                   </span>
                   <ArrowRight
                     size={18}
-                    className="text-blue-600 group-hover:translate-x-1 transition-transform"
+                    className="text-blue-600 group-hover:translate-x-2 transition-transform"
                     style={{
                       display: 'block',
                       visibility: 'visible',
