@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSEO } from '../hooks/useSEO';
+import { getPageSEO } from '../config/seo';
 import HeroSection from '../components/home/HeroSection';
 import PopularFormations from '../components/home/PopularFormations';
 import AIFormationsSection from '../components/home/AIFormationsSection';
@@ -19,11 +21,7 @@ import { Link } from 'react-router-dom';
  * - Final conversion section with company branding
  */
 const HomePage: React.FC = () => {
-  /**
-   * Function to trigger the callback modal
-   * Removes the localStorage flag that prevents the modal from showing
-   * and reloads the page to trigger the modal display
-   */
+  useSEO(getPageSEO('home'));
 
   return (
     <>

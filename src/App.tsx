@@ -15,6 +15,13 @@ import FormatPage from './pages/FormatPage';
 import CGUPage from './pages/CGUPage';
 import CGVPage from './pages/CGVPage';
 import MentionsLegalesPage from './pages/MentionsLegalesPage';
+import FormationIATPEPMEPage from './pages/FormationIATPEPMEPage';
+import FormationChatGPTEntreprisePage from './pages/FormationChatGPTEntreprisePage';
+import FormationIAMarketingPage from './pages/FormationIAMarketingPage';
+import FormationIARHPage from './pages/FormationIARHPage';
+import FormationIACommerciauxPage from './pages/FormationIACommerciauxPage';
+import FormationIAMetiersBouchePage from './pages/FormationIAMetiersBouchePage';
+import HabilitationElectriquePage from './pages/HabilitationElectriquePage';
 import CookieBanner from './components/common/CookieBanner';
 import CallbackModal from './components/common/CallbackModal';
 import AccessibilityWidget from './components/common/AccessibilityWidget';
@@ -33,6 +40,13 @@ function App() {
           <Route path="formations-professionnelles" element={<FormationsProfessionnellesPage />} />
           <Route path="formations-particuliers" element={<FormationsParticuliersPage />} />
           <Route path="formations-securite" element={<FormationsSecuritePage />} />
+          <Route path="formation-ia-tpe-pme" element={<FormationIATPEPMEPage />} />
+          <Route path="formation-chatgpt-entreprise" element={<FormationChatGPTEntreprisePage />} />
+          <Route path="formation-ia-marketing" element={<FormationIAMarketingPage />} />
+          <Route path="formation-ia-rh" element={<FormationIARHPage />} />
+          <Route path="formation-ia-commerciaux" element={<FormationIACommerciauxPage />} />
+          <Route path="formation-ia-metiers-bouche" element={<FormationIAMetiersBouchePage />} />
+          <Route path="habilitation-electrique-vehicules-electriques" element={<HabilitationElectriquePage />} />
           <Route path="format/:format" element={<FormatPage />} />
           <Route path="webinaires" element={<WebinairsPage />} />
           <Route path="a-propos" element={<AboutPage />} />

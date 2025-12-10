@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iaformaplus.fr/sitemap.xml
