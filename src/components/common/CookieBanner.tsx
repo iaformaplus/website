@@ -10,20 +10,71 @@ interface CookiePreferences {
 
 const CookieStudentIcon = () => (
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="60" cy="60" r="50" fill="#F4A460" />
-    <circle cx="60" cy="60" r="45" fill="#DEB887" />
-    <circle cx="45" cy="55" r="4" fill="#8B4513" />
-    <circle cx="75" cy="55" r="4" fill="#8B4513" />
-    <path d="M 45 70 Q 60 80 75 70" stroke="#8B4513" strokeWidth="3" fill="none" strokeLinecap="round" />
-    <ellipse cx="35" cy="60" rx="8" ry="12" fill="#CD853F" />
-    <ellipse cx="85" cy="60" rx="8" ry="12" fill="#CD853F" />
-    <circle cx="50" cy="45" r="3" fill="#D2691E" />
-    <circle cx="70" cy="50" r="2.5" fill="#D2691E" />
-    <circle cx="55" cy="75" r="2" fill="#D2691E" />
-    <path d="M 30 25 L 60 15 L 90 25 L 60 35 Z" fill="#1e40af" />
-    <rect x="57" y="15" width="6" height="25" fill="#1e40af" />
-    <path d="M 30 25 L 35 30 L 60 20 L 85 30 L 90 25 L 60 15 Z" fill="#2563eb" />
-    <rect x="54" y="10" width="12" height="8" rx="4" fill="#fbbf24" />
+    {/* Cookie body */}
+    <circle cx="60" cy="65" r="50" fill="#F4A460" />
+    <circle cx="60" cy="65" r="45" fill="#DEB887" />
+
+    {/* Cookie chips */}
+    <circle cx="50" cy="50" r="3" fill="#8B4513" />
+    <circle cx="70" cy="55" r="2.5" fill="#8B4513" />
+    <circle cx="55" cy="80" r="2" fill="#8B4513" />
+    <circle cx="75" cy="70" r="3" fill="#8B4513" />
+    <circle cx="45" cy="70" r="2" fill="#8B4513" />
+
+    {/* Eyes */}
+    <circle cx="50" cy="60" r="4" fill="#8B4513" />
+    <circle cx="70" cy="60" r="4" fill="#8B4513" />
+
+    {/* Smile */}
+    <path d="M 48 75 Q 60 83 72 75" stroke="#8B4513" strokeWidth="3" fill="none" strokeLinecap="round" />
+
+    {/* Graduation cap - shadow under plateau */}
+    <ellipse cx="60" cy="28" rx="34" ry="4" fill="rgba(0,0,0,0.12)" transform="rotate(-6 60 28)" />
+
+    {/* Cap base that follows cookie curve */}
+    <ellipse cx="60" cy="25" rx="22" ry="7" fill="#1e3a8a" transform="rotate(-6 60 25)" />
+    <ellipse cx="60" cy="24" rx="22" ry="6" fill="#1e40af" transform="rotate(-6 60 24)" />
+
+    {/* Cap body */}
+    <path
+      d="M 40 23 Q 60 20 80 23 L 80 28 Q 60 25 40 28 Z"
+      fill="#1e40af"
+      stroke="#1e3a8a"
+      strokeWidth="1"
+      transform="rotate(-6 60 25)"
+    />
+
+    {/* Graduation cap - large flat plateau */}
+    <g transform="rotate(-6 60 20)">
+      {/* Bottom of plateau */}
+      <path d="M 26 22 L 94 22 L 92 26 L 28 26 Z" fill="#1e3a8a" />
+      {/* Top of plateau */}
+      <path d="M 26 18 L 94 18 L 94 22 L 26 22 Z" fill="#1e40af" />
+      {/* Highlight on top */}
+      <path d="M 28 18 L 92 18 L 91 20 L 29 20 Z" fill="#2563eb" />
+      {/* Edge detail */}
+      <rect x="26" y="18" width="68" height="1" fill="#3b82f6" />
+    </g>
+
+    {/* Tassel string */}
+    <line
+      x1="88"
+      y1="20"
+      x2="98"
+      y2="30"
+      stroke="#fbbf24"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+
+    {/* Tassel pompom - outer */}
+    <circle cx="98" cy="30" r="5" fill="#fbbf24" />
+    {/* Tassel pompom - inner highlight */}
+    <circle cx="98" cy="30" r="3.5" fill="#fcd34d" />
+    {/* Tassel detail lines */}
+    <line x1="98" y1="32" x2="98" y2="35" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="96" y1="33" x2="95" y2="36" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="100" y1="33" x2="101" y2="36" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
