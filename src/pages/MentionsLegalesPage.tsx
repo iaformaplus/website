@@ -119,10 +119,10 @@ const MentionsLegalesPage: React.FC = () => {
               </h2>
               <div className="bg-gray-50 rounded-lg p-6 space-y-3">
                 <p className="text-gray-700">
-                  <strong>Hébergeur :</strong> Bolt (service d'hébergement intégré à la plateforme Bolt / StackBlitz)
+                  <strong>Hébergeur :</strong> Bolt (opéré par StackBlitz, Inc.)
                 </p>
                 <p className="text-gray-700">
-                  <strong>Adresse :</strong> À compléter selon les informations de souscription/facturation Bolt
+                  <strong>Adresse :</strong> 2443 Fillmore Street, Suite 380-7122, San Francisco, CA 94115, USA
                 </p>
                 <p className="text-gray-700">
                   <strong>Contact :</strong> support@bolt.new
