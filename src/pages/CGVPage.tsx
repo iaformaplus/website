@@ -168,7 +168,7 @@ const CGVPage: React.FC = () => {
                     <div className="bg-gray-50 rounded-lg p-4">
                       <ul className="space-y-2 text-gray-700">
                         <li><strong>Entreprises :</strong> Paiement à 30 jours fin de mois par virement bancaire</li>
-                        <li><strong>Particuliers :</strong> Paiement comptant par virement, chèque ou financement CPF</li>
+                        <li><strong>Particuliers :</strong> Paiement comptant par virement ou chèque</li>
                         <li><strong>OPCO :</strong> Paiement direct par l'organisme financeur selon ses modalités</li>
                       </ul>
                     </div>

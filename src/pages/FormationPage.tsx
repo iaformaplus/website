@@ -1158,8 +1158,8 @@ const FormationPage: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-green-700 text-sm">
-                  Cette formation est certifiée Qualiopi et éligible aux financements OPCO, 
-                  CPF et plan de développement des compétences.
+                  Cette formation est certifiée Qualiopi et éligible aux financements OPCO
+                  et plan de développement des compétences selon votre situation.
                 </p>
               </div>
             </div>

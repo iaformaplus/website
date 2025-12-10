@@ -71,6 +71,13 @@ const Header: React.FC = () => {
                       <div className="text-xs text-gray-500">Bureautique, marketing, management</div>
                     </div>
                   </Link>
+                  <Link to="/formations-securite" className="flex items-center px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-200 group">
+                    <span className="text-2xl mr-3">🛡️</span>
+                    <div>
+                      <div className="font-medium">Formations Sécurité</div>
+                      <div className="text-xs text-gray-500">SST, incendie, habilitations</div>
+                    </div>
+                  </Link>
                   <Link to="/formations-particuliers" className="flex items-center px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-200 group">
                     <span className="text-2xl mr-3">👤</span>
                     <div>
@@ -176,6 +183,9 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/formations-professionnelles" className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 text-center border-b border-gray-100">
                 💼 Formations Pro
+              </Link>
+              <Link to="/formations-securite" className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 text-center border-b border-gray-100">
+                🛡️ Formations Sécurité
               </Link>
               <Link to="/formations-particuliers" className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 text-center border-b border-gray-100">
                 👤 Particuliers

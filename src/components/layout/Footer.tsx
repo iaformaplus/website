@@ -133,6 +133,11 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/formations-securite" className="text-gray-400 hover:text-primary transition-colors">
+                  Formations Sécurité
+                </Link>
+              </li>
+              <li>
                 <Link to="/formations-particuliers" className="text-gray-400 hover:text-primary transition-colors">
                   Formations Particuliers
                 </Link>
@@ -265,7 +270,7 @@ const Footer: React.FC = () => {
                   <Link to="/cgv" className="hover:text-primary transition-colors">
                     CGV
                   </Link>
-                  <Link to="/contact" className="hover:text-primary transition-colors">
+                  <Link to="/mentions-legales" className="hover:text-primary transition-colors">
                     Mentions légales
                   </Link>
                 </div>

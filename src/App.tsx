@@ -6,6 +6,7 @@ import FormationPage from './pages/FormationPage';
 import FormationsIAPage from './pages/FormationsIAPage';
 import FormationsProfessionnellesPage from './pages/FormationsProfessionnellesPage';
 import FormationsParticuliersPage from './pages/FormationsParticuliersPage';
+import FormationsSecuritePage from './pages/FormationsSecuritePage';
 import WebinairsPage from './pages/WebinairsPage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
@@ -13,6 +14,7 @@ import ContactPage from './pages/ContactPage';
 import FormatPage from './pages/FormatPage';
 import CGUPage from './pages/CGUPage';
 import CGVPage from './pages/CGVPage';
+import MentionsLegalesPage from './pages/MentionsLegalesPage';
 import CookieBanner from './components/common/CookieBanner';
 import CallbackModal from './components/common/CallbackModal';
 import AccessibilityWidget from './components/common/AccessibilityWidget';
@@ -30,6 +32,7 @@ function App() {
           <Route path="formations-ia" element={<FormationsIAPage />} />
           <Route path="formations-professionnelles" element={<FormationsProfessionnellesPage />} />
           <Route path="formations-particuliers" element={<FormationsParticuliersPage />} />
+          <Route path="formations-securite" element={<FormationsSecuritePage />} />
           <Route path="format/:format" element={<FormatPage />} />
           <Route path="webinaires" element={<WebinairsPage />} />
           <Route path="a-propos" element={<AboutPage />} />
@@ -38,6 +41,7 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="cgu" element={<CGUPage />} />
           <Route path="cgv" element={<CGVPage />} />
+          <Route path="mentions-legales" element={<MentionsLegalesPage />} />
         </Route>
       </Routes>
       

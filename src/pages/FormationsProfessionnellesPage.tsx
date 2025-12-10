@@ -1050,8 +1050,8 @@ const FormationsProfessionnellesPage = () => {
                 </summary>
                 <div className="px-6 pb-6">
                   <p className="text-gray-600">
-                    Nos formations sont éligibles aux financements OPCO, CPF, plan de développement des compétences, 
-                    et autres dispositifs. Notre équipe vous accompagne dans le montage de votre dossier de financement.
+                    Nos formations sont éligibles aux financements OPCO, plan de développement des compétences,
+                    et autres dispositifs selon votre situation. Notre équipe vous accompagne dans le montage de votre dossier de financement.
                   </p>
                 </div>
               </details>

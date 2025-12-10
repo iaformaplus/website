@@ -24,7 +24,7 @@ const formatsData = {
       "Formations certifiantes exigeantes"
     ],
     functioning: "Sessions organisées dans nos centres équipés ou dans vos locaux. Groupes de 4 à 12 participants maximum. Matériel pédagogique fourni. Pauses et déjeuner inclus selon la durée.",
-    qualiopi: "Toutes nos formations présentielles sont certifiées Qualiopi. Elles bénéficient d'un suivi pédagogique renforcé et sont éligibles à tous les dispositifs de financement (OPCO, CPF, plan de formation)."
+    qualiopi: "Toutes nos formations présentielles sont certifiées Qualiopi. Elles bénéficient d'un suivi pédagogique renforcé et sont éligibles aux financements OPCO et plan de formation selon votre situation."
   },
   "distanciel": {
     title: "Formations en Distanciel",
@@ -68,7 +68,7 @@ const formatsData = {
       "Préparation à une certification"
     ],
     functioning: "Plateforme LMS accessible via navigateur. Modules vidéo HD, documents PDF, exercices interactifs, quiz d'évaluation. Support pédagogique par email ou chat.",
-    qualiopi: "Modules e-learning certifiés Qualiopi avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Éligibles CPF et financements OPCO."
+    qualiopi: "Modules e-learning certifiés Qualiopi avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation."
   },
   "mixte": {
     title: "Formations Mixtes (Blended Learning)",
@@ -112,7 +112,7 @@ const formatsData = {
       "Développement personnel"
     ],
     functioning: "Inscription sur sessions programmées, groupes de 4 à 12 participants, supports fournis, certificat de réalisation délivré.",
-    qualiopi: "Toutes nos formations inter-entreprises sont certifiées Qualiopi et éligibles aux financements OPCO, CPF et plan de développement des compétences."
+    qualiopi: "Toutes nos formations inter-entreprises sont certifiées Qualiopi et éligibles aux financements OPCO et plan de développement des compétences selon votre situation."
   },
   "intra-entreprise": {
     title: "Formations Intra-entreprise",
@@ -178,7 +178,7 @@ const formatsData = {
       "Apprentissage autonome"
     ],
     functioning: "Plateforme LMS dédiée, vidéos HD, exercices interactifs, quiz d'évaluation, support pédagogique à distance.",
-    qualiopi: "Modules e-learning certifiés Qualiopi, traçabilité complète des apprentissages, éligibles CPF et financements OPCO."
+    qualiopi: "Modules e-learning certifiés Qualiopi, traçabilité complète des apprentissages. Financements possibles via OPCO selon votre situation."
   },
   "digital-learning": {
     title: "Digital Learning & Innovation",
