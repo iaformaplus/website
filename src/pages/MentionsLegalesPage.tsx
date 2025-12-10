@@ -119,13 +119,13 @@ const MentionsLegalesPage: React.FC = () => {
               </h2>
               <div className="bg-gray-50 rounded-lg p-6 space-y-3">
                 <p className="text-gray-700">
-                  <strong>Hébergeur :</strong> [Nom de l'hébergeur - à compléter selon votre hébergement]
+                  <strong>Hébergeur :</strong> Bolt (service d'hébergement intégré à la plateforme Bolt / StackBlitz)
                 </p>
                 <p className="text-gray-700">
-                  <strong>Adresse :</strong> [Adresse de l'hébergeur]
+                  <strong>Adresse :</strong> À compléter selon les informations de souscription/facturation Bolt
                 </p>
                 <p className="text-gray-700">
-                  <strong>Contact :</strong> [Contact de l'hébergeur]
+                  <strong>Contact :</strong> support@bolt.new
                 </p>
               </div>
             </div>

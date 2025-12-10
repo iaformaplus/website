@@ -264,7 +264,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-gray-400 text-sm max-w-md">
                 <p className="font-medium text-white mb-1">Certification Qualiopi</p>
-                <p>En cours de formalisation interne</p>
+                <p className="text-green-400 font-medium">✅ Organisme certifié</p>
                 <p className="text-xs mt-1">Catégories d'actions : actions de formation</p>
               </div>
             </div>
