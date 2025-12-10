@@ -42,9 +42,12 @@ const aiFormationsData = [
 ];
 
 const AIFormationsSection: React.FC = () => {
-  // Fonction pour gérer les erreurs d'images avec fallback multiple
+  // Fonction pour gérer les erreurs d'images avec fallback multiple - STABLE ET FIABLE
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, fallbackImage: string) => {
     const target = e.target as HTMLImageElement;
+    // Assurer que l'image reste visible même en cas d'erreur
+    target.style.opacity = '1';
+
     if (target.src !== fallbackImage) {
       target.src = fallbackImage;
     } else {
@@ -79,20 +82,15 @@ const AIFormationsSection: React.FC = () => {
               key={formation.id} 
               className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 hover:translate-y-[-2px]"
             >
-              {/* Image container with overlay */}
-              <div className="relative overflow-hidden h-48">
-                <img 
-                  src={formation.image} 
+              {/* Image container with overlay - CONTENU TOUJOURS VISIBLE */}
+              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-indigo-100">
+                <img
+                  src={formation.image}
                   alt={formation.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
+                  loading="eager"
                   onError={(e) => handleImageError(e, formation.fallbackImage)}
-                  onLoad={(e) => {
-                    // Assurer que l'image est bien chargée
-                    const target = e.target as HTMLImageElement;
-                    target.style.opacity = '1';
-                  }}
-                  style={{ opacity: '0', transition: 'opacity 0.3s ease-in-out' }}
+                  style={{ opacity: '1' }}
                 />
                 
                 {/* Overlay gradient */}

@@ -403,9 +403,11 @@ const FormationsIAPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [expandedFormation, setExpandedFormation] = useState<string | null>(null);
 
-  // Fonction pour gérer les erreurs d'images avec fallback multiple
+  // Fonction pour gérer les erreurs d'images avec fallback multiple - STABLE ET FIABLE
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
+    // Assurer que l'image reste visible même en cas d'erreur
+    target.style.opacity = '1';
     // Image de fallback très fiable pour l'automatisation
     target.src = 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800';
   };

@@ -36,9 +36,9 @@ const HeroSection: React.FC = () => {
               />
             </h1>
             
-            {/* Subtitle and CTA Buttons */}
+            {/* Subtitle and CTA Buttons - CONTENU TOUJOURS VISIBLE */}
             {/* Appears after typing animation completes with slide-up effect */}
-            <div className="animate-slide-up" style={{ animationDelay: '4s', animationFillMode: 'both', opacity: 0 }}>
+            <div className="animate-slide-up" style={{ animationDelay: '4s', animationFillMode: 'forwards' }}>
               {/* Subtitle describing the value proposition */}
               <p className="text-lg md:text-xl text-gray-200 mb-6">
                 Nos parcours certifiés Qualiopi vous permettent d'acquérir des compétences IA applicables immédiatement dans votre métier. Formations en présentiel, distanciel ou e-learning.
