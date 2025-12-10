@@ -585,6 +585,302 @@ const formationsData = {
     location: "Formation 100% distanciel sécurisée",
     groupSize: "8 à 15 participants",
     instructor: "Expert cybersécurité certifié"
+  },
+  "ia-productivite-quotidien": {
+    title: "IA & Productivité au quotidien",
+    category: "Intelligence Artificielle",
+    duration: "7h",
+    format: "E-learning ou Distanciel",
+    level: "Débutant",
+    price: "490€ HT",
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Maîtrisez les outils d'IA pour automatiser vos tâches quotidiennes, gagner du temps et augmenter votre efficacité professionnelle. Formation pratique avec ChatGPT, Notion AI et autres assistants intelligents.",
+    objectives: [
+      "Utiliser ChatGPT et les assistants IA pour automatiser les tâches répétitives",
+      "Rédiger rapidement emails, documents et rapports avec l'IA",
+      "Organiser et structurer votre travail avec Notion AI et outils similaires",
+      "Gagner plusieurs heures par jour grâce à l'automatisation intelligente"
+    ],
+    program: [
+      {
+        module: "Module 1 : Découverte des outils IA",
+        duration: "2h",
+        content: [
+          "Panorama des assistants IA disponibles (ChatGPT, Claude, Gemini)",
+          "Création de comptes et premières manipulations",
+          "Comprendre les forces et limites de chaque outil",
+          "Cas d'usage concrets par métier"
+        ]
+      },
+      {
+        module: "Module 2 : Rédaction et communication",
+        duration: "2h",
+        content: [
+          "Rédiger des emails professionnels efficaces",
+          "Créer des documents, rapports et synthèses",
+          "Adapter le ton et le style selon le contexte",
+          "Correction, reformulation et amélioration de textes"
+        ]
+      },
+      {
+        module: "Module 3 : Organisation et productivité",
+        duration: "2h",
+        content: [
+          "Structurer son travail avec Notion AI",
+          "Créer des to-do lists intelligentes",
+          "Automatiser la prise de notes et comptes-rendus",
+          "Gérer son agenda et ses priorités avec l'IA"
+        ]
+      },
+      {
+        module: "Module 4 : Automatisations pratiques",
+        duration: "1h",
+        content: [
+          "Créer des templates réutilisables",
+          "Intégrer l'IA dans vos workflows existants",
+          "Exemples d'automatisations métier",
+          "Plan d'action personnalisé post-formation"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Utilisation basique d'un ordinateur et d'Internet",
+      "Aucune compétence technique particulière requise",
+      "Motivation pour gagner en efficacité"
+    ],
+    audience: [
+      "Tous professionnels souhaitant gagner du temps",
+      "Entrepreneurs et indépendants",
+      "Assistants et collaborateurs",
+      "TPE et PME"
+    ],
+    certification: "Certificat de réalisation IA & Productivité",
+    validityPeriod: "Permanent avec mises à jour régulières",
+    location: "100% E-learning ou classes virtuelles",
+    groupSize: "12 participants maximum",
+    instructor: "Expert certifié en outils IA et productivité"
+  },
+  "ia-marketing-vente": {
+    title: "IA pour Marketing & Vente",
+    category: "Intelligence Artificielle",
+    duration: "14h",
+    format: "Présentiel ou Distanciel",
+    level: "Intermédiaire",
+    price: "990€ HT",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Boostez vos performances commerciales et marketing avec l'IA. Créez des campagnes performantes, générez du contenu engageant, automatisez votre prospection et optimisez votre CRM avec l'intelligence artificielle.",
+    objectives: [
+      "Créer des campagnes publicitaires optimisées avec l'IA",
+      "Générer du contenu marketing engageant pour tous les canaux",
+      "Automatiser et personnaliser la prospection commerciale",
+      "Optimiser le CRM et le parcours client avec l'IA"
+    ],
+    program: [
+      {
+        module: "Module 1 : IA pour la création de contenu",
+        duration: "4h",
+        content: [
+          "Générer des posts réseaux sociaux impactants",
+          "Créer des landing pages et pages de vente",
+          "Rédiger des newsletters et séquences email",
+          "Produire des visuels avec Midjourney et DALL-E"
+        ]
+      },
+      {
+        module: "Module 2 : IA pour la publicité",
+        duration: "3h",
+        content: [
+          "Optimiser les campagnes Google Ads avec l'IA",
+          "Créer des publicités Facebook/Instagram performantes",
+          "Analyser les données et ajuster les budgets",
+          "A/B testing automatisé et optimisation continue"
+        ]
+      },
+      {
+        module: "Module 3 : IA pour la prospection",
+        duration: "4h",
+        content: [
+          "Automatiser la recherche de prospects qualifiés",
+          "Personnaliser les messages de prospection à grande échelle",
+          "Scorer et prioriser les leads avec l'IA",
+          "Créer des séquences de suivi automatisées"
+        ]
+      },
+      {
+        module: "Module 4 : IA pour le CRM",
+        duration: "3h",
+        content: [
+          "Intégrer l'IA dans votre CRM (HubSpot, Salesforce, etc.)",
+          "Automatiser la qualification et le suivi clients",
+          "Prédire les opportunités de vente",
+          "Analyser les performances et optimiser la stratégie"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Connaissances de base en marketing ou vente",
+      "Utilisation d'outils digitaux",
+      "Expérience en prospection ou marketing digital recommandée"
+    ],
+    audience: [
+      "Responsables marketing et commerciaux",
+      "Growth hackers et traffic managers",
+      "Entrepreneurs et freelances",
+      "Équipes marketing et vente"
+    ],
+    certification: "Certificat de réalisation IA Marketing & Vente",
+    validityPeriod: "Permanent avec accès aux mises à jour",
+    location: "Présentiel dans nos centres ou 100% distanciel",
+    groupSize: "10 participants maximum",
+    instructor: "Expert marketing digital et IA certifié"
+  },
+  "ia-automatisation-process": {
+    title: "IA & Automatisation des process",
+    category: "Intelligence Artificielle",
+    duration: "14h",
+    format: "Intra-entreprise ou Distanciel",
+    level: "Intermédiaire",
+    price: "990€ HT",
+    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Optimisez la productivité de vos équipes en automatisant les process internes. Maîtrisez les outils no-code pour créer des workflows intelligents, automatiser le reporting et déployer un support client IA.",
+    objectives: [
+      "Identifier et automatiser les processus à faible valeur ajoutée",
+      "Créer des workflows intelligents avec Make, Zapier et n8n",
+      "Automatiser la génération de rapports et tableaux de bord",
+      "Mettre en place un support client intelligent et automatisé"
+    ],
+    program: [
+      {
+        module: "Module 1 : Cartographie et identification",
+        duration: "3h",
+        content: [
+          "Analyser les processus actuels de l'entreprise",
+          "Identifier les tâches automatisables",
+          "Prioriser selon l'impact business",
+          "Définir les indicateurs de succès"
+        ]
+      },
+      {
+        module: "Module 2 : Automatisation no-code",
+        duration: "4h",
+        content: [
+          "Créer des automatisations avec Make (ex-Integromat)",
+          "Connecter vos outils avec Zapier",
+          "Intégrer l'IA dans vos workflows (GPT, Claude)",
+          "Gérer les erreurs et optimiser les performances"
+        ]
+      },
+      {
+        module: "Module 3 : Reporting automatisé",
+        duration: "3h",
+        content: [
+          "Automatiser la collecte de données",
+          "Générer des rapports et dashboards avec l'IA",
+          "Créer des alertes et notifications intelligentes",
+          "Diffuser automatiquement les rapports aux équipes"
+        ]
+      },
+      {
+        module: "Module 4 : Support client IA",
+        duration: "4h",
+        content: [
+          "Créer un chatbot intelligent pour le support",
+          "Automatiser les réponses aux questions fréquentes",
+          "Qualifier et router les demandes complexes",
+          "Mesurer la satisfaction et optimiser en continu"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Connaissances des processus de l'entreprise",
+      "Utilisation d'outils web et SaaS",
+      "Aucune compétence de programmation requise"
+    ],
+    audience: [
+      "Managers et responsables d'équipe",
+      "Chefs de projet et product owners",
+      "Responsables des opérations",
+      "Équipes RH et administration"
+    ],
+    certification: "Certificat de réalisation IA & Automatisation",
+    validityPeriod: "Permanent avec support technique 6 mois",
+    location: "Formation sur site en intra ou classes virtuelles",
+    groupSize: "8 participants maximum",
+    instructor: "Expert en automatisation et transformation digitale"
+  },
+  "ia-dirigeants-strategie": {
+    title: "IA pour Dirigeants & Stratégie",
+    category: "Intelligence Artificielle",
+    duration: "7h",
+    format: "Sur-mesure ou Présentiel",
+    level: "Direction",
+    price: "1290€ HT",
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description: "Intégrez l'IA dans votre stratégie d'entreprise. Identifiez les opportunités business, prenez des décisions éclairées grâce à l'analyse de données, et définissez votre roadmap de transformation IA.",
+    objectives: [
+      "Comprendre les enjeux stratégiques de l'IA pour votre secteur",
+      "Identifier les cas d'usage à fort impact business",
+      "Utiliser l'IA pour l'aide à la décision stratégique",
+      "Définir et piloter une roadmap de transformation IA"
+    ],
+    program: [
+      {
+        module: "Module 1 : IA et stratégie d'entreprise",
+        duration: "2h",
+        content: [
+          "Panorama des technologies IA et leurs applications",
+          "Impact de l'IA sur votre secteur d'activité",
+          "Opportunités et menaces concurrentielles",
+          "ROI et business cases de l'IA"
+        ]
+      },
+      {
+        module: "Module 2 : Identifier les cas d'usage",
+        duration: "2h",
+        content: [
+          "Méthodologie d'identification des opportunités IA",
+          "Analyse de la chaîne de valeur",
+          "Priorisation des projets selon l'impact",
+          "Exemples de cas d'usage par fonction (RH, finance, ops, commercial)"
+        ]
+      },
+      {
+        module: "Module 3 : IA pour la prise de décision",
+        duration: "2h",
+        content: [
+          "Analyser les données avec l'IA (tendances, prévisions)",
+          "Simuler des scénarios business",
+          "Utiliser l'IA comme assistant stratégique",
+          "Limites et biais à connaître"
+        ]
+      },
+      {
+        module: "Module 4 : Roadmap et mise en œuvre",
+        duration: "1h",
+        content: [
+          "Définir votre stratégie et feuille de route IA",
+          "Organiser la gouvernance et les compétences",
+          "Gérer le changement et accompagner les équipes",
+          "Mesurer et piloter la performance"
+        ]
+      }
+    ],
+    prerequisites: [
+      "Fonction de direction ou management stratégique",
+      "Compréhension des enjeux business de l'entreprise",
+      "Aucune compétence technique requise"
+    ],
+    audience: [
+      "Dirigeants et comités de direction",
+      "Directeurs métiers (DSI, DG, DAF, DRH)",
+      "Consultants en stratégie",
+      "Managers de la transformation"
+    ],
+    certification: "Certificat de réalisation IA Stratégique",
+    validityPeriod: "Permanent avec accès privilégié à nos experts",
+    location: "Formation executive sur-mesure ou séminaire",
+    groupSize: "6 à 8 participants (format intimiste)",
+    instructor: "Expert en transformation digitale et stratégie IA"
   }
 };
 

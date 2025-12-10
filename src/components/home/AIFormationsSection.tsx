@@ -11,55 +11,55 @@ import { Link } from 'react-router-dom';
  * Chaque carte a sa propre destination unique - AUCUNE redirection vers l'accueil.
  */
 
-// Données hardcodées et stables avec destinations uniques - NE PAS MODIFIER SANS RAISON
+// Données hardcodées et stables avec destinations uniques vers pages formations complètes
 const formationsStables = [
   {
-    id: 'ia-quotidien-1',
-    titre: "IA pour gagner du temps au quotidien",
+    id: 'ia-productivite-quotidien',
+    titre: "IA & Productivité au quotidien",
     description: "Automatisations, rédaction, organisation",
-    details: "Apprenez à utiliser ChatGPT, Notion AI et autres outils IA pour automatiser vos tâches répétitives, rédiger vos emails et documents, et organiser votre travail. Gagnez plusieurs heures par jour.",
+    details: "Maîtrisez ChatGPT, Notion AI et autres outils IA pour automatiser vos tâches répétitives, rédiger vos emails et documents, et organiser votre travail. Gagnez plusieurs heures par jour.",
     publicCible: "Tous professionnels, TPE/PME, indépendants",
-    duree: "7h à 14h",
+    duree: "7h",
     format: "E-learning ou Distanciel",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // Destination unique pour cette formation
-    lien: "/formations-ia#ia-productivite"
+    // DESTINATION : Page de formation complète avec programme détaillé
+    lien: "/formations/ia-productivite-quotidien"
   },
   {
-    id: 'ia-marketing-2',
-    titre: "IA pour le marketing & la vente",
+    id: 'ia-marketing-vente',
+    titre: "IA pour Marketing & Vente",
     description: "Ads, contenus, CRM, prospection",
-    details: "Créez des campagnes marketing performantes, générez du contenu engageant pour vos réseaux sociaux, optimisez votre prospection commerciale et automatisez votre CRM avec l'IA.",
+    details: "Boostez vos performances commerciales et marketing. Créez des campagnes performantes, générez du contenu engageant, automatisez votre prospection et optimisez votre CRM avec l'IA.",
     publicCible: "Marketeurs, commerciaux, entrepreneurs",
-    duree: "14h à 21h",
+    duree: "14h",
     format: "Présentiel ou Distanciel",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // Destination unique pour cette formation
-    lien: "/formations-ia#ia-marketing-vente"
+    // DESTINATION : Page de formation complète avec programme détaillé
+    lien: "/formations/ia-marketing-vente"
   },
   {
-    id: 'ia-equipe-3',
-    titre: "IA pour la productivité d'équipe",
+    id: 'ia-automatisation-process',
+    titre: "IA & Automatisation des process",
     description: "Process internes, reporting, support",
-    details: "Optimisez la collaboration de vos équipes avec des outils IA pour la gestion de projet, le reporting automatisé, le support client intelligent et les processus internes.",
-    publicCible: "Managers, chefs de projet, RH",
-    duree: "14h à 21h",
+    details: "Optimisez la productivité de vos équipes. Automatisez les workflows, le reporting et déployez un support client intelligent avec les outils IA et no-code.",
+    publicCible: "Managers, chefs de projet, Ops",
+    duree: "14h",
     format: "Intra-entreprise ou Distanciel",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // Destination unique pour cette formation
-    lien: "/formations-ia#ia-equipe"
+    // DESTINATION : Page de formation complète avec programme détaillé
+    lien: "/formations/ia-automatisation-process"
   },
   {
-    id: 'ia-strategie-4',
-    titre: "IA pour dirigeants & stratégie",
+    id: 'ia-dirigeants-strategie',
+    titre: "IA pour Dirigeants & Stratégie",
     description: "Cas d'usage, décisions, roadmap",
-    details: "Intégrez l'IA dans votre stratégie d'entreprise, identifiez les opportunités business, prenez des décisions éclairées grâce à l'analyse de données et définissez votre roadmap IA.",
+    details: "Intégrez l'IA dans votre stratégie d'entreprise. Identifiez les opportunités business, prenez des décisions éclairées et définissez votre roadmap de transformation IA.",
     publicCible: "Dirigeants, décideurs, consultants",
-    duree: "7h à 14h",
+    duree: "7h",
     format: "Sur-mesure ou Présentiel",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
-    // Destination unique pour cette formation
-    lien: "/formations-ia#ia-dirigeants"
+    // DESTINATION : Page de formation complète avec programme détaillé
+    lien: "/formations/ia-dirigeants-strategie"
   }
 ];
 
@@ -114,7 +114,7 @@ const AIFormationsSection: React.FC = () => {
               opacity: 1
             }}
           >
-            🧠 Formations IA les plus demandées
+            Formations IA les plus demandées
           </h2>
 
           {/* Sous-titre - VERROUILLÉ */}
@@ -198,7 +198,7 @@ const AIFormationsSection: React.FC = () => {
                     }}
                   >
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg">
-                      🧠 IA
+                      IA
                     </span>
                   </div>
 
@@ -213,7 +213,7 @@ const AIFormationsSection: React.FC = () => {
                     }}
                   >
                     <span className="inline-flex items-center px-2 py-1 rounded text-xs font-bold bg-red-500 text-white shadow-lg">
-                      🔥 Top
+                      Top
                     </span>
                   </div>
                 </div>
@@ -393,7 +393,6 @@ const AIFormationsSection: React.FC = () => {
               textDecoration: 'none'
             }}
           >
-            <span className="mr-2">🧠</span>
             Voir toutes nos formations IA
             <ArrowRight size={20} className="ml-2" />
           </Link>
