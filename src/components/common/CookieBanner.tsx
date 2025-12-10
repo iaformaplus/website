@@ -28,53 +28,41 @@ const CookieStudentIcon = () => (
     {/* Smile */}
     <path d="M 48 75 Q 60 83 72 75" stroke="#8B4513" strokeWidth="3" fill="none" strokeLinecap="round" />
 
-    {/* Graduation cap - shadow under plateau */}
-    <ellipse cx="60" cy="28" rx="34" ry="4" fill="rgba(0,0,0,0.12)" transform="rotate(-6 60 28)" />
+    {/* Graduation Cap - Mortier */}
+    <g transform="rotate(-5 60 25)">
+      {/* Shadow under the cap */}
+      <ellipse cx="60" cy="31" rx="24" ry="3" fill="rgba(0,0,0,0.15)" />
 
-    {/* Cap base that follows cookie curve */}
-    <ellipse cx="60" cy="25" rx="22" ry="7" fill="#1e3a8a" transform="rotate(-6 60 25)" />
-    <ellipse cx="60" cy="24" rx="22" ry="6" fill="#1e40af" transform="rotate(-6 60 24)" />
+      {/* Cap band (bandeau) - cylindrical base */}
+      <rect x="42" y="24" width="36" height="8" rx="1" fill="#0f172a" stroke="#1e293b" strokeWidth="1.5" />
+      <ellipse cx="60" cy="24" rx="18" ry="4" fill="#1e293b" />
+      <ellipse cx="60" cy="32" rx="18" ry="4" fill="#0a0f1a" />
 
-    {/* Cap body */}
-    <path
-      d="M 40 23 Q 60 20 80 23 L 80 28 Q 60 25 40 28 Z"
-      fill="#1e40af"
-      stroke="#1e3a8a"
-      strokeWidth="1"
-      transform="rotate(-6 60 25)"
-    />
+      {/* Square plateau (carré) - Very visible */}
+      <rect x="38" y="16" width="44" height="44" rx="2" fill="#0f172a" transform="translate(0, -26)" stroke="#1e293b" strokeWidth="2" />
 
-    {/* Graduation cap - large flat plateau */}
-    <g transform="rotate(-6 60 20)">
-      {/* Bottom of plateau */}
-      <path d="M 26 22 L 94 22 L 92 26 L 28 26 Z" fill="#1e3a8a" />
-      {/* Top of plateau */}
-      <path d="M 26 18 L 94 18 L 94 22 L 26 22 Z" fill="#1e40af" />
-      {/* Highlight on top */}
-      <path d="M 28 18 L 92 18 L 91 20 L 29 20 Z" fill="#2563eb" />
-      {/* Edge detail */}
-      <rect x="26" y="18" width="68" height="1" fill="#3b82f6" />
+      {/* Top of square plateau with highlight */}
+      <rect x="38" y="14" width="44" height="6" rx="2" fill="#1e293b" transform="translate(0, -26)" />
+      <rect x="40" y="14" width="40" height="3" rx="1" fill="#334155" transform="translate(0, -26)" />
+
+      {/* Bottom edge of plateau for depth */}
+      <rect x="38" y="19" width="44" height="2" fill="#0a0f1a" transform="translate(0, -26)" />
     </g>
 
-    {/* Tassel string */}
-    <line
-      x1="88"
-      y1="20"
-      x2="98"
-      y2="30"
-      stroke="#fbbf24"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    {/* Tassel (pompon) - Very visible on the side */}
+    <g transform="rotate(-5 78 18)">
+      {/* Tassel cord */}
+      <line x1="78" y1="18" x2="88" y2="28" stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round" />
 
-    {/* Tassel pompom - outer */}
-    <circle cx="98" cy="30" r="5" fill="#fbbf24" />
-    {/* Tassel pompom - inner highlight */}
-    <circle cx="98" cy="30" r="3.5" fill="#fcd34d" />
-    {/* Tassel detail lines */}
-    <line x1="98" y1="32" x2="98" y2="35" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="96" y1="33" x2="95" y2="36" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="100" y1="33" x2="101" y2="36" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Tassel pompom */}
+      <circle cx="88" cy="28" r="6" fill="#fbbf24" stroke="#f59e0b" strokeWidth="1.5" />
+      <circle cx="88" cy="28" r="4" fill="#fcd34d" />
+
+      {/* Tassel threads */}
+      <line x1="88" y1="31" x2="88" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
+      <line x1="85" y1="32" x2="84" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
+      <line x1="91" y1="32" x2="92" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
+    </g>
   </svg>
 );
 
