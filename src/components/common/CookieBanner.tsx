@@ -9,59 +9,175 @@ interface CookiePreferences {
 }
 
 const CookieStudentIcon = () => (
-  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Cookie body */}
-    <circle cx="60" cy="65" r="50" fill="#F4A460" />
-    <circle cx="60" cy="65" r="45" fill="#DEB887" />
+  <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="cookieGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#f59e0b" />
+        <stop offset="100%" stopColor="#d97706" />
+      </linearGradient>
+      <linearGradient id="capGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#1e293b" />
+        <stop offset="100%" stopColor="#0f172a" />
+      </linearGradient>
+      <filter id="softShadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+        <feOffset dx="0" dy="4" result="offsetblur"/>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.3"/>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
 
-    {/* Cookie chips */}
-    <circle cx="50" cy="50" r="3" fill="#8B4513" />
-    <circle cx="70" cy="55" r="2.5" fill="#8B4513" />
-    <circle cx="55" cy="80" r="2" fill="#8B4513" />
-    <circle cx="75" cy="70" r="3" fill="#8B4513" />
-    <circle cx="45" cy="70" r="2" fill="#8B4513" />
+    {/* Cookie shadow */}
+    <ellipse cx="70" cy="95" rx="38" ry="8" fill="rgba(0,0,0,0.12)" />
 
-    {/* Eyes */}
-    <circle cx="50" cy="60" r="4" fill="#8B4513" />
-    <circle cx="70" cy="60" r="4" fill="#8B4513" />
+    {/* Cookie body - main circle */}
+    <circle cx="70" cy="78" r="42" fill="url(#cookieGradient)" filter="url(#softShadow)" />
+    <circle cx="70" cy="78" r="40" fill="#f59e0b" />
 
-    {/* Smile */}
-    <path d="M 48 75 Q 60 83 72 75" stroke="#8B4513" strokeWidth="3" fill="none" strokeLinecap="round" />
+    {/* Cookie highlight for depth */}
+    <ellipse cx="70" cy="65" rx="35" ry="28" fill="rgba(251, 191, 36, 0.4)" />
+    <ellipse cx="58" cy="60" rx="18" ry="14" fill="rgba(255, 255, 255, 0.2)" />
 
-    {/* Graduation Cap - Mortier */}
-    <g transform="rotate(-5 60 25)">
-      {/* Shadow under the cap */}
-      <ellipse cx="60" cy="31" rx="24" ry="3" fill="rgba(0,0,0,0.15)" />
+    {/* Cookie chips - 7 chocolate chips */}
+    <circle cx="55" cy="65" r="4" fill="#78350f" opacity="0.9" />
+    <circle cx="85" cy="68" r="3.5" fill="#78350f" opacity="0.85" />
+    <circle cx="62" cy="88" r="3" fill="#78350f" opacity="0.9" />
+    <circle cx="82" cy="82" r="4" fill="#78350f" opacity="0.8" />
+    <circle cx="50" cy="82" r="3" fill="#78350f" opacity="0.85" />
+    <circle cx="70" cy="92" r="2.5" fill="#78350f" opacity="0.9" />
+    <circle cx="75" cy="75" r="3" fill="#78350f" opacity="0.85" />
 
-      {/* Cap band (bandeau) - cylindrical base */}
-      <rect x="42" y="24" width="36" height="8" rx="1" fill="#0f172a" stroke="#1e293b" strokeWidth="1.5" />
-      <ellipse cx="60" cy="24" rx="18" ry="4" fill="#1e293b" />
-      <ellipse cx="60" cy="32" rx="18" ry="4" fill="#0a0f1a" />
+    {/* Face - Eyes */}
+    <g>
+      {/* Left eye */}
+      <circle cx="60" cy="72" r="5" fill="#ffffff" />
+      <circle cx="60" cy="72" r="4" fill="#422006" />
+      <circle cx="61" cy="71" r="1.5" fill="#ffffff" opacity="0.8" />
 
-      {/* Square plateau (carré) - Very visible */}
-      <rect x="38" y="16" width="44" height="44" rx="2" fill="#0f172a" transform="translate(0, -26)" stroke="#1e293b" strokeWidth="2" />
-
-      {/* Top of square plateau with highlight */}
-      <rect x="38" y="14" width="44" height="6" rx="2" fill="#1e293b" transform="translate(0, -26)" />
-      <rect x="40" y="14" width="40" height="3" rx="1" fill="#334155" transform="translate(0, -26)" />
-
-      {/* Bottom edge of plateau for depth */}
-      <rect x="38" y="19" width="44" height="2" fill="#0a0f1a" transform="translate(0, -26)" />
+      {/* Right eye */}
+      <circle cx="80" cy="72" r="5" fill="#ffffff" />
+      <circle cx="80" cy="72" r="4" fill="#422006" />
+      <circle cx="81" cy="71" r="1.5" fill="#ffffff" opacity="0.8" />
     </g>
 
-    {/* Tassel (pompon) - Very visible on the side */}
-    <g transform="rotate(-5 78 18)">
+    {/* Rosy cheeks */}
+    <ellipse cx="48" cy="80" rx="6" ry="4" fill="#fda4af" opacity="0.6" />
+    <ellipse cx="92" cy="80" rx="6" ry="4" fill="#fda4af" opacity="0.6" />
+
+    {/* Happy smile */}
+    <path
+      d="M 58 82 Q 70 90 82 82"
+      stroke="#78350f"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+      opacity="0.9"
+    />
+
+    {/* Graduation Cap (Mortier) */}
+    <g transform="rotate(-8 70 38)">
+      {/* Cap shadow on cookie */}
+      <ellipse cx="70" cy="48" rx="26" ry="4" fill="rgba(0,0,0,0.15)" />
+
+      {/* Bandeau (cylindrical band) - 3D effect */}
+      <ellipse cx="70" cy="40" rx="22" ry="5" fill="#334155" />
+      <rect x="48" y="40" width="44" height="10" fill="url(#capGradient)" />
+      <ellipse cx="70" cy="50" rx="22" ry="5" fill="#0f172a" />
+
+      {/* Inner detail bandeau */}
+      <ellipse cx="70" cy="40" rx="20" ry="4" fill="#475569" opacity="0.5" />
+
+      {/* Square plateau (board) - Large and very visible */}
+      <rect
+        x="42"
+        y="22"
+        width="56"
+        height="56"
+        rx="2"
+        fill="#0f172a"
+        transform="translate(0, -36)"
+        stroke="#334155"
+        strokeWidth="1.5"
+      />
+
+      {/* Top of plateau with highlight - 3D depth */}
+      <rect
+        x="42"
+        y="20"
+        width="56"
+        height="6"
+        rx="2"
+        fill="#1e293b"
+        transform="translate(0, -36)"
+      />
+      <rect
+        x="45"
+        y="20"
+        width="50"
+        height="3"
+        rx="1"
+        fill="#475569"
+        transform="translate(0, -36)"
+        opacity="0.6"
+      />
+
+      {/* Bottom edge shadow */}
+      <rect
+        x="42"
+        y="26"
+        width="56"
+        height="2"
+        fill="#020617"
+        transform="translate(0, -36)"
+      />
+    </g>
+
+    {/* Tassel (pompon) - hanging from cap */}
+    <g>
       {/* Tassel cord */}
-      <line x1="78" y1="18" x2="88" y2="28" stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round" />
+      <line
+        x1="90"
+        y1="28"
+        x2="102"
+        y2="42"
+        stroke="#fbbf24"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
 
-      {/* Tassel pompom */}
-      <circle cx="88" cy="28" r="6" fill="#fbbf24" stroke="#f59e0b" strokeWidth="1.5" />
-      <circle cx="88" cy="28" r="4" fill="#fcd34d" />
+      {/* Main pompom sphere */}
+      <circle cx="102" cy="42" r="7" fill="#fbbf24" />
+      <circle cx="102" cy="42" r="6" fill="#fcd34d" />
+      <ellipse cx="100" cy="40" rx="3" ry="2.5" fill="#fef3c7" opacity="0.7" />
 
-      {/* Tassel threads */}
-      <line x1="88" y1="31" x2="88" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
-      <line x1="85" y1="32" x2="84" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
-      <line x1="91" y1="32" x2="92" y2="36" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
+      {/* Pompom threads hanging */}
+      <line x1="102" y1="46" x2="102" y2="52" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="98" y1="47" x2="96" y2="52" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="106" y1="47" x2="108" y2="52" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="100" y1="47" x2="99" y2="53" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
+      <line x1="104" y1="47" x2="105" y2="53" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
+    </g>
+
+    {/* Star badge detail (subtle humor) */}
+    <g transform="translate(28, 54)">
+      <circle cx="0" cy="0" r="8" fill="#3b82f6" opacity="0.95" />
+      <circle cx="0" cy="0" r="6.5" fill="#60a5fa" />
+      <text
+        x="0"
+        y="0"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fill="white"
+        fontSize="10"
+        fontWeight="bold"
+      >
+        A+
+      </text>
     </g>
   </svg>
 );
