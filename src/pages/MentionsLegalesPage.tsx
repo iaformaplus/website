@@ -39,6 +39,13 @@ const MentionsLegalesPage: React.FC = () => {
         <div className="container max-w-4xl">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-10">
 
+            {/* Résumé juridique */}
+            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-6">
+              <p className="text-gray-900 font-semibold text-lg leading-relaxed">
+                IA FORMA PLUS – SAS au capital de 1 000 € – SIRET : 941 565 988 00016 – RCS Paris 941 565 988 – Siège social : 138 boulevard Haussmann, 75008 Paris
+              </p>
+            </div>
+
             {/* 1. Éditeur du site */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
