@@ -1,34 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Settings, X } from 'lucide-react';
+import { Cookie, Settings, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
 
 interface CookiePreferences {
   essential: boolean;
   analytics: boolean;
   marketing: boolean;
-  personalization: boolean;
 }
 
 const CookieBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
-    essential: true, // Toujours activé
+    essential: true,
     analytics: false,
     marketing: false,
-    personalization: false,
   });
 
   useEffect(() => {
-    // Vérifier si l'utilisateur a déjà fait un choix
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
       setIsVisible(true);
-      // Bloquer le scroll tant que le choix n'est pas fait
-      document.body.style.overflow = 'hidden';
     } else {
-      // Charger les préférences sauvegardées
       const savedPreferences = localStorage.getItem('cookiePreferences');
       if (savedPreferences) {
         setPreferences(JSON.parse(savedPreferences));
@@ -41,18 +34,12 @@ const CookieBanner: React.FC = () => {
       essential: true,
       analytics: true,
       marketing: true,
-      personalization: true,
     };
-    
+
     setPreferences(allAccepted);
     localStorage.setItem('cookieConsent', 'accepted');
     localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
-    
-    // Réactiver le scroll
-    document.body.style.overflow = 'unset';
     setIsVisible(false);
-    
-    // Ici vous pourrez déclencher vos scripts de tracking
     initializeTracking(allAccepted);
   };
 
@@ -61,28 +48,19 @@ const CookieBanner: React.FC = () => {
       essential: true,
       analytics: false,
       marketing: false,
-      personalization: false,
     };
-    
+
     setPreferences(onlyEssential);
     localStorage.setItem('cookieConsent', 'rejected');
     localStorage.setItem('cookiePreferences', JSON.stringify(onlyEssential));
-    
-    // Réactiver le scroll
-    document.body.style.overflow = 'unset';
     setIsVisible(false);
   };
 
   const handleSavePreferences = () => {
     localStorage.setItem('cookieConsent', 'customized');
     localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
-    
-    // Réactiver le scroll
-    document.body.style.overflow = 'unset';
     setIsVisible(false);
     setShowPreferences(false);
-    
-    // Initialiser le tracking selon les préférences
     initializeTracking(preferences);
   };
 
@@ -95,225 +73,145 @@ const CookieBanner: React.FC = () => {
     }));
   };
 
-  // Fonction pour initialiser le tracking (à adapter selon vos besoins)
   const initializeTracking = (prefs: CookiePreferences) => {
     if (prefs.analytics) {
-      // Initialiser Google Analytics, etc.
       console.log('Analytics cookies enabled');
     }
     if (prefs.marketing) {
-      // Initialiser Meta Pixel, Google Ads, etc.
       console.log('Marketing cookies enabled');
-    }
-    if (prefs.personalization) {
-      // Initialiser les cookies de personnalisation
-      console.log('Personalization cookies enabled');
     }
   };
 
   if (!isVisible) return null;
 
   return (
-    <>
-      {/* Overlay bloquant */}
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
-      
-      {/* Bandeau principal */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl animate-slide-up">
-        <div className="container py-6">
-          {!showPreferences ? (
-            /* Vue principale */
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-              <div className="flex-1">
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-50 p-3 rounded-full">
-                    <Shield size={24} className="text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Nous respectons votre vie privée
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
-                      Nous utilisons des cookies pour améliorer votre expérience sur notre site, 
-                      personnaliser le contenu, analyser notre trafic et vous proposer des publicités pertinentes. 
-                      Vous pouvez accepter tous les cookies, les refuser ou personnaliser vos préférences.
-                    </p>
-                    <p className="text-xs text-gray-500 mt-2">
-                      En continuant à naviguer, vous acceptez notre 
-                      <Link to="/cgu" className="text-blue-600 hover:underline ml-1">
-                        politique de confidentialité
-                      </Link>.
-                    </p>
-                  </div>
+    <div className="fixed bottom-0 left-0 right-0 z-50 animate-slide-up">
+      {!showPreferences ? (
+        <div className="bg-white border-t border-gray-200 shadow-2xl">
+          <div className="container py-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div className="flex items-start gap-3 flex-1">
+                <Cookie size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
+                <div className="text-sm">
+                  <p className="text-gray-800 mb-1">
+                    Nous utilisons des cookies pour améliorer votre expérience et mesurer l'audience.
+                  </p>
+                  <Link to="/cgu" className="text-blue-600 hover:underline text-xs">
+                    Politique de cookies
+                  </Link>
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-                <Button 
-                  variant="outline" 
+
+              <div className="flex flex-wrap gap-2 w-full md:w-auto">
+                <button
                   onClick={handleRejectAll}
-                  className="border-gray-300 text-gray-700 hover:bg-gray-50"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                 >
-                  Refuser tout
-                </Button>
-                <Button 
-                  variant="outline" 
+                  Tout refuser
+                </button>
+                <button
                   onClick={() => setShowPreferences(true)}
-                  className="border-blue-300 text-blue-700 hover:bg-blue-50"
-                  leftIcon={<Settings size={16} />}
+                  className="px-4 py-2 text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors flex items-center gap-1"
                 >
+                  <Settings size={16} />
                   Personnaliser
-                </Button>
-                <Button 
-                  variant="primary" 
+                </button>
+                <button
                   onClick={handleAcceptAll}
-                  className="bg-green-600 hover:bg-green-700 focus:ring-green-500/50"
+                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                 >
-                  Accepter tout
-                </Button>
+                  Tout accepter
+                </button>
               </div>
             </div>
-          ) : (
-            /* Vue des préférences détaillées */
-            <div className="max-w-4xl mx-auto">
+          </div>
+        </div>
+      ) : (
+        <div className="bg-white border-t border-gray-200 shadow-2xl max-h-[80vh] overflow-y-auto">
+          <div className="container py-6">
+            <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Personnaliser mes préférences cookies
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Personnaliser les cookies
                 </h3>
                 <button
                   onClick={() => setShowPreferences(false)}
-                  className="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100"
-                  aria-label="Retour"
+                  className="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+                  aria-label="Fermer"
                 >
                   <X size={20} />
                 </button>
               </div>
-              
-              <div className="space-y-6">
-                {/* Cookies essentiels */}
-                <div className="bg-gray-50 p-4 rounded-lg">
+
+              <div className="space-y-4">
+                <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Cookies essentiels
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 mb-1">Nécessaires</h4>
                       <p className="text-sm text-gray-600">
-                        Nécessaires au fonctionnement du site (sécurité, navigation, formulaires).
-                        Ces cookies ne peuvent pas être désactivés.
+                        Essentiels au fonctionnement du site. Toujours actifs.
                       </p>
                     </div>
-                    <div className="ml-4">
-                      <div className="w-12 h-6 bg-green-500 rounded-full flex items-center justify-end px-1">
-                        <div className="w-4 h-4 bg-white rounded-full"></div>
-                      </div>
+                    <div className="w-12 h-6 bg-green-500 rounded-full flex items-center justify-end px-1 ml-4">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Cookies analytiques */}
                 <div className="bg-white border border-gray-200 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Cookies analytiques
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 mb-1">Statistiques</h4>
                       <p className="text-sm text-gray-600">
-                        Nous aident à comprendre comment vous utilisez notre site pour l'améliorer 
-                        (Google Analytics, statistiques de visite).
+                        Mesure d'audience pour améliorer le site.
                       </p>
                     </div>
-                    <div className="ml-4">
-                      <button
-                        onClick={() => handlePreferenceChange('analytics')}
-                        className={`w-12 h-6 rounded-full flex items-center transition-colors ${
-                          preferences.analytics ? 'bg-green-500 justify-end' : 'bg-gray-300 justify-start'
-                        }`}
-                      >
-                        <div className="w-4 h-4 bg-white rounded-full mx-1"></div>
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => handlePreferenceChange('analytics')}
+                      className={`w-12 h-6 rounded-full flex items-center transition-colors ml-4 ${
+                        preferences.analytics ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
+                      }`}
+                      aria-label="Activer/désactiver les cookies statistiques"
+                    >
+                      <div className="w-4 h-4 bg-white rounded-full mx-1"></div>
+                    </button>
                   </div>
                 </div>
 
-                {/* Cookies marketing */}
                 <div className="bg-white border border-gray-200 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Cookies marketing
-                      </h4>
+                      <h4 className="font-semibold text-gray-900 mb-1">Marketing</h4>
                       <p className="text-sm text-gray-600">
-                        Permettent de vous proposer des publicités personnalisées sur notre site 
-                        et d'autres sites (Meta Pixel, Google Ads).
+                        Publicités personnalisées et remarketing.
                       </p>
                     </div>
-                    <div className="ml-4">
-                      <button
-                        onClick={() => handlePreferenceChange('marketing')}
-                        className={`w-12 h-6 rounded-full flex items-center transition-colors ${
-                          preferences.marketing ? 'bg-green-500 justify-end' : 'bg-gray-300 justify-start'
-                        }`}
-                      >
-                        <div className="w-4 h-4 bg-white rounded-full mx-1"></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cookies de personnalisation */}
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Cookies de personnalisation
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        Mémorisent vos préférences (langue, région, paramètres d'affichage) 
-                        pour personnaliser votre expérience.
-                      </p>
-                    </div>
-                    <div className="ml-4">
-                      <button
-                        onClick={() => handlePreferenceChange('personalization')}
-                        className={`w-12 h-6 rounded-full flex items-center transition-colors ${
-                          preferences.personalization ? 'bg-green-500 justify-end' : 'bg-gray-300 justify-start'
-                        }`}
-                      >
-                        <div className="w-4 h-4 bg-white rounded-full mx-1"></div>
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => handlePreferenceChange('marketing')}
+                      className={`w-12 h-6 rounded-full flex items-center transition-colors ml-4 ${
+                        preferences.marketing ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
+                      }`}
+                      aria-label="Activer/désactiver les cookies marketing"
+                    >
+                      <div className="w-4 h-4 bg-white rounded-full mx-1"></div>
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-8 pt-6 border-t border-gray-200">
-                <Button 
-                  variant="outline" 
-                  onClick={handleRejectAll}
-                  className="border-gray-300 text-gray-700 hover:bg-gray-50"
-                >
-                  Refuser tout
-                </Button>
-                <Button 
-                  variant="primary" 
+              <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t border-gray-200">
+                <button
                   onClick={handleSavePreferences}
-                  className="bg-blue-600 hover:bg-blue-700 focus:ring-blue-500/50"
+                  className="flex-1 min-w-[200px] px-6 py-3 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                 >
-                  Enregistrer mes préférences
-                </Button>
-                <Button 
-                  variant="primary" 
-                  onClick={handleAcceptAll}
-                  className="bg-green-600 hover:bg-green-700 focus:ring-green-500/50"
-                >
-                  Accepter tout
-                </Button>
+                  Enregistrer mes choix
+                </button>
               </div>
             </div>
-          )}
+          </div>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
