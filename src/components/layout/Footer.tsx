@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Check } from 'lucide-react';
 import Logo from '../common/Logo';
 
 const Footer: React.FC = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -75,9 +78,11 @@ const Footer: React.FC = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <Logo className="h-12 w-auto" isWhite={true} />
-            <p className="text-gray-400 font-medium">
-              IA FORMA PLUS – SAS au capital de 1 000 €
-            </p>
+            {!isHomePage && (
+              <p className="text-gray-400 font-medium">
+                IA FORMA PLUS – SAS au capital de 1 000 €
+              </p>
+            )}
             <p className="text-gray-400 text-sm">
               Organisme de formation spécialisé dans les formations IA et professionnelles.
             </p>
