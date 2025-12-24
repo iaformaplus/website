@@ -22,7 +22,6 @@ const formationsPopulaires = [
     image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "habilitation-vehicules-electriques-b1-b2",
     excerpt: "Formation certifiante pour intervenir en sécurité sur les véhicules électriques et hybrides selon la norme NF C18-550.",
-    price: "1450€ HT"
   },
   {
     id: 'formation-2',
@@ -34,7 +33,6 @@ const formationsPopulaires = [
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "marketing-digital-avance",
     excerpt: "Maîtrisez les stratégies d'acquisition et de fidélisation client dans l'environnement numérique.",
-    price: "990€ HT"
   },
   {
     id: 'formation-3',
@@ -46,7 +44,6 @@ const formationsPopulaires = [
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "e-commerce",
     excerpt: "Formation pratique pour lancer et optimiser votre activité en ligne. Apprenez à créer, gérer et développer une boutique e-commerce rentable.",
-    price: "2490€ HT"
   },
   {
     id: 'formation-4',
@@ -58,7 +55,6 @@ const formationsPopulaires = [
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
     slug: "techniques-vente-management",
     excerpt: "Formation complète alliant techniques de vente avancées et compétences managériales pour les responsables commerciaux.",
-    price: "2190€ HT"
   }
 ];
 

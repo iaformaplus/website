@@ -10,7 +10,6 @@ const formationsData = {
     duration: "21h",
     format: "Présentiel",
     level: "Intermédiaire",
-    price: "1450€ HT",
     image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation certifiante pour intervenir en sécurité sur les véhicules électriques et hybrides selon la norme NF C18-550.",
     objectives: [
@@ -84,7 +83,6 @@ const formationsData = {
     duration: "14h",
     format: "Distanciel",
     level: "Avancé",
-    price: "990€ HT",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Maîtrisez les stratégies d'acquisition et de fidélisation client dans l'environnement numérique.",
     objectives: [
@@ -158,7 +156,6 @@ const formationsData = {
     duration: "35h",
     format: "Présentiel",
     level: "Intermédiaire",
-    price: "2490€ HT",
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation pratique pour lancer et optimiser votre activité en ligne. Apprenez à créer, gérer et développer une boutique e-commerce rentable.",
     objectives: [
@@ -232,7 +229,6 @@ const formationsData = {
     duration: "35h",
     format: "Présentiel",
     level: "Intermédiaire",
-    price: "2190€ HT",
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation complète alliant techniques de vente avancées et compétences managériales pour les responsables commerciaux.",
     objectives: [
@@ -296,7 +292,6 @@ const formationsData = {
     duration: "7h",
     format: "Présentiel",
     level: "Débutant",
-    price: "350€ HT",
     image: "https://images.pexels.com/photos/280076/pexels-photo-280076.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation obligatoire pour prévenir les risques d'incendie et réagir efficacement en cas d'urgence.",
     objectives: [
@@ -369,7 +364,6 @@ const formationsData = {
     duration: "14h",
     format: "Présentiel",
     level: "Débutant",
-    price: "250€ HT",
     image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation certifiante SST pour porter secours et prévenir les risques dans l'entreprise. Minimum 4 stagiaires requis.",
     objectives: [
@@ -446,7 +440,6 @@ const formationsData = {
     duration: "14h",
     format: "Présentiel",
     level: "Débutant",
-    price: "490€ HT",
     image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation pour garantir des conditions de travail conformes et saines selon la réglementation.",
     objectives: [
@@ -519,7 +512,6 @@ const formationsData = {
     duration: "14h",
     format: "Distanciel",
     level: "Intermédiaire",
-    price: "790€ HT",
     image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Formation pour protéger les données, systèmes et communications de l'entreprise contre les cybermenaces.",
     objectives: [
@@ -592,7 +584,6 @@ const formationsData = {
     duration: "7h",
     format: "E-learning ou Distanciel",
     level: "Débutant",
-    price: "490€ HT",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Maîtrisez les outils d'IA pour automatiser vos tâches quotidiennes, gagner du temps et augmenter votre efficacité professionnelle. Formation pratique avec ChatGPT, Notion AI et autres assistants intelligents.",
     objectives: [
@@ -666,7 +657,6 @@ const formationsData = {
     duration: "14h",
     format: "Présentiel ou Distanciel",
     level: "Intermédiaire",
-    price: "990€ HT",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Boostez vos performances commerciales et marketing avec l'IA. Créez des campagnes performantes, générez du contenu engageant, automatisez votre prospection et optimisez votre CRM avec l'intelligence artificielle.",
     objectives: [
@@ -740,7 +730,6 @@ const formationsData = {
     duration: "14h",
     format: "Intra-entreprise ou Distanciel",
     level: "Intermédiaire",
-    price: "990€ HT",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Optimisez la productivité de vos équipes en automatisant les process internes. Maîtrisez les outils no-code pour créer des workflows intelligents, automatiser le reporting et déployer un support client IA.",
     objectives: [
@@ -814,7 +803,6 @@ const formationsData = {
     duration: "7h",
     format: "Sur-mesure ou Présentiel",
     level: "Direction",
-    price: "1290€ HT",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Intégrez l'IA dans votre stratégie d'entreprise. Identifiez les opportunités business, prenez des décisions éclairées grâce à l'analyse de données, et définissez votre roadmap de transformation IA.",
     objectives: [
@@ -944,11 +932,6 @@ const FormationPage: React.FC = () => {
                   <Award size={24} className="mx-auto mb-2" />
                   <div className="text-sm text-gray-300">Certification</div>
                   <div className="font-semibold">Certificat de réalisation</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Star size={24} className="mx-auto mb-2" />
-                  <div className="text-sm text-gray-300">Prix</div>
-                  <div className="font-semibold">{formation.price}</div>
                 </div>
               </div>
 
@@ -1123,25 +1106,60 @@ const FormationPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Price & CTA */}
-              <div className="bg-primary text-white rounded-xl p-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">{formation.price}</div>
-                  <div className="text-primary-light mb-6">Formation certifiante</div>
-                  <Link 
-                    to="/contact" 
-                    className="btn bg-white text-primary hover:bg-gray-100 w-full mb-4"
-                  >
-                    Demander un devis
-                  </Link>
-                  <a 
-                    href="tel:0162177770"
-                    className="btn-outline border-white text-white hover:bg-white hover:text-primary w-full"
-                  >
-                    <Phone size={20} className="mr-2" />
-                    Nous appeler
-                  </a>
+              {/* Tarifs */}
+              <div className="bg-white border-2 border-primary rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Tarifs</h3>
+                <div className="space-y-4 text-gray-700 mb-6">
+                  <p className="font-semibold text-primary">Tarifs à partir de (sur devis).</p>
+                  <p className="text-sm leading-relaxed">
+                    Le prix varie selon :
+                  </p>
+                  <ul className="text-sm space-y-2 ml-4">
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>le format (présentiel/distanciel/hybride)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>la durée</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>le niveau</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>le nombre de participants</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>le lieu</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      <span>les éventuels besoins spécifiques</span>
+                    </li>
+                  </ul>
+                  <p className="text-sm leading-relaxed">
+                    Le tarif définitif est celui indiqué sur la proposition commerciale et/ou la convention de formation.
+                  </p>
+                  <p className="text-sm leading-relaxed">
+                    Des frais spécifiques peuvent s'ajouter si nécessaire (déplacements, licences, matériel).
+                  </p>
                 </div>
+                <Link
+                  to="/contact"
+                  className="btn bg-primary text-white hover:bg-primary-dark w-full mb-3"
+                >
+                  Demander un devis
+                </Link>
+                <a
+                  href="tel:0162177770"
+                  className="btn-outline border-primary text-primary hover:bg-primary hover:text-white w-full"
+                >
+                  <Phone size={20} className="mr-2" />
+                  Nous appeler
+                </a>
               </div>
 
               {/* Qualiopi */}

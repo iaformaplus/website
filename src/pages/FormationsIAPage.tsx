@@ -19,7 +19,6 @@ const formationsData = {
         duration: "7h",
         format: "E-learning",
         level: "Débutant",
-        price: "490",
         objectives: [
           "Comprendre le fonctionnement de ChatGPT et ses capacités",
           "Rédiger des prompts efficaces pour obtenir des résultats précis",
@@ -35,7 +34,6 @@ const formationsData = {
         duration: "14h",
         format: "Blended",
         level: "Intermédiaire",
-        price: "990",
         objectives: [
           "Maîtriser l'API ChatGPT et ses paramètres",
           "Concevoir l'architecture d'un chatbot intelligent",
@@ -51,7 +49,6 @@ const formationsData = {
         duration: "7h",
         format: "E-learning",
         level: "Débutant",
-        price: "490",
         objectives: [
           "Configurer et personnaliser Notion AI",
           "Utiliser Microsoft Copilot dans Office 365",
@@ -67,7 +64,6 @@ const formationsData = {
         duration: "14h",
         format: "Distanciel",
         level: "Intermédiaire",
-        price: "790",
         objectives: [
           "Maîtriser Jasper AI pour le copywriting",
           "Utiliser Copy.ai pour différents formats de contenu",
@@ -83,7 +79,6 @@ const formationsData = {
         duration: "21h",
         format: "Présentiel",
         level: "Avancé",
-        price: "1490",
         objectives: [
           "Développer un assistant vocal multilingue",
           "Intégrer la reconnaissance vocale Whisper",
@@ -106,7 +101,6 @@ const formationsData = {
         duration: "14h",
         format: "Blended",
         level: "Intermédiaire",
-        price: "990",
         objectives: [
           "Créer des automatisations complexes avec Make",
           "Connecter vos outils via Zapier",
@@ -122,7 +116,6 @@ const formationsData = {
         duration: "7h",
         format: "E-learning",
         level: "Débutant",
-        price: "490",
         objectives: [
           "Automatiser la rédaction d'emails",
           "Générer des documents personnalisés",
@@ -138,7 +131,6 @@ const formationsData = {
         duration: "21h",
         format: "Blended",
         level: "Intermédiaire",
-        price: "1290",
         objectives: [
           "Développer des apps no-code avec IA",
           "Intégrer des APIs d'intelligence artificielle",
@@ -161,7 +153,6 @@ const formationsData = {
         duration: "21h",
         format: "Blended",
         level: "Intermédiaire",
-        price: "1290",
         objectives: [
           "Analyser les données clients avec l'IA",
           "Personnaliser les campagnes marketing",
@@ -177,7 +168,6 @@ const formationsData = {
         duration: "14h",
         format: "Distanciel",
         level: "Débutant",
-        price: "790",
         objectives: [
           "Générer du contenu engageant avec l'IA",
           "Optimiser les posts pour chaque plateforme",
@@ -193,7 +183,6 @@ const formationsData = {
         duration: "14h",
         format: "E-learning",
         level: "Intermédiaire",
-        price: "890",
         objectives: [
           "Rechercher des mots-clés avec l'IA",
           "Optimiser le contenu pour Google",
@@ -216,7 +205,6 @@ const formationsData = {
         duration: "35h",
         format: "Blended",
         level: "Débutant",
-        price: "1990",
         objectives: [
           "Maîtriser les bases de Python pour la data",
           "Utiliser Google Colab efficacement",
@@ -232,7 +220,6 @@ const formationsData = {
         duration: "14h",
         format: "Distanciel",
         level: "Débutant",
-        price: "890",
         objectives: [
           "Comprendre l'AutoML et ses applications",
           "Utiliser Teachable Machine de Google",
@@ -248,7 +235,6 @@ const formationsData = {
         duration: "21h",
         format: "Présentiel",
         level: "Intermédiaire",
-        price: "1490",
         objectives: [
           "Intégrer l'IA dans Power BI",
           "Créer des tableaux de bord intelligents",
@@ -271,7 +257,6 @@ const formationsData = {
         duration: "35h",
         format: "Présentiel",
         level: "Avancé",
-        price: "2490",
         objectives: [
           "Maîtriser TensorFlow 2 et Keras",
           "Développer des réseaux de neurones complexes",
@@ -287,7 +272,6 @@ const formationsData = {
         duration: "28h",
         format: "Présentiel",
         level: "Avancé",
-        price: "1990",
         objectives: [
           "Comprendre l'architecture des GANs",
           "Implémenter des GANs avec PyTorch",
@@ -303,7 +287,6 @@ const formationsData = {
         duration: "21h",
         format: "Blended",
         level: "Avancé",
-        price: "1490",
         objectives: [
           "Maîtriser le framework LangChain",
           "Créer des agents IA conversationnels",
@@ -326,7 +309,6 @@ const formationsData = {
         duration: "14h",
         format: "Distanciel",
         level: "Débutant",
-        price: "790",
         objectives: [
           "Maîtriser Midjourney et DALL·E",
           "Créer des prompts visuels efficaces",
@@ -342,7 +324,6 @@ const formationsData = {
         duration: "14h",
         format: "Blended",
         level: "Intermédiaire",
-        price: "990",
         objectives: [
           "Cloner et synthétiser des voix",
           "Créer des avatars IA réalistes",
@@ -358,7 +339,6 @@ const formationsData = {
         duration: "21h",
         format: "Présentiel",
         level: "Intermédiaire",
-        price: "1490",
         objectives: [
           "Créer des animations avec l'IA",
           "Maîtriser Kaiber et Genmo",
@@ -381,7 +361,6 @@ const formationsData = {
         duration: "28h",
         format: "Blended",
         level: "Avancé",
-        price: "1990",
         objectives: [
           "Détecter les menaces avec l'IA",
           "Automatiser la réponse aux incidents",
@@ -655,7 +634,7 @@ const FormationsIAPage = () => {
                             </div>
                             <div className="flex items-center text-primary font-semibold">
                               <Star size={18} className="mr-2" />
-                              <span>À partir de {formation.price}€ HT</span>
+                              <span>Tarif sur devis</span>
                             </div>
                             <div className="flex items-center text-gray-600 mt-2">
                               <Award size={16} className="mr-2 text-primary" />
@@ -712,6 +691,34 @@ const FormationsIAPage = () => {
                                   ))}
                                 </ul>
                               </div>
+
+                              {/* Tarifs */}
+                              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <h4 className="flex items-center font-semibold mb-3 text-primary">
+                                  <Star size={16} className="mr-2" />
+                                  Tarifs
+                                </h4>
+                                <div className="space-y-2 text-sm text-gray-700">
+                                  <p className="font-semibold text-primary">Tarifs à partir de (sur devis).</p>
+                                  <p>Le prix varie selon :</p>
+                                  <ul className="space-y-1 ml-3">
+                                    <li className="flex items-start">
+                                      <span className="inline-block w-1 h-1 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                      <span>le format (présentiel/distanciel/hybride)</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                      <span className="inline-block w-1 h-1 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                      <span>la durée, le niveau, le nombre de participants</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                      <span className="inline-block w-1 h-1 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                                      <span>le lieu et les besoins spécifiques</span>
+                                    </li>
+                                  </ul>
+                                  <p className="mt-2">Le tarif définitif est celui indiqué sur la proposition commerciale et/ou la convention de formation.</p>
+                                  <p>Des frais spécifiques peuvent s'ajouter si nécessaire (déplacements, licences, matériel).</p>
+                                </div>
+                              </div>
                             </div>
                           )}
 
@@ -729,7 +736,7 @@ const FormationsIAPage = () => {
                               className="flex-1"
                               rightIcon={<ArrowRight size={16} />}
                             >
-                              S'inscrire
+                              Demander un devis
                             </Button>
                           </div>
                         </div>
