@@ -276,12 +276,15 @@ const Footer: React.FC = () => {
             {/* Copyright and Legal Links */}
             <div className="text-gray-400 text-sm">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   <Link to="/cgu" className="hover:text-primary transition-colors">
                     CGU
                   </Link>
                   <Link to="/cgv" className="hover:text-primary transition-colors">
                     CGV
+                  </Link>
+                  <Link to="/reglement-interieur" className="hover:text-primary transition-colors">
+                    Règlement intérieur
                   </Link>
                   <Link to="/mentions-legales" className="hover:text-primary transition-colors">
                     Mentions légales

@@ -454,6 +454,13 @@ const CGUPage: React.FC = () => {
                     Conditions Générales de Vente
                   </Link>
                   <Link
+                    to="/reglement-interieur"
+                    className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+                  >
+                    <FileText size={16} className="mr-2" />
+                    Règlement intérieur
+                  </Link>
+                  <Link
                     to="/mentions-legales"
                     className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
                   >

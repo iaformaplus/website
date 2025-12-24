@@ -15,6 +15,7 @@ import FormatPage from './pages/FormatPage';
 import CGUPage from './pages/CGUPage';
 import CGVPage from './pages/CGVPage';
 import MentionsLegalesPage from './pages/MentionsLegalesPage';
+import ReglementInterieurPage from './pages/ReglementInterieurPage';
 import FormationIATPEPMEPage from './pages/FormationIATPEPMEPage';
 import FormationChatGPTEntreprisePage from './pages/FormationChatGPTEntreprisePage';
 import FormationIAMarketingPage from './pages/FormationIAMarketingPage';
@@ -56,6 +57,7 @@ function App() {
           <Route path="cgu" element={<CGUPage />} />
           <Route path="cgv" element={<CGVPage />} />
           <Route path="mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="reglement-interieur" element={<ReglementInterieurPage />} />
         </Route>
       </Routes>
       
