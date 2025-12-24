@@ -20,7 +20,6 @@ const formationsStables = [
     publicCible: "Tous professionnels, TPE/PME, indépendants",
     duree: "7h",
     format: "E-learning ou Distanciel",
-    prix: "490€ HT",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
     objectifs: [
       "Utiliser ChatGPT et les assistants IA pour automatiser les tâches répétitives",
@@ -49,7 +48,6 @@ const formationsStables = [
     publicCible: "Marketeurs, commerciaux, entrepreneurs",
     duree: "14h",
     format: "Présentiel ou Distanciel",
-    prix: "990€ HT",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     objectifs: [
       "Créer des campagnes publicitaires optimisées avec l'IA",
@@ -78,7 +76,6 @@ const formationsStables = [
     publicCible: "Managers, chefs de projet, Ops",
     duree: "14h",
     format: "Intra-entreprise ou Distanciel",
-    prix: "990€ HT",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
     objectifs: [
       "Identifier et automatiser les processus à faible valeur ajoutée",
@@ -107,7 +104,6 @@ const formationsStables = [
     publicCible: "Dirigeants, décideurs, consultants",
     duree: "7h",
     format: "Sur-mesure ou Présentiel",
-    prix: "1290€ HT",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
     objectifs: [
       "Comprendre les enjeux stratégiques de l'IA pour votre secteur",
@@ -461,10 +457,31 @@ const AIFormationsSection: React.FC = () => {
                             <Target size={14} className="mr-2 text-blue-600" />
                             <span><strong>Format :</strong> {formation.format}</span>
                           </div>
-                          <div className="flex items-center text-blue-600 font-bold mt-3">
-                            <Award size={14} className="mr-2" />
-                            <span>{formation.prix}</span>
-                          </div>
+                        </div>
+                      </div>
+
+                      {/* Tarifs */}
+                      <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <h4 className="font-bold text-sm mb-3 text-gray-900">Tarifs</h4>
+                        <div className="space-y-2 text-xs text-gray-700">
+                          <p className="font-semibold text-blue-600">Tarifs à partir de (sur devis).</p>
+                          <p>Le prix varie selon :</p>
+                          <ul className="space-y-1 ml-3">
+                            <li className="flex items-start">
+                              <span className="inline-block w-1 h-1 bg-blue-600 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                              <span>le format, la durée, le niveau</span>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="inline-block w-1 h-1 bg-blue-600 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                              <span>le nombre de participants, le lieu</span>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="inline-block w-1 h-1 bg-blue-600 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                              <span>les besoins spécifiques</span>
+                            </li>
+                          </ul>
+                          <p className="mt-2">Le tarif définitif est celui indiqué sur la proposition commerciale et/ou la convention de formation.</p>
+                          <p>Des frais spécifiques peuvent s'ajouter si nécessaire (déplacements, licences, matériel).</p>
                         </div>
                       </div>
 
@@ -474,7 +491,7 @@ const AIFormationsSection: React.FC = () => {
                           to="/contact"
                           className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold w-full"
                         >
-                          Demander le programme complet
+                          Demander un devis
                         </Link>
                         <a
                           href="tel:0162177770"
