@@ -441,6 +441,27 @@ const CGUPage: React.FC = () => {
                   </a>
                 </p>
               </div>
+
+              {/* Documents juridiques associés */}
+              <div className="border-t pt-8 mt-8">
+                <h2 className="text-lg font-bold text-gray-900 mb-4">Documents juridiques associés</h2>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    to="/cgv"
+                    className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+                  >
+                    <FileText size={16} className="mr-2" />
+                    Conditions Générales de Vente
+                  </Link>
+                  <Link
+                    to="/mentions-legales"
+                    className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+                  >
+                    <FileText size={16} className="mr-2" />
+                    Mentions Légales
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Bouton Retour en haut */}
