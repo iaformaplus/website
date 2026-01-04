@@ -78,7 +78,7 @@ const FormationIATPEPMEPage: React.FC = () => {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
               <Award className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Certifié Qualiopi</h3>
+              <h3 className="text-lg font-semibold mb-2">Organisme certifié Qualiopi</h3>
               <p className="text-slate-600">Financement OPCO disponible</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">

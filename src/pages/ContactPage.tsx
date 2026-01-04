@@ -468,7 +468,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-medium">Formateurs experts</p>
-                      <p className="text-gray-300 text-sm">Professionnels certifiés dans leur domaine</p>
+                      <p className="text-gray-300 text-sm">Professionnels qualifiés dans leur domaine</p>
                     </div>
                   </div>
                   <div className="flex items-start">

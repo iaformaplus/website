@@ -21,7 +21,7 @@ const formatsData = {
       "Apprentissage de logiciels complexes",
       "Formations sécurité avec manipulation",
       "Développement de compétences relationnelles",
-      "Formations certifiantes exigeantes"
+      "Formations professionnelles exigeantes"
     ],
     functioning: "Sessions organisées dans nos centres équipés ou dans vos locaux. Groupes de 4 à 12 participants maximum. Matériel pédagogique fourni. Pauses et déjeuner inclus selon la durée.",
     qualiopi: "Nos formations présentielles bénéficient d'un suivi pédagogique renforcé et peuvent être financées par les OPCO et le plan de formation selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
@@ -65,7 +65,7 @@ const formatsData = {
       "Apprentissage en autonomie",
       "Remise à niveau rapide",
       "Formations de masse en entreprise",
-      "Préparation à une certification"
+      "Préparation à un examen professionnel"
     ],
     functioning: "Plateforme LMS accessible via navigateur. Modules vidéo HD, documents PDF, exercices interactifs, quiz d'évaluation. Support pédagogique par email ou chat.",
     qualiopi: "Modules e-learning avec traçabilité complète du parcours. Temps de connexion et résultats aux quiz enregistrés. Financements possibles via OPCO selon votre situation. Organisme certifié Qualiopi - Catégorie : Actions de formation."
@@ -108,7 +108,7 @@ const formatsData = {
       "Montée en compétences individuelle",
       "Formation de 1 à 3 collaborateurs",
       "Découverte de nouvelles technologies",
-      "Certification professionnelle",
+      "Reconnaissance professionnelle",
       "Développement personnel"
     ],
     functioning: "Inscription sur sessions programmées, groupes de 4 à 12 participants, supports fournis, certificat de réalisation délivré.",

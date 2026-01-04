@@ -44,7 +44,7 @@ const FormationChatGPTEntreprisePage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MessageSquare className="w-4 h-4" />
-              Formation ChatGPT Certifiée
+              Formation ChatGPT Professionnelle
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Formation ChatGPT Entreprise
@@ -72,8 +72,8 @@ const FormationChatGPTEntreprisePage: React.FC = () => {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
               <Award className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
-              <p className="font-semibold">Certification</p>
-              <p className="text-sm text-slate-600">Qualiopi</p>
+              <p className="font-semibold">Attestation remise</p>
+              <p className="text-sm text-slate-600">Certificat de réalisation</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
               <Users className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
