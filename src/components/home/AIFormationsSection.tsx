@@ -377,7 +377,7 @@ const AIFormationsSection: React.FC = () => {
                       }}
                     >
                       <Award size={14} className="mr-2 text-orange-600 mt-0.5 flex-shrink-0" />
-                      <span><strong>Certificat Qualiopi</strong></span>
+                      <span><strong>Certificat de réalisation</strong></span>
                     </div>
                   </div>
                 </div>
