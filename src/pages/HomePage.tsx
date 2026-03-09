@@ -4,6 +4,7 @@ import { getPageSEO } from '../config/seo';
 import HeroSection from '../components/home/HeroSection';
 import PopularFormations from '../components/home/PopularFormations';
 import AIFormationsSection from '../components/home/AIFormationsSection';
+import EInvoicingSection from '../components/home/EInvoicingSection';
 import AIQAAnimation from '../components/common/AIQAAnimation';
 import { ArrowRight, Award, Clock, User, BookOpen, Users, Building, Laptop, Globe, Zap, Phone, MessageCircle, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -267,7 +268,14 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* 
+      {/*
+        E-INVOICING SECTION
+        Critical information about mandatory electronic invoicing reform in 2026
+        Positioned prominently to capture businesses that need to prepare
+      */}
+      <EInvoicingSection />
+
+      {/*
         AI BENEFITS SECTION
         Showcases the value proposition of AI training
         Features interactive AI Q&A animation to demonstrate AI capabilities
