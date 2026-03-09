@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and About */}
           <div className="space-y-4">
-            <Logo className="h-16 w-auto" />
+            <Logo className="h-20 md:h-24 w-auto" />
             {!isHomePage && (
               <p className="text-gray-400 font-medium">
                 IA FORMA PLUS – SAS au capital de 1 000 €
