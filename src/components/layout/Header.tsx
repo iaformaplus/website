@@ -39,12 +39,12 @@ const Header: React.FC = () => {
       isScrolled ? 'shadow-lg' : 'shadow-sm'
     }`}>
       <div className="container">
-        <div className="flex items-center justify-between py-4 px-6">
+        <div className="flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
           
           {/* Logo IA FORMA PLUS */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <Logo className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" />
+              <Logo className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105" />
             </Link>
           </div>
 
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
           <div className="container py-8 px-6">
             {/* Logo centré - Mobile */}
             <div className="text-center mb-8">
-              <Logo className="h-10 w-auto mx-auto" />
+              <Logo className="h-16 w-auto mx-auto" />
             </div>
 
             {/* Téléphone en haut - Mobile */}
