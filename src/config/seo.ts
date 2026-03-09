@@ -119,6 +119,13 @@ export const seoConfig: Record<string, SEOMetadata> = {
     keywords: 'habilitation électrique, B1 B2, véhicules électriques, NF C18-510, formation électrique',
     canonical: 'https://iaformaplus.fr/habilitation-electrique-vehicules-electriques',
   },
+
+  formationFacturationElectronique: {
+    title: 'Formation facturation électronique obligatoire 2026',
+    description: 'Anticipez l\'obligation légale de facturation électronique prévue pour septembre 2026. Formation complète pour mettre en conformité votre entreprise. Financement OPCO.',
+    keywords: 'facturation électronique obligatoire, réforme facture électronique 2026, formation facturation électronique entreprise, obligation facture électronique France',
+    canonical: 'https://iaformaplus.fr/formation-facturation-electronique-2026',
+  },
 };
 
 export const getPageSEO = (pageKey: string): SEOMetadata => {

@@ -23,6 +23,7 @@ import FormationIARHPage from './pages/FormationIARHPage';
 import FormationIACommerciauxPage from './pages/FormationIACommerciauxPage';
 import FormationIAMetiersBouchePage from './pages/FormationIAMetiersBouchePage';
 import HabilitationElectriquePage from './pages/HabilitationElectriquePage';
+import FormationFacturationElectroniquePage from './pages/FormationFacturationElectroniquePage';
 import CookieBanner from './components/common/CookieBanner';
 import CallbackModal from './components/common/CallbackModal';
 import AccessibilityWidget from './components/common/AccessibilityWidget';
@@ -48,6 +49,7 @@ function App() {
           <Route path="formation-ia-commerciaux" element={<FormationIACommerciauxPage />} />
           <Route path="formation-ia-metiers-bouche" element={<FormationIAMetiersBouchePage />} />
           <Route path="habilitation-electrique-vehicules-electriques" element={<HabilitationElectriquePage />} />
+          <Route path="formation-facturation-electronique-2026" element={<FormationFacturationElectroniquePage />} />
           <Route path="format/:format" element={<FormatPage />} />
           <Route path="webinaires" element={<WebinairsPage />} />
           <Route path="a-propos" element={<AboutPage />} />

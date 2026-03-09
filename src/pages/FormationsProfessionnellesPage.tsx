@@ -564,10 +564,10 @@ const formationsData = {
     icon: "https://assets3.lottiefiles.com/packages/lf20_vd2uluct.json",
     image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
     formations: [
-      { 
-        title: "Sage", 
-        levels: ["Débutant", "Intermédiaire", "Avancé"], 
-        duration: "28h", 
+      {
+        title: "Sage",
+        levels: ["Débutant", "Intermédiaire", "Avancé"],
+        duration: "28h",
         format: "Présentiel",
         objectives: [
           "Paramétrer le logiciel Sage",
@@ -578,10 +578,10 @@ const formationsData = {
         audience: ["Comptables", "Assistants comptables", "Entrepreneurs", "Gestionnaires"],
         modalities: ["Logiciel Sage complet", "Dossiers d'entraînement", "Cas d'entreprise", "Certification Sage"]
       },
-      { 
-        title: "EBP", 
-        levels: ["Débutant", "Intermédiaire"], 
-        duration: "21h", 
+      {
+        title: "EBP",
+        levels: ["Débutant", "Intermédiaire"],
+        duration: "21h",
         format: "Présentiel",
         objectives: [
           "Utiliser EBP Comptabilité",
@@ -592,10 +592,10 @@ const formationsData = {
         audience: ["PME", "Artisans", "Commerçants", "Associations"],
         modalities: ["Suite EBP", "Paramétrage PME", "Gestion commerciale", "Support technique"]
       },
-      { 
-        title: "Ciel Paye", 
-        levels: ["Débutant", "Avancé"], 
-        duration: "21h", 
+      {
+        title: "Ciel Paye",
+        levels: ["Débutant", "Avancé"],
+        duration: "21h",
         format: "Présentiel",
         objectives: [
           "Paramétrer les bulletins de paie",
@@ -606,10 +606,10 @@ const formationsData = {
         audience: ["Gestionnaires paie", "RH", "Comptables", "Dirigeants"],
         modalities: ["Logiciel Ciel Paye", "Législation sociale", "DSN", "Cas pratiques paie"]
       },
-      { 
-        title: "Analyse des coûts", 
-        levels: ["Intermédiaire"], 
-        duration: "14h", 
+      {
+        title: "Analyse des coûts",
+        levels: ["Intermédiaire"],
+        duration: "14h",
         format: "Distanciel",
         objectives: [
           "Calculer les coûts de revient",
@@ -619,6 +619,21 @@ const formationsData = {
         ],
         audience: ["Contrôleurs de gestion", "Managers", "Dirigeants", "Analystes"],
         modalities: ["Méthodes de calcul", "Tableaux de bord", "Indicateurs clés", "Business cases"]
+      },
+      {
+        title: "Facturation électronique 2026",
+        levels: ["Tous niveaux"],
+        duration: "7h",
+        format: "Mixte",
+        objectives: [
+          "Comprendre la réforme de la facturation électronique",
+          "Identifier les plateformes de dématérialisation (PDP)",
+          "Adapter son organisation comptable et administrative",
+          "Mettre en place les bons outils pour rester conforme"
+        ],
+        audience: ["Dirigeants", "Comptables", "Gestionnaires", "Commerçants"],
+        modalities: ["Réglementation 2026", "Choix PDP", "Mise en conformité", "Plan d'action personnalisé"],
+        pageLink: "/formation-facturation-electronique-2026"
       }
     ]
   },
@@ -1009,21 +1024,34 @@ const FormationsProfessionnellesPage = () => {
                           )}
 
                           <div className="flex gap-2 mt-6">
-                            <button
-                              onClick={() => toggleFormationDetails(formationId)}
-                              className="flex items-center gap-2 px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors flex-1 justify-center"
-                            >
-                              {isExpanded ? <EyeOff size={16} /> : <Eye size={16} />}
-                              {isExpanded ? 'Masquer' : 'Découvrir'}
-                            </button>
-                            <Button
-                              to="/contact"
-                              variant="primary"
-                              className="flex-1"
-                              rightIcon={<ArrowRight size={16} />}
-                            >
-                              Devis
-                            </Button>
+                            {formation.pageLink ? (
+                              <Button
+                                to={formation.pageLink}
+                                variant="primary"
+                                className="flex-1"
+                                rightIcon={<ArrowRight size={16} />}
+                              >
+                                Voir la formation
+                              </Button>
+                            ) : (
+                              <>
+                                <button
+                                  onClick={() => toggleFormationDetails(formationId)}
+                                  className="flex items-center gap-2 px-4 py-2 text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors flex-1 justify-center"
+                                >
+                                  {isExpanded ? <EyeOff size={16} /> : <Eye size={16} />}
+                                  {isExpanded ? 'Masquer' : 'Découvrir'}
+                                </button>
+                                <Button
+                                  to="/contact"
+                                  variant="primary"
+                                  className="flex-1"
+                                  rightIcon={<ArrowRight size={16} />}
+                                >
+                                  Devis
+                                </Button>
+                              </>
+                            )}
                           </div>
                         </div>
                       </div>
