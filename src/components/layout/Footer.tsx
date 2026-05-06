@@ -261,15 +261,23 @@ const Footer: React.FC = () => {
             {/* Qualiopi Certification */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="flex items-center">
-                <img 
-                  src="/Screenshot 2025-06-22 204332.png" 
-                  alt="Logo Qualiopi – certification actions de formation" 
+                <img
+                  src="/Screenshot 2025-06-22 204332.png"
+                  alt="Logo Qualiopi – certification actions de formation"
                   className="h-16 w-auto object-contain"
                 />
               </div>
               <div className="text-gray-400 text-sm max-w-md">
                 <p className="font-medium text-white mb-1">Organisme certifié Qualiopi</p>
-                <p className="text-xs mt-1">Catégorie : Actions de formation</p>
+                <p className="text-xs">Processus certifié – Catégorie : Actions de formation</p>
+                <a
+                  href="/documents/Certificat_QUALIOPI_IA_FORMA_PLUS_CAP1904_2025.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors mt-1 underline underline-offset-2"
+                >
+                  Voir le certificat
+                </a>
               </div>
             </div>
             
